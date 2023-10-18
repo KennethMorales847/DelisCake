@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("MateriaPrimaConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DelisCake.mdf"& _ 
+            ";Integrated Security=True")>  _
+        Public ReadOnly Property DelisCakeConnectionString() As String
+            Get
+                Return CType(Me("DelisCakeConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
