@@ -67,7 +67,9 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -186,11 +188,8 @@
     <None Include="Imagenes\User.png" />
     <None Include="Imagenes\Pass.png" />
     <None Include="Imagenes\Registrar.png" />
-    <Content Include="DelisCake.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="DelisCake.mdf" />
     <Content Include="DelisCake_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DelisCake.mdf</DependentUpon>
     </Content>
     <Content Include="Icon_Inicio %282%29.ico" />
