@@ -70,14 +70,14 @@ Partial Class InicioSesion
         '
         'TextBox_NombreLogin
         '
-        Me.TextBox_NombreLogin.Location = New System.Drawing.Point(75, 248)
+        Me.TextBox_NombreLogin.Location = New System.Drawing.Point(78, 248)
         Me.TextBox_NombreLogin.Name = "TextBox_NombreLogin"
         Me.TextBox_NombreLogin.Size = New System.Drawing.Size(296, 20)
         Me.TextBox_NombreLogin.TabIndex = 4
         '
         'TextBox_ContraseñaLogin
         '
-        Me.TextBox_ContraseñaLogin.Location = New System.Drawing.Point(75, 343)
+        Me.TextBox_ContraseñaLogin.Location = New System.Drawing.Point(78, 343)
         Me.TextBox_ContraseñaLogin.Name = "TextBox_ContraseñaLogin"
         Me.TextBox_ContraseñaLogin.Size = New System.Drawing.Size(296, 20)
         Me.TextBox_ContraseñaLogin.TabIndex = 5
@@ -162,10 +162,10 @@ Partial Class InicioSesion
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox_NombreLogin As TextBox
     Friend WithEvents TextBox_ContraseñaLogin As TextBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btn_iniciar As Button
     Friend WithEvents Button2 As Button
+    Public WithEvents TextBox_NombreLogin As TextBox
 End Class
