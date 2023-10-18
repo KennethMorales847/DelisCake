@@ -7,8 +7,8 @@ Public Class IniciarSesion
 
     Private Sub btn_iniciarSesion_Click(sender As Object, e As EventArgs) Handles btn_iniciarSesion.Click
         ' Abre el formulario Login.vb
-        Dim IniciarSesionForm As New IniciarSesion()
-        IniciarSesionForm.Show()
+        Dim InicioSesionForm As New InicioSesion()
+        InicioSesionForm.Show()
 
     End Sub
 
