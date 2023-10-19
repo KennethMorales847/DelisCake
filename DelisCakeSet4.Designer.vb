@@ -1128,12 +1128,31 @@ Namespace DelisCakeSet4TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad"& _ 
                 "_Medida, Cantidad, Costo_Unitario, IVA_Unitario, Costo_Total FROM dbo.MP"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO MP"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (Id_Ingrediente, Nombre, Categoria, Fech"& _ 
+                "a_Compra, Fecha_Vencimiento, Unidad_Medida, Cantidad, Costo_Unitario, IVA_Unitar"& _ 
+                "io)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@Id_Ingrediente,@Nombre,@Categoria,@Fecha_Compra,@Fecha_Venc"& _ 
+                "imiento,@Unidad_Medida,@Cantidad,@Costo_Unitario,@IVA_Unitario); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Ing"& _ 
+                "rediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, Can"& _ 
+                "tidad, Costo_Unitario, IVA_Unitario, Costo_Total FROM MP WHERE (Id_Ingrediente ="& _ 
+                " @Id_Ingrediente)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Ingrediente", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Ingrediente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Categoria", Global.System.Data.SqlDbType.NVarChar, 20, Global.System.Data.ParameterDirection.Input, 0, 0, "Categoria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Compra", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Unidad_Medida", Global.System.Data.SqlDbType.NVarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cantidad", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Costo_Unitario", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "Costo_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IVA_Unitario", Global.System.Data.SqlDbType.[Decimal], 9, Global.System.Data.ParameterDirection.Input, 18, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1433,6 +1452,57 @@ Namespace DelisCakeSet4TableAdapters
                     ByVal Original_IVA_Unitario As Decimal,  _
                     ByVal Original_Costo_Total As Global.System.Nullable(Of Decimal)) As Integer
             Return Me.Update(Original_Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, Cantidad, Costo_Unitario, IVA_Unitario, Original_Id_Ingrediente, Original_Nombre, Original_Categoria, Original_Fecha_Compra, Original_Fecha_Vencimiento, Original_Unidad_Medida, Original_Cantidad, Original_Costo_Unitario, Original_IVA_Unitario, Original_Costo_Total)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function agregar(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As String, ByVal Fecha_Vencimiento As String, ByVal Unidad_Medida As String, ByVal Cantidad As Integer, ByVal Costo_Unitario As Decimal, ByVal IVA_Unitario As Decimal) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Id_Ingrediente,Integer)
+            If (Nombre Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre")
+            Else
+                command.Parameters(1).Value = CType(Nombre,String)
+            End If
+            If (Categoria Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Categoria")
+            Else
+                command.Parameters(2).Value = CType(Categoria,String)
+            End If
+            If (Fecha_Compra Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(Fecha_Compra,String)
+            End If
+            If (Fecha_Vencimiento Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Fecha_Vencimiento,String)
+            End If
+            If (Unidad_Medida Is Nothing) Then
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(5).Value = CType(Unidad_Medida,String)
+            End If
+            command.Parameters(6).Value = CType(Cantidad,Integer)
+            command.Parameters(7).Value = CType(Costo_Unitario,Decimal)
+            command.Parameters(8).Value = CType(IVA_Unitario,Decimal)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

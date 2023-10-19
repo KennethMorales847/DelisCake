@@ -34,20 +34,6 @@ Partial Class materia_prima_form
         Dim IVA_UnitarioLabel As System.Windows.Forms.Label
         Dim Costo_TotalLabel As System.Windows.Forms.Label
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DelisCakeSet4 = New DelisCake.DelisCakeSet4()
-        Me.MPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MPTableAdapter = New DelisCake.DelisCakeSet4TableAdapters.MPTableAdapter()
-        Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaVencimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnidadMedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TableAdapterManager = New DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager()
         Me.Id_IngredienteTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.CategoriaTextBox = New System.Windows.Forms.TextBox()
@@ -58,6 +44,24 @@ Partial Class materia_prima_form
         Me.Costo_UnitarioTextBox = New System.Windows.Forms.TextBox()
         Me.IVA_UnitarioTextBox = New System.Windows.Forms.TextBox()
         Me.Costo_TotalTextBox = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.MPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DelisCakeSet4 = New DelisCake.DelisCakeSet4()
+        Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaVencimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UnidadMedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MPTableAdapter = New DelisCake.DelisCakeSet4TableAdapters.MPTableAdapter()
+        Me.TableAdapterManager = New DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager()
         Id_IngredienteLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CategoriaLabel = New System.Windows.Forms.Label()
@@ -69,8 +73,8 @@ Partial Class materia_prima_form
         IVA_UnitarioLabel = New System.Windows.Forms.Label()
         Costo_TotalLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -83,87 +87,6 @@ Partial Class materia_prima_form
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(696, 251)
         Me.DataGridView1.TabIndex = 0
-        '
-        'DelisCakeSet4
-        '
-        Me.DelisCakeSet4.DataSetName = "DelisCakeSet4"
-        Me.DelisCakeSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MPBindingSource
-        '
-        Me.MPBindingSource.DataMember = "MP"
-        Me.MPBindingSource.DataSource = Me.DelisCakeSet4
-        '
-        'MPTableAdapter
-        '
-        Me.MPTableAdapter.ClearBeforeFill = True
-        '
-        'IdIngredienteDataGridViewTextBoxColumn
-        '
-        Me.IdIngredienteDataGridViewTextBoxColumn.DataPropertyName = "Id_Ingrediente"
-        Me.IdIngredienteDataGridViewTextBoxColumn.HeaderText = "Id_Ingrediente"
-        Me.IdIngredienteDataGridViewTextBoxColumn.Name = "IdIngredienteDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'CategoriaDataGridViewTextBoxColumn
-        '
-        Me.CategoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.Name = "CategoriaDataGridViewTextBoxColumn"
-        '
-        'FechaCompraDataGridViewTextBoxColumn
-        '
-        Me.FechaCompraDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Compra"
-        Me.FechaCompraDataGridViewTextBoxColumn.HeaderText = "Fecha_Compra"
-        Me.FechaCompraDataGridViewTextBoxColumn.Name = "FechaCompraDataGridViewTextBoxColumn"
-        '
-        'FechaVencimientoDataGridViewTextBoxColumn
-        '
-        Me.FechaVencimientoDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Vencimiento"
-        Me.FechaVencimientoDataGridViewTextBoxColumn.HeaderText = "Fecha_Vencimiento"
-        Me.FechaVencimientoDataGridViewTextBoxColumn.Name = "FechaVencimientoDataGridViewTextBoxColumn"
-        '
-        'UnidadMedidaDataGridViewTextBoxColumn
-        '
-        Me.UnidadMedidaDataGridViewTextBoxColumn.DataPropertyName = "Unidad_Medida"
-        Me.UnidadMedidaDataGridViewTextBoxColumn.HeaderText = "Unidad_Medida"
-        Me.UnidadMedidaDataGridViewTextBoxColumn.Name = "UnidadMedidaDataGridViewTextBoxColumn"
-        '
-        'CantidadDataGridViewTextBoxColumn
-        '
-        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
-        '
-        'CostoUnitarioDataGridViewTextBoxColumn
-        '
-        Me.CostoUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Costo_Unitario"
-        Me.CostoUnitarioDataGridViewTextBoxColumn.HeaderText = "Costo_Unitario"
-        Me.CostoUnitarioDataGridViewTextBoxColumn.Name = "CostoUnitarioDataGridViewTextBoxColumn"
-        '
-        'IVAUnitarioDataGridViewTextBoxColumn
-        '
-        Me.IVAUnitarioDataGridViewTextBoxColumn.DataPropertyName = "IVA_Unitario"
-        Me.IVAUnitarioDataGridViewTextBoxColumn.HeaderText = "IVA_Unitario"
-        Me.IVAUnitarioDataGridViewTextBoxColumn.Name = "IVAUnitarioDataGridViewTextBoxColumn"
-        '
-        'CostoTotalDataGridViewTextBoxColumn
-        '
-        Me.CostoTotalDataGridViewTextBoxColumn.DataPropertyName = "Costo_Total"
-        Me.CostoTotalDataGridViewTextBoxColumn.HeaderText = "Costo_Total"
-        Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
-        Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.MPTableAdapter = Me.MPTableAdapter
-        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Id_IngredienteLabel
         '
@@ -332,14 +255,136 @@ Partial Class materia_prima_form
         Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
         Me.Costo_TotalTextBox.Location = New System.Drawing.Point(838, 244)
         Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
+        Me.Costo_TotalTextBox.ReadOnly = True
         Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Costo_TotalTextBox.TabIndex = 20
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(13, 300)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(94, 300)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 21
+        Me.Button2.Text = "Eliminar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(175, 300)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Modificar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(256, 300)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 21
+        Me.Button4.Text = "Buscar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'MPBindingSource
+        '
+        Me.MPBindingSource.DataMember = "MP"
+        Me.MPBindingSource.DataSource = Me.DelisCakeSet4
+        '
+        'DelisCakeSet4
+        '
+        Me.DelisCakeSet4.DataSetName = "DelisCakeSet4"
+        Me.DelisCakeSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'IdIngredienteDataGridViewTextBoxColumn
+        '
+        Me.IdIngredienteDataGridViewTextBoxColumn.DataPropertyName = "Id_Ingrediente"
+        Me.IdIngredienteDataGridViewTextBoxColumn.HeaderText = "Id_Ingrediente"
+        Me.IdIngredienteDataGridViewTextBoxColumn.Name = "IdIngredienteDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'CategoriaDataGridViewTextBoxColumn
+        '
+        Me.CategoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria"
+        Me.CategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria"
+        Me.CategoriaDataGridViewTextBoxColumn.Name = "CategoriaDataGridViewTextBoxColumn"
+        '
+        'FechaCompraDataGridViewTextBoxColumn
+        '
+        Me.FechaCompraDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Compra"
+        Me.FechaCompraDataGridViewTextBoxColumn.HeaderText = "Fecha_Compra"
+        Me.FechaCompraDataGridViewTextBoxColumn.Name = "FechaCompraDataGridViewTextBoxColumn"
+        '
+        'FechaVencimientoDataGridViewTextBoxColumn
+        '
+        Me.FechaVencimientoDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Vencimiento"
+        Me.FechaVencimientoDataGridViewTextBoxColumn.HeaderText = "Fecha_Vencimiento"
+        Me.FechaVencimientoDataGridViewTextBoxColumn.Name = "FechaVencimientoDataGridViewTextBoxColumn"
+        '
+        'UnidadMedidaDataGridViewTextBoxColumn
+        '
+        Me.UnidadMedidaDataGridViewTextBoxColumn.DataPropertyName = "Unidad_Medida"
+        Me.UnidadMedidaDataGridViewTextBoxColumn.HeaderText = "Unidad_Medida"
+        Me.UnidadMedidaDataGridViewTextBoxColumn.Name = "UnidadMedidaDataGridViewTextBoxColumn"
+        '
+        'CantidadDataGridViewTextBoxColumn
+        '
+        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
+        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
+        '
+        'CostoUnitarioDataGridViewTextBoxColumn
+        '
+        Me.CostoUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Costo_Unitario"
+        Me.CostoUnitarioDataGridViewTextBoxColumn.HeaderText = "Costo_Unitario"
+        Me.CostoUnitarioDataGridViewTextBoxColumn.Name = "CostoUnitarioDataGridViewTextBoxColumn"
+        '
+        'IVAUnitarioDataGridViewTextBoxColumn
+        '
+        Me.IVAUnitarioDataGridViewTextBoxColumn.DataPropertyName = "IVA_Unitario"
+        Me.IVAUnitarioDataGridViewTextBoxColumn.HeaderText = "IVA_Unitario"
+        Me.IVAUnitarioDataGridViewTextBoxColumn.Name = "IVAUnitarioDataGridViewTextBoxColumn"
+        '
+        'CostoTotalDataGridViewTextBoxColumn
+        '
+        Me.CostoTotalDataGridViewTextBoxColumn.DataPropertyName = "Costo_Total"
+        Me.CostoTotalDataGridViewTextBoxColumn.HeaderText = "Costo_Total"
+        Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
+        Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MPTableAdapter
+        '
+        Me.MPTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.MPTableAdapter = Me.MPTableAdapter
+        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'materia_prima_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1049, 390)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Id_IngredienteLabel)
         Me.Controls.Add(Me.Id_IngredienteTextBox)
         Me.Controls.Add(NombreLabel)
@@ -364,8 +409,8 @@ Partial Class materia_prima_form
         Me.Name = "materia_prima_form"
         Me.Text = "materia_prima_form"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -396,4 +441,8 @@ Partial Class materia_prima_form
     Friend WithEvents Costo_UnitarioTextBox As TextBox
     Friend WithEvents IVA_UnitarioTextBox As TextBox
     Friend WithEvents Costo_TotalTextBox As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 End Class
