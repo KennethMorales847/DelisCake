@@ -126,12 +126,6 @@
     <Compile Include="IniciarSesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="materia_prima_form.Designer.vb">
-      <DependentUpon>materia_prima_form.vb</DependentUpon>
-    </Compile>
-    <Compile Include="materia_prima_form.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -179,9 +173,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="materia_prima_form.resx">
-      <DependentUpon>materia_prima_form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
