@@ -6,8 +6,8 @@ Public Class Registro
             Dim nombreUsuario As String = TextBox_Nombre.Text
             Dim contraseña As String = TextBox_Contraseña.Text
 
-            ' Ruta del archivo "Usuarios.txt"
-            Dim rutaArchivo As String = "Usuarios.txt"
+            ' Ruta del archivo
+            Dim rutaArchivo As String = If(CheckBox_Usuario.Checked, "Usuarios.txt", "Administradores.txt")
 
             ' Verificar si el nombre de usuario ya existe
             If File.Exists(rutaArchivo) Then
@@ -35,9 +35,15 @@ Public Class Registro
                 escritor.WriteLine(nuevaLinea)
             End Using
 
-            MessageBox.Show("Usuario registrado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim tipoUsuario As String = If(CheckBox_Usuario.Checked, "Usuario", "Administrador")
+
+            MessageBox.Show($"Nuevo {tipoUsuario} registrado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBox.Show("Hubo un error al registrar el usuario: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub Registro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

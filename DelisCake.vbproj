@@ -114,6 +114,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EliminarUsuario.Designer.vb">
+      <DependentUpon>EliminarUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio.Designer.vb">
       <DependentUpon>Inicio.vb</DependentUpon>
     </Compile>
@@ -130,6 +136,18 @@
       <DependentUpon>materia_prima_form.vb</DependentUpon>
     </Compile>
     <Compile Include="materia_prima_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.Designer.vb">
+      <DependentUpon>MenuAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuEmpleados.Designer.vb">
+      <DependentUpon>MenuEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -166,6 +184,12 @@
     <Compile Include="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RestablecerUsuario.Designer.vb">
+      <DependentUpon>RestablecerUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RestablecerUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="trabajadores_form.Designer.vb">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
     </Compile>
@@ -174,6 +198,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="materia_prima_form.resx">
       <DependentUpon>materia_prima_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdmin.resx">
+      <DependentUpon>MenuAdmin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEmpleados.resx">
+      <DependentUpon>MenuEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -197,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestablecerUsuario.resx">
+      <DependentUpon>RestablecerUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trabajadores_form.resx">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
