@@ -34,22 +34,9 @@ Partial Class materia_prima_form
         Dim IVA_UnitarioLabel As System.Windows.Forms.Label
         Dim Costo_TotalLabel As System.Windows.Forms.Label
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Id_IngredienteTextBox = New System.Windows.Forms.TextBox()
-        Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.CategoriaTextBox = New System.Windows.Forms.TextBox()
-        Me.Fecha_CompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Fecha_VencimientoDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Unidad_MedidaTextBox = New System.Windows.Forms.TextBox()
-        Me.CantidadTextBox = New System.Windows.Forms.TextBox()
-        Me.Costo_UnitarioTextBox = New System.Windows.Forms.TextBox()
-        Me.IVA_UnitarioTextBox = New System.Windows.Forms.TextBox()
-        Me.Costo_TotalTextBox = New System.Windows.Forms.TextBox()
-        Me.AgregarMP = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DelisCakeSet4 = New DelisCake.DelisCakeSet4()
         Me.MPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Delis_CakeDataSet = New DelisCake.Delis_CakeDataSet()
+        Me.MPTableAdapter = New DelisCake.DelisCakeSet4TableAdapters.MPTableAdapter()
         Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,8 +47,17 @@ Partial Class materia_prima_form
         Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MPTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.MPTableAdapter()
-        Me.TableAdapterManager = New DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager()
+        Me.TableAdapterManager = New DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager()
+        Me.Id_IngredienteTextBox = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox = New System.Windows.Forms.TextBox()
+        Me.CategoriaTextBox = New System.Windows.Forms.TextBox()
+        Me.Fecha_CompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Fecha_VencimientoDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Unidad_MedidaTextBox = New System.Windows.Forms.TextBox()
+        Me.CantidadTextBox = New System.Windows.Forms.TextBox()
+        Me.Costo_UnitarioTextBox = New System.Windows.Forms.TextBox()
+        Me.IVA_UnitarioTextBox = New System.Windows.Forms.TextBox()
+        Me.Costo_TotalTextBox = New System.Windows.Forms.TextBox()
         Id_IngredienteLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CategoriaLabel = New System.Windows.Forms.Label()
@@ -73,8 +69,8 @@ Partial Class materia_prima_form
         IVA_UnitarioLabel = New System.Windows.Forms.Label()
         Costo_TotalLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Delis_CakeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -85,241 +81,22 @@ Partial Class materia_prima_form
         Me.DataGridView1.DataSource = Me.MPBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(13, 13)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(666, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(667, 275)
         Me.DataGridView1.TabIndex = 0
         '
-        'Id_IngredienteLabel
+        'DelisCakeSet4
         '
-        Id_IngredienteLabel.AutoSize = True
-        Id_IngredienteLabel.Location = New System.Drawing.Point(699, 13)
-        Id_IngredienteLabel.Name = "Id_IngredienteLabel"
-        Id_IngredienteLabel.Size = New System.Drawing.Size(75, 13)
-        Id_IngredienteLabel.TabIndex = 1
-        Id_IngredienteLabel.Text = "Id Ingrediente:"
-        '
-        'Id_IngredienteTextBox
-        '
-        Me.Id_IngredienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Id_Ingrediente", True))
-        Me.Id_IngredienteTextBox.Location = New System.Drawing.Point(806, 10)
-        Me.Id_IngredienteTextBox.Name = "Id_IngredienteTextBox"
-        Me.Id_IngredienteTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Id_IngredienteTextBox.TabIndex = 2
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(699, 39)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "Nombre:"
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(806, 36)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.NombreTextBox.TabIndex = 4
-        '
-        'CategoriaLabel
-        '
-        CategoriaLabel.AutoSize = True
-        CategoriaLabel.Location = New System.Drawing.Point(699, 65)
-        CategoriaLabel.Name = "CategoriaLabel"
-        CategoriaLabel.Size = New System.Drawing.Size(55, 13)
-        CategoriaLabel.TabIndex = 5
-        CategoriaLabel.Text = "Categoria:"
-        '
-        'CategoriaTextBox
-        '
-        Me.CategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Categoria", True))
-        Me.CategoriaTextBox.Location = New System.Drawing.Point(806, 62)
-        Me.CategoriaTextBox.Name = "CategoriaTextBox"
-        Me.CategoriaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CategoriaTextBox.TabIndex = 6
-        '
-        'Fecha_CompraLabel
-        '
-        Fecha_CompraLabel.AutoSize = True
-        Fecha_CompraLabel.Location = New System.Drawing.Point(699, 92)
-        Fecha_CompraLabel.Name = "Fecha_CompraLabel"
-        Fecha_CompraLabel.Size = New System.Drawing.Size(79, 13)
-        Fecha_CompraLabel.TabIndex = 7
-        Fecha_CompraLabel.Text = "Fecha Compra:"
-        '
-        'Fecha_CompraDateTimePicker
-        '
-        Me.Fecha_CompraDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Compra", True))
-        Me.Fecha_CompraDateTimePicker.Location = New System.Drawing.Point(806, 88)
-        Me.Fecha_CompraDateTimePicker.Name = "Fecha_CompraDateTimePicker"
-        Me.Fecha_CompraDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_CompraDateTimePicker.TabIndex = 8
-        '
-        'Fecha_VencimientoLabel
-        '
-        Fecha_VencimientoLabel.AutoSize = True
-        Fecha_VencimientoLabel.Location = New System.Drawing.Point(699, 118)
-        Fecha_VencimientoLabel.Name = "Fecha_VencimientoLabel"
-        Fecha_VencimientoLabel.Size = New System.Drawing.Size(101, 13)
-        Fecha_VencimientoLabel.TabIndex = 9
-        Fecha_VencimientoLabel.Text = "Fecha Vencimiento:"
-        '
-        'Fecha_VencimientoDateTimePicker
-        '
-        Me.Fecha_VencimientoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Vencimiento", True))
-        Me.Fecha_VencimientoDateTimePicker.Location = New System.Drawing.Point(806, 114)
-        Me.Fecha_VencimientoDateTimePicker.Name = "Fecha_VencimientoDateTimePicker"
-        Me.Fecha_VencimientoDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_VencimientoDateTimePicker.TabIndex = 10
-        '
-        'Unidad_MedidaLabel
-        '
-        Unidad_MedidaLabel.AutoSize = True
-        Unidad_MedidaLabel.Location = New System.Drawing.Point(699, 143)
-        Unidad_MedidaLabel.Name = "Unidad_MedidaLabel"
-        Unidad_MedidaLabel.Size = New System.Drawing.Size(82, 13)
-        Unidad_MedidaLabel.TabIndex = 11
-        Unidad_MedidaLabel.Text = "Unidad Medida:"
-        '
-        'Unidad_MedidaTextBox
-        '
-        Me.Unidad_MedidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Unidad_Medida", True))
-        Me.Unidad_MedidaTextBox.Location = New System.Drawing.Point(806, 140)
-        Me.Unidad_MedidaTextBox.Name = "Unidad_MedidaTextBox"
-        Me.Unidad_MedidaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Unidad_MedidaTextBox.TabIndex = 12
-        '
-        'CantidadLabel
-        '
-        CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(699, 169)
-        CantidadLabel.Name = "CantidadLabel"
-        CantidadLabel.Size = New System.Drawing.Size(52, 13)
-        CantidadLabel.TabIndex = 13
-        CantidadLabel.Text = "Cantidad:"
-        '
-        'CantidadTextBox
-        '
-        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Cantidad", True))
-        Me.CantidadTextBox.Location = New System.Drawing.Point(806, 166)
-        Me.CantidadTextBox.Name = "CantidadTextBox"
-        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CantidadTextBox.TabIndex = 14
-        '
-        'Costo_UnitarioLabel
-        '
-        Costo_UnitarioLabel.AutoSize = True
-        Costo_UnitarioLabel.Location = New System.Drawing.Point(699, 195)
-        Costo_UnitarioLabel.Name = "Costo_UnitarioLabel"
-        Costo_UnitarioLabel.Size = New System.Drawing.Size(76, 13)
-        Costo_UnitarioLabel.TabIndex = 15
-        Costo_UnitarioLabel.Text = "Costo Unitario:"
-        '
-        'Costo_UnitarioTextBox
-        '
-        Me.Costo_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Unitario", True))
-        Me.Costo_UnitarioTextBox.Location = New System.Drawing.Point(806, 192)
-        Me.Costo_UnitarioTextBox.Name = "Costo_UnitarioTextBox"
-        Me.Costo_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Costo_UnitarioTextBox.TabIndex = 16
-        '
-        'IVA_UnitarioLabel
-        '
-        IVA_UnitarioLabel.AutoSize = True
-        IVA_UnitarioLabel.Location = New System.Drawing.Point(699, 221)
-        IVA_UnitarioLabel.Name = "IVA_UnitarioLabel"
-        IVA_UnitarioLabel.Size = New System.Drawing.Size(66, 13)
-        IVA_UnitarioLabel.TabIndex = 17
-        IVA_UnitarioLabel.Text = "IVA Unitario:"
-        '
-        'IVA_UnitarioTextBox
-        '
-        Me.IVA_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "IVA_Unitario", True))
-        Me.IVA_UnitarioTextBox.Location = New System.Drawing.Point(806, 218)
-        Me.IVA_UnitarioTextBox.Name = "IVA_UnitarioTextBox"
-        Me.IVA_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.IVA_UnitarioTextBox.TabIndex = 18
-        '
-        'Costo_TotalLabel
-        '
-        Costo_TotalLabel.AutoSize = True
-        Costo_TotalLabel.Location = New System.Drawing.Point(699, 247)
-        Costo_TotalLabel.Name = "Costo_TotalLabel"
-        Costo_TotalLabel.Size = New System.Drawing.Size(64, 13)
-        Costo_TotalLabel.TabIndex = 19
-        Costo_TotalLabel.Text = "Costo Total:"
-        '
-        'Costo_TotalTextBox
-        '
-        Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
-        Me.Costo_TotalTextBox.Location = New System.Drawing.Point(806, 244)
-        Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
-        Me.Costo_TotalTextBox.ReadOnly = True
-        Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Costo_TotalTextBox.TabIndex = 20
-        '
-        'AgregarMP
-        '
-        Me.AgregarMP.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.AgregarMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AgregarMP.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AgregarMP.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.AgregarMP.Location = New System.Drawing.Point(13, 318)
-        Me.AgregarMP.Name = "AgregarMP"
-        Me.AgregarMP.Size = New System.Drawing.Size(82, 32)
-        Me.AgregarMP.TabIndex = 21
-        Me.AgregarMP.Text = "&Agregar"
-        Me.AgregarMP.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(101, 318)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 32)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "&Agregar"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Button2.Location = New System.Drawing.Point(189, 318)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 32)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "&Agregar"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(277, 318)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(82, 32)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "&Agregar"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.DelisCakeSet4.DataSetName = "DelisCakeSet4"
+        Me.DelisCakeSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MPBindingSource
         '
         Me.MPBindingSource.DataMember = "MP"
-        Me.MPBindingSource.DataSource = Me.Delis_CakeDataSet
+        Me.MPBindingSource.DataSource = Me.DelisCakeSet4
         '
-        'Delis_CakeDataSet
+        'MPTableAdapter
         '
-        Me.Delis_CakeDataSet.DataSetName = "Delis_CakeDataSet"
-        Me.Delis_CakeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.MPTableAdapter.ClearBeforeFill = True
         '
         'IdIngredienteDataGridViewTextBoxColumn
         '
@@ -382,25 +159,187 @@ Partial Class materia_prima_form
         Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
         Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'MPTableAdapter
-        '
-        Me.MPTableAdapter.ClearBeforeFill = True
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.MPTableAdapter = Me.MPTableAdapter
-        Me.TableAdapterManager.UpdateOrder = DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Id_IngredienteLabel
+        '
+        Id_IngredienteLabel.AutoSize = True
+        Id_IngredienteLabel.Location = New System.Drawing.Point(713, 13)
+        Id_IngredienteLabel.Name = "Id_IngredienteLabel"
+        Id_IngredienteLabel.Size = New System.Drawing.Size(75, 13)
+        Id_IngredienteLabel.TabIndex = 1
+        Id_IngredienteLabel.Text = "Id Ingrediente:"
+        '
+        'Id_IngredienteTextBox
+        '
+        Me.Id_IngredienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Id_Ingrediente", True))
+        Me.Id_IngredienteTextBox.Location = New System.Drawing.Point(820, 10)
+        Me.Id_IngredienteTextBox.Name = "Id_IngredienteTextBox"
+        Me.Id_IngredienteTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Id_IngredienteTextBox.TabIndex = 2
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(713, 39)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "Nombre:"
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(820, 36)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.NombreTextBox.TabIndex = 4
+        '
+        'CategoriaLabel
+        '
+        CategoriaLabel.AutoSize = True
+        CategoriaLabel.Location = New System.Drawing.Point(713, 65)
+        CategoriaLabel.Name = "CategoriaLabel"
+        CategoriaLabel.Size = New System.Drawing.Size(55, 13)
+        CategoriaLabel.TabIndex = 5
+        CategoriaLabel.Text = "Categoria:"
+        '
+        'CategoriaTextBox
+        '
+        Me.CategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Categoria", True))
+        Me.CategoriaTextBox.Location = New System.Drawing.Point(820, 62)
+        Me.CategoriaTextBox.Name = "CategoriaTextBox"
+        Me.CategoriaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CategoriaTextBox.TabIndex = 6
+        '
+        'Fecha_CompraLabel
+        '
+        Fecha_CompraLabel.AutoSize = True
+        Fecha_CompraLabel.Location = New System.Drawing.Point(713, 92)
+        Fecha_CompraLabel.Name = "Fecha_CompraLabel"
+        Fecha_CompraLabel.Size = New System.Drawing.Size(79, 13)
+        Fecha_CompraLabel.TabIndex = 7
+        Fecha_CompraLabel.Text = "Fecha Compra:"
+        '
+        'Fecha_CompraDateTimePicker
+        '
+        Me.Fecha_CompraDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Compra", True))
+        Me.Fecha_CompraDateTimePicker.Location = New System.Drawing.Point(820, 88)
+        Me.Fecha_CompraDateTimePicker.Name = "Fecha_CompraDateTimePicker"
+        Me.Fecha_CompraDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_CompraDateTimePicker.TabIndex = 8
+        '
+        'Fecha_VencimientoLabel
+        '
+        Fecha_VencimientoLabel.AutoSize = True
+        Fecha_VencimientoLabel.Location = New System.Drawing.Point(713, 118)
+        Fecha_VencimientoLabel.Name = "Fecha_VencimientoLabel"
+        Fecha_VencimientoLabel.Size = New System.Drawing.Size(101, 13)
+        Fecha_VencimientoLabel.TabIndex = 9
+        Fecha_VencimientoLabel.Text = "Fecha Vencimiento:"
+        '
+        'Fecha_VencimientoDateTimePicker
+        '
+        Me.Fecha_VencimientoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Vencimiento", True))
+        Me.Fecha_VencimientoDateTimePicker.Location = New System.Drawing.Point(820, 114)
+        Me.Fecha_VencimientoDateTimePicker.Name = "Fecha_VencimientoDateTimePicker"
+        Me.Fecha_VencimientoDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_VencimientoDateTimePicker.TabIndex = 10
+        '
+        'Unidad_MedidaLabel
+        '
+        Unidad_MedidaLabel.AutoSize = True
+        Unidad_MedidaLabel.Location = New System.Drawing.Point(713, 143)
+        Unidad_MedidaLabel.Name = "Unidad_MedidaLabel"
+        Unidad_MedidaLabel.Size = New System.Drawing.Size(82, 13)
+        Unidad_MedidaLabel.TabIndex = 11
+        Unidad_MedidaLabel.Text = "Unidad Medida:"
+        '
+        'Unidad_MedidaTextBox
+        '
+        Me.Unidad_MedidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Unidad_Medida", True))
+        Me.Unidad_MedidaTextBox.Location = New System.Drawing.Point(820, 140)
+        Me.Unidad_MedidaTextBox.Name = "Unidad_MedidaTextBox"
+        Me.Unidad_MedidaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Unidad_MedidaTextBox.TabIndex = 12
+        '
+        'CantidadLabel
+        '
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Location = New System.Drawing.Point(713, 169)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(52, 13)
+        CantidadLabel.TabIndex = 13
+        CantidadLabel.Text = "Cantidad:"
+        '
+        'CantidadTextBox
+        '
+        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Cantidad", True))
+        Me.CantidadTextBox.Location = New System.Drawing.Point(820, 166)
+        Me.CantidadTextBox.Name = "CantidadTextBox"
+        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CantidadTextBox.TabIndex = 14
+        '
+        'Costo_UnitarioLabel
+        '
+        Costo_UnitarioLabel.AutoSize = True
+        Costo_UnitarioLabel.Location = New System.Drawing.Point(713, 195)
+        Costo_UnitarioLabel.Name = "Costo_UnitarioLabel"
+        Costo_UnitarioLabel.Size = New System.Drawing.Size(76, 13)
+        Costo_UnitarioLabel.TabIndex = 15
+        Costo_UnitarioLabel.Text = "Costo Unitario:"
+        '
+        'Costo_UnitarioTextBox
+        '
+        Me.Costo_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Unitario", True))
+        Me.Costo_UnitarioTextBox.Location = New System.Drawing.Point(820, 192)
+        Me.Costo_UnitarioTextBox.Name = "Costo_UnitarioTextBox"
+        Me.Costo_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Costo_UnitarioTextBox.TabIndex = 16
+        '
+        'IVA_UnitarioLabel
+        '
+        IVA_UnitarioLabel.AutoSize = True
+        IVA_UnitarioLabel.Location = New System.Drawing.Point(713, 221)
+        IVA_UnitarioLabel.Name = "IVA_UnitarioLabel"
+        IVA_UnitarioLabel.Size = New System.Drawing.Size(66, 13)
+        IVA_UnitarioLabel.TabIndex = 17
+        IVA_UnitarioLabel.Text = "IVA Unitario:"
+        '
+        'IVA_UnitarioTextBox
+        '
+        Me.IVA_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "IVA_Unitario", True))
+        Me.IVA_UnitarioTextBox.Location = New System.Drawing.Point(820, 218)
+        Me.IVA_UnitarioTextBox.Name = "IVA_UnitarioTextBox"
+        Me.IVA_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.IVA_UnitarioTextBox.TabIndex = 18
+        '
+        'Costo_TotalLabel
+        '
+        Costo_TotalLabel.AutoSize = True
+        Costo_TotalLabel.Location = New System.Drawing.Point(713, 247)
+        Costo_TotalLabel.Name = "Costo_TotalLabel"
+        Costo_TotalLabel.Size = New System.Drawing.Size(64, 13)
+        Costo_TotalLabel.TabIndex = 19
+        Costo_TotalLabel.Text = "Costo Total:"
+        '
+        'Costo_TotalTextBox
+        '
+        Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
+        Me.Costo_TotalTextBox.Location = New System.Drawing.Point(820, 244)
+        Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
+        Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Costo_TotalTextBox.TabIndex = 20
         '
         'materia_prima_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1029, 450)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.AgregarMP)
+        Me.ClientSize = New System.Drawing.Size(1041, 362)
         Me.Controls.Add(Id_IngredienteLabel)
         Me.Controls.Add(Me.Id_IngredienteTextBox)
         Me.Controls.Add(NombreLabel)
@@ -425,17 +364,17 @@ Partial Class materia_prima_form
         Me.Name = "materia_prima_form"
         Me.Text = "materia_prima_form"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Delis_CakeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Delis_CakeDataSet As Delis_CakeDataSet
+    Friend WithEvents DelisCakeSet4 As DelisCakeSet4
     Friend WithEvents MPBindingSource As BindingSource
-    Friend WithEvents MPTableAdapter As Delis_CakeDataSetTableAdapters.MPTableAdapter
+    Friend WithEvents MPTableAdapter As DelisCakeSet4TableAdapters.MPTableAdapter
     Friend WithEvents IdIngredienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CategoriaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -446,7 +385,7 @@ Partial Class materia_prima_form
     Friend WithEvents CostoUnitarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents IVAUnitarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CostoTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TableAdapterManager As Delis_CakeDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents TableAdapterManager As DelisCakeSet4TableAdapters.TableAdapterManager
     Friend WithEvents Id_IngredienteTextBox As TextBox
     Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents CategoriaTextBox As TextBox
@@ -457,8 +396,4 @@ Partial Class materia_prima_form
     Friend WithEvents Costo_UnitarioTextBox As TextBox
     Friend WithEvents IVA_UnitarioTextBox As TextBox
     Friend WithEvents Costo_TotalTextBox As TextBox
-    Friend WithEvents AgregarMP As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
 End Class
