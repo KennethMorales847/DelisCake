@@ -202,12 +202,6 @@
     <Compile Include="trabajadores_form.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VitacoraUsuarios.Designer.vb">
-      <DependentUpon>VitacoraUsuarios.vb</DependentUpon>
-    </Compile>
-    <Compile Include="VitacoraUsuarios.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AjustesUsuario.resx">
@@ -251,9 +245,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trabajadores_form.resx">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VitacoraUsuarios.resx">
-      <DependentUpon>VitacoraUsuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
