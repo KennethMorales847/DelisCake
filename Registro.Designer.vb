@@ -23,31 +23,21 @@ Partial Class Registro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro))
-        Me.L_Registro = New System.Windows.Forms.Label()
         Me.L_Usuario = New System.Windows.Forms.Label()
         Me.TextBox_Nombre = New System.Windows.Forms.TextBox()
         Me.L_Contraseña = New System.Windows.Forms.Label()
         Me.TextBox_Contraseña = New System.Windows.Forms.TextBox()
         Me.btn_registrar = New System.Windows.Forms.Button()
         Me.btn_limpiar = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
         Me.CheckBox_Admin = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.L_Registro = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'L_Registro
-        '
-        Me.L_Registro.AutoSize = True
-        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Registro.Location = New System.Drawing.Point(134, 9)
-        Me.L_Registro.Name = "L_Registro"
-        Me.L_Registro.Size = New System.Drawing.Size(106, 28)
-        Me.L_Registro.TabIndex = 0
-        Me.L_Registro.Text = "Registro"
         '
         'L_Usuario
         '
@@ -105,26 +95,6 @@ Partial Class Registro
         Me.btn_limpiar.Text = "Limpiar"
         Me.btn_limpiar.UseVisualStyleBackColor = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.DelisCake.My.Resources.Resources.Pass
-        Me.PictureBox3.Location = New System.Drawing.Point(23, 228)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(43, 39)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 9
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Registrar
-        Me.PictureBox2.Location = New System.Drawing.Point(23, 142)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(43, 39)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 8
-        Me.PictureBox2.TabStop = False
-        '
         'CheckBox_Usuario
         '
         Me.CheckBox_Usuario.AutoSize = True
@@ -159,12 +129,43 @@ Partial Class Registro
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Seleccione el Tipo de Usuario:"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.DelisCake.My.Resources.Resources.Pass
+        Me.PictureBox3.Location = New System.Drawing.Point(23, 228)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(43, 39)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 9
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Registrar
+        Me.PictureBox2.Location = New System.Drawing.Point(23, 142)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(43, 39)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 8
+        Me.PictureBox2.TabStop = False
+        '
+        'L_Registro
+        '
+        Me.L_Registro.AutoSize = True
+        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Registro.Location = New System.Drawing.Point(135, 19)
+        Me.L_Registro.Name = "L_Registro"
+        Me.L_Registro.Size = New System.Drawing.Size(106, 28)
+        Me.L_Registro.TabIndex = 13
+        Me.L_Registro.Text = "Registro"
+        '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(365, 388)
+        Me.Controls.Add(Me.L_Registro)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox_Admin)
         Me.Controls.Add(Me.CheckBox_Usuario)
@@ -176,7 +177,6 @@ Partial Class Registro
         Me.Controls.Add(Me.L_Contraseña)
         Me.Controls.Add(Me.TextBox_Nombre)
         Me.Controls.Add(Me.L_Usuario)
-        Me.Controls.Add(Me.L_Registro)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Registro"
         Me.Text = "Registro"
@@ -186,8 +186,6 @@ Partial Class Registro
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents L_Registro As Label
     Friend WithEvents L_Usuario As Label
     Friend WithEvents TextBox_Nombre As TextBox
     Friend WithEvents L_Contraseña As Label
@@ -199,4 +197,5 @@ Partial Class Registro
     Friend WithEvents CheckBox_Usuario As CheckBox
     Friend WithEvents CheckBox_Admin As CheckBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents L_Registro As Label
 End Class

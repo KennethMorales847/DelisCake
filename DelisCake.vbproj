@@ -94,6 +94,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjustesUsuario.Designer.vb">
+      <DependentUpon>AjustesUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AjustesUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DelisCakeSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,8 +202,17 @@
     <Compile Include="trabajadores_form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VitacoraUsuarios.Designer.vb">
+      <DependentUpon>VitacoraUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VitacoraUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AjustesUsuario.resx">
+      <DependentUpon>AjustesUsuario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarUsuario.resx">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="trabajadores_form.resx">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VitacoraUsuarios.resx">
+      <DependentUpon>VitacoraUsuarios.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +313,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Registrarse.png" />
+    <None Include="Imagenes\IniciarSesion.png" />
+    <None Include="Imagenes\Vitacora.png" />
+    <None Include="Imagenes\Ajustes_Usuario.png" />
+    <None Include="Imagenes\Productos.png" />
+    <None Include="Imagenes\MateriaPrima.png" />
+    <None Include="Imagenes\Proveedores.png" />
+    <None Include="Imagenes\Planilla.png" />
     <None Include="Imagenes\Eliminar.png" />
     <None Include="Imagenes\Cambiar_Usuario.png" />
     <None Include="Imagenes\LOGO.jpeg" />
