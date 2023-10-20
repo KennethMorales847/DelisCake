@@ -184,10 +184,10 @@
     <Compile Include="Registro.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RestablecerUsuario.Designer.vb">
-      <DependentUpon>RestablecerUsuario.vb</DependentUpon>
+    <Compile Include="RestablecerContraseña.Designer.vb">
+      <DependentUpon>RestablecerContraseña.vb</DependentUpon>
     </Compile>
-    <Compile Include="RestablecerUsuario.vb">
+    <Compile Include="RestablecerContraseña.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="trabajadores_form.Designer.vb">
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RestablecerUsuario.resx">
-      <DependentUpon>RestablecerUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="RestablecerContraseña.resx">
+      <DependentUpon>RestablecerContraseña.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trabajadores_form.resx">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
@@ -295,6 +295,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Cambiar_Usuario.png" />
     <None Include="Imagenes\LOGO.jpeg" />
     <None Include="Imagenes\User.png" />
     <None Include="Imagenes\Pass.png" />

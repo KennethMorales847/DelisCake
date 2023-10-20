@@ -53,7 +53,7 @@ Partial Class Registro
         '
         Me.L_Usuario.AutoSize = True
         Me.L_Usuario.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Usuario.Location = New System.Drawing.Point(52, 170)
+        Me.L_Usuario.Location = New System.Drawing.Point(68, 151)
         Me.L_Usuario.Name = "L_Usuario"
         Me.L_Usuario.Size = New System.Drawing.Size(208, 18)
         Me.L_Usuario.TabIndex = 1
@@ -61,16 +61,16 @@ Partial Class Registro
         '
         'TextBox_Nombre
         '
-        Me.TextBox_Nombre.Location = New System.Drawing.Point(56, 192)
+        Me.TextBox_Nombre.Location = New System.Drawing.Point(72, 173)
         Me.TextBox_Nombre.Name = "TextBox_Nombre"
-        Me.TextBox_Nombre.Size = New System.Drawing.Size(301, 20)
+        Me.TextBox_Nombre.Size = New System.Drawing.Size(267, 20)
         Me.TextBox_Nombre.TabIndex = 2
         '
         'L_Contraseña
         '
         Me.L_Contraseña.AutoSize = True
         Me.L_Contraseña.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Contraseña.Location = New System.Drawing.Point(52, 244)
+        Me.L_Contraseña.Location = New System.Drawing.Point(68, 225)
         Me.L_Contraseña.Name = "L_Contraseña"
         Me.L_Contraseña.Size = New System.Drawing.Size(184, 18)
         Me.L_Contraseña.TabIndex = 3
@@ -78,18 +78,18 @@ Partial Class Registro
         '
         'TextBox_Contraseña
         '
-        Me.TextBox_Contraseña.Location = New System.Drawing.Point(56, 266)
+        Me.TextBox_Contraseña.Location = New System.Drawing.Point(72, 247)
         Me.TextBox_Contraseña.Name = "TextBox_Contraseña"
-        Me.TextBox_Contraseña.Size = New System.Drawing.Size(301, 20)
+        Me.TextBox_Contraseña.Size = New System.Drawing.Size(267, 20)
         Me.TextBox_Contraseña.TabIndex = 4
         '
         'btn_registrar
         '
         Me.btn_registrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_registrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_registrar.Location = New System.Drawing.Point(199, 325)
+        Me.btn_registrar.Location = New System.Drawing.Point(189, 302)
         Me.btn_registrar.Name = "btn_registrar"
-        Me.btn_registrar.Size = New System.Drawing.Size(103, 27)
+        Me.btn_registrar.Size = New System.Drawing.Size(111, 40)
         Me.btn_registrar.TabIndex = 6
         Me.btn_registrar.Text = "Registrar"
         Me.btn_registrar.UseVisualStyleBackColor = False
@@ -98,9 +98,9 @@ Partial Class Registro
         '
         Me.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_limpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_limpiar.Location = New System.Drawing.Point(57, 325)
+        Me.btn_limpiar.Location = New System.Drawing.Point(50, 302)
         Me.btn_limpiar.Name = "btn_limpiar"
-        Me.btn_limpiar.Size = New System.Drawing.Size(103, 27)
+        Me.btn_limpiar.Size = New System.Drawing.Size(112, 40)
         Me.btn_limpiar.TabIndex = 7
         Me.btn_limpiar.Text = "Limpiar"
         Me.btn_limpiar.UseVisualStyleBackColor = False
@@ -108,7 +108,7 @@ Partial Class Registro
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.DelisCake.My.Resources.Resources.Pass
-        Me.PictureBox3.Location = New System.Drawing.Point(7, 247)
+        Me.PictureBox3.Location = New System.Drawing.Point(23, 228)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(43, 39)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -118,7 +118,7 @@ Partial Class Registro
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Registrar
-        Me.PictureBox2.Location = New System.Drawing.Point(7, 161)
+        Me.PictureBox2.Location = New System.Drawing.Point(23, 142)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 39)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -153,7 +153,7 @@ Partial Class Registro
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1, 74)
+        Me.Label1.Location = New System.Drawing.Point(4, 75)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(222, 16)
         Me.Label1.TabIndex = 12
