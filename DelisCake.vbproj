@@ -295,6 +295,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Eliminar.png" />
     <None Include="Imagenes\Cambiar_Usuario.png" />
     <None Include="Imagenes\LOGO.jpeg" />
     <None Include="Imagenes\User.png" />

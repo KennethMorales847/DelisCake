@@ -85,7 +85,7 @@ Partial Class EliminarUsuario
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Registrar
+        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Eliminar
         Me.PictureBox2.Location = New System.Drawing.Point(23, 142)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 39)

@@ -95,7 +95,7 @@ Partial Class RestablecerContraseña
         '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Registrar
+        Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Cambiar_Usuario
         Me.PictureBox2.Location = New System.Drawing.Point(27, 128)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(43, 39)
