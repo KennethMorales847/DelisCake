@@ -45,7 +45,7 @@ Partial Class AjustesUsuario
         Me.btn_vitacora.Name = "btn_vitacora"
         Me.btn_vitacora.Size = New System.Drawing.Size(232, 61)
         Me.btn_vitacora.TabIndex = 0
-        Me.btn_vitacora.Text = "Vitacora de Usuarios"
+        Me.btn_vitacora.Text = "Bitácora de Usuarios"
         Me.btn_vitacora.UseVisualStyleBackColor = True
         '
         'btn_restablecer
