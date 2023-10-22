@@ -120,6 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Delis_CakeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EliminarUsuario.Designer.vb">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
     </Compile>
@@ -291,6 +296,17 @@
     </None>
     <None Include="DelisCakeSet4.xss">
       <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Delis_CakeDataSet.xsc">
+      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Delis_CakeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Delis_CakeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Delis_CakeDataSet.xss">
+      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
