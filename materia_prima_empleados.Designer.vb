@@ -343,6 +343,7 @@ Partial Class materia_prima_empleados
         Me.Costo_Sin_IVATextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Sin_IVA", True))
         Me.Costo_Sin_IVATextBox.Location = New System.Drawing.Point(747, 190)
         Me.Costo_Sin_IVATextBox.Name = "Costo_Sin_IVATextBox"
+        Me.Costo_Sin_IVATextBox.ReadOnly = True
         Me.Costo_Sin_IVATextBox.Size = New System.Drawing.Size(200, 20)
         Me.Costo_Sin_IVATextBox.TabIndex = 15
         '
@@ -360,6 +361,7 @@ Partial Class materia_prima_empleados
         Me.IVA_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "IVA_Unitario", True))
         Me.IVA_UnitarioTextBox.Location = New System.Drawing.Point(747, 216)
         Me.IVA_UnitarioTextBox.Name = "IVA_UnitarioTextBox"
+        Me.IVA_UnitarioTextBox.ReadOnly = True
         Me.IVA_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IVA_UnitarioTextBox.TabIndex = 17
         '
@@ -377,6 +379,7 @@ Partial Class materia_prima_empleados
         Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
         Me.Costo_TotalTextBox.Location = New System.Drawing.Point(747, 242)
         Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
+        Me.Costo_TotalTextBox.ReadOnly = True
         Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Costo_TotalTextBox.TabIndex = 19
         '

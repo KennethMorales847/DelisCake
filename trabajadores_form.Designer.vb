@@ -23,7 +23,6 @@ Partial Class trabajadores_form
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(trabajadores_form))
         Dim Codigo_EmpleadoLabel As System.Windows.Forms.Label
         Dim Nombre_CompletoLabel As System.Windows.Forms.Label
         Dim PuestoLabel As System.Windows.Forms.Label
@@ -36,23 +35,17 @@ Partial Class trabajadores_form
         Dim IGSSLabel As System.Windows.Forms.Label
         Dim Total_DescuentosLabel As System.Windows.Forms.Label
         Dim Importe_a_RecibirLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(trabajadores_form))
         Me.Delis_CakeDataSet = New DelisCake.Delis_CakeDataSet()
         Me.PlanillaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlanillaTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.PlanillaTableAdapter()
         Me.TableAdapterManager = New DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager()
         Me.PlanillaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.PlanillaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Codigo_EmpleadoTextBox = New System.Windows.Forms.TextBox()
         Me.Nombre_CompletoTextBox = New System.Windows.Forms.TextBox()
         Me.PuestoTextBox = New System.Windows.Forms.TextBox()
@@ -79,6 +72,13 @@ Partial Class trabajadores_form
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.PlanillaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Codigo_EmpleadoLabel = New System.Windows.Forms.Label()
         Nombre_CompletoLabel = New System.Windows.Forms.Label()
         PuestoLabel = New System.Windows.Forms.Label()
@@ -139,24 +139,6 @@ Partial Class trabajadores_form
         Me.PlanillaBindingNavigator.TabIndex = 0
         Me.PlanillaBindingNavigator.Text = "BindingNavigator1"
         '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
@@ -166,6 +148,7 @@ Partial Class trabajadores_form
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -174,63 +157,19 @@ Partial Class trabajadores_form
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
         Me.BindingNavigatorCountItem.Text = "of {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'PlanillaBindingNavigatorSaveItem
-        '
-        Me.PlanillaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PlanillaBindingNavigatorSaveItem.Image = CType(resources.GetObject("PlanillaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.PlanillaBindingNavigatorSaveItem.Name = "PlanillaBindingNavigatorSaveItem"
-        Me.PlanillaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
-        Me.PlanillaBindingNavigatorSaveItem.Text = "Save Data"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'Codigo_EmpleadoLabel
         '
@@ -331,6 +270,7 @@ Partial Class trabajadores_form
         Me.Horas_ExtrasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Horas_Extras", True))
         Me.Horas_ExtrasTextBox.Location = New System.Drawing.Point(931, 166)
         Me.Horas_ExtrasTextBox.Name = "Horas_ExtrasTextBox"
+        Me.Horas_ExtrasTextBox.ReadOnly = True
         Me.Horas_ExtrasTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Horas_ExtrasTextBox.TabIndex = 12
         '
@@ -365,6 +305,7 @@ Partial Class trabajadores_form
         Me.Total_DevengadoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Total_Devengado", True))
         Me.Total_DevengadoTextBox.Location = New System.Drawing.Point(931, 218)
         Me.Total_DevengadoTextBox.Name = "Total_DevengadoTextBox"
+        Me.Total_DevengadoTextBox.ReadOnly = True
         Me.Total_DevengadoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Total_DevengadoTextBox.TabIndex = 16
         '
@@ -399,6 +340,7 @@ Partial Class trabajadores_form
         Me.IGSSTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "IGSS", True))
         Me.IGSSTextBox.Location = New System.Drawing.Point(931, 270)
         Me.IGSSTextBox.Name = "IGSSTextBox"
+        Me.IGSSTextBox.ReadOnly = True
         Me.IGSSTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IGSSTextBox.TabIndex = 20
         '
@@ -416,6 +358,7 @@ Partial Class trabajadores_form
         Me.Total_DescuentosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Total_Descuentos", True))
         Me.Total_DescuentosTextBox.Location = New System.Drawing.Point(931, 296)
         Me.Total_DescuentosTextBox.Name = "Total_DescuentosTextBox"
+        Me.Total_DescuentosTextBox.ReadOnly = True
         Me.Total_DescuentosTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Total_DescuentosTextBox.TabIndex = 22
         '
@@ -433,6 +376,7 @@ Partial Class trabajadores_form
         Me.Importe_a_RecibirTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Importe_a_Recibir", True))
         Me.Importe_a_RecibirTextBox.Location = New System.Drawing.Point(931, 322)
         Me.Importe_a_RecibirTextBox.Name = "Importe_a_RecibirTextBox"
+        Me.Importe_a_RecibirTextBox.ReadOnly = True
         Me.Importe_a_RecibirTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Importe_a_RecibirTextBox.TabIndex = 24
         '
@@ -532,6 +476,68 @@ Partial Class trabajadores_form
         Me.Button1.TabIndex = 26
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'PlanillaBindingNavigatorSaveItem
+        '
+        Me.PlanillaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PlanillaBindingNavigatorSaveItem.Image = CType(resources.GetObject("PlanillaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.PlanillaBindingNavigatorSaveItem.Name = "PlanillaBindingNavigatorSaveItem"
+        Me.PlanillaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.PlanillaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'trabajadores_form
         '
