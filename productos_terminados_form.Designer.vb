@@ -110,7 +110,7 @@ Partial Class productos_terminados_form
         Me.Productos_TerminadosBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Productos_TerminadosBindingNavigator.Name = "Productos_TerminadosBindingNavigator"
         Me.Productos_TerminadosBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Productos_TerminadosBindingNavigator.Size = New System.Drawing.Size(1179, 25)
+        Me.Productos_TerminadosBindingNavigator.Size = New System.Drawing.Size(1051, 25)
         Me.Productos_TerminadosBindingNavigator.TabIndex = 0
         Me.Productos_TerminadosBindingNavigator.Text = "BindingNavigator1"
         '
@@ -362,7 +362,7 @@ Partial Class productos_terminados_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1179, 361)
+        Me.ClientSize = New System.Drawing.Size(1051, 361)
         Me.Controls.Add(Me.Productos_TerminadosDataGridView)
         Me.Controls.Add(Id_Producto_TerminadoLabel)
         Me.Controls.Add(Me.Id_Producto_TerminadoTextBox)
