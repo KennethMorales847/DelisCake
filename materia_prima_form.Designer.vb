@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class materia_prima_form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,351 +20,80 @@ Partial Class materia_prima_form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(materia_prima_form))
         Dim Id_IngredienteLabel As System.Windows.Forms.Label
         Dim NombreLabel As System.Windows.Forms.Label
         Dim CategoriaLabel As System.Windows.Forms.Label
         Dim Fecha_CompraLabel As System.Windows.Forms.Label
-        Dim Fecha_VencimientoLabel As System.Windows.Forms.Label
-        Dim Unidad_MedidaLabel As System.Windows.Forms.Label
         Dim CantidadLabel As System.Windows.Forms.Label
         Dim Costo_UnitarioLabel As System.Windows.Forms.Label
+        Dim Costo_Sin_IVALabel As System.Windows.Forms.Label
         Dim IVA_UnitarioLabel As System.Windows.Forms.Label
         Dim Costo_TotalLabel As System.Windows.Forms.Label
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Delis_CakeDataSet = New DelisCake.Delis_CakeDataSet()
+        Me.MPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MPTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.MPTableAdapter()
+        Me.TableAdapterManager = New DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager()
+        Me.MPBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.MPBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Id_IngredienteTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.CategoriaTextBox = New System.Windows.Forms.TextBox()
         Me.Fecha_CompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Fecha_VencimientoDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Unidad_MedidaTextBox = New System.Windows.Forms.TextBox()
         Me.CantidadTextBox = New System.Windows.Forms.TextBox()
         Me.Costo_UnitarioTextBox = New System.Windows.Forms.TextBox()
+        Me.Costo_Sin_IVATextBox = New System.Windows.Forms.TextBox()
         Me.IVA_UnitarioTextBox = New System.Windows.Forms.TextBox()
         Me.Costo_TotalTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.MPBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DelisCakeSet4 = New DelisCake.DelisCakeSet4()
-        Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaVencimientoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UnidadMedidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MPTableAdapter = New DelisCake.DelisCakeSet4TableAdapters.MPTableAdapter()
-        Me.TableAdapterManager = New DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager()
+        Me.MPDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Id_IngredienteLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CategoriaLabel = New System.Windows.Forms.Label()
         Fecha_CompraLabel = New System.Windows.Forms.Label()
-        Fecha_VencimientoLabel = New System.Windows.Forms.Label()
-        Unidad_MedidaLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Costo_UnitarioLabel = New System.Windows.Forms.Label()
+        Costo_Sin_IVALabel = New System.Windows.Forms.Label()
         IVA_UnitarioLabel = New System.Windows.Forms.Label()
         Costo_TotalLabel = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Delis_CakeDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MPBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MPBindingNavigator.SuspendLayout()
+        CType(Me.MPDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'Delis_CakeDataSet
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdIngredienteDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.CategoriaDataGridViewTextBoxColumn, Me.FechaCompraDataGridViewTextBoxColumn, Me.FechaVencimientoDataGridViewTextBoxColumn, Me.UnidadMedidaDataGridViewTextBoxColumn, Me.CantidadDataGridViewTextBoxColumn, Me.CostoUnitarioDataGridViewTextBoxColumn, Me.IVAUnitarioDataGridViewTextBoxColumn, Me.CostoTotalDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.MPBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 13)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(696, 251)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Id_IngredienteLabel
-        '
-        Id_IngredienteLabel.AutoSize = True
-        Id_IngredienteLabel.Location = New System.Drawing.Point(731, 13)
-        Id_IngredienteLabel.Name = "Id_IngredienteLabel"
-        Id_IngredienteLabel.Size = New System.Drawing.Size(75, 13)
-        Id_IngredienteLabel.TabIndex = 1
-        Id_IngredienteLabel.Text = "Id Ingrediente:"
-        '
-        'Id_IngredienteTextBox
-        '
-        Me.Id_IngredienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Id_Ingrediente", True))
-        Me.Id_IngredienteTextBox.Location = New System.Drawing.Point(838, 10)
-        Me.Id_IngredienteTextBox.Name = "Id_IngredienteTextBox"
-        Me.Id_IngredienteTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Id_IngredienteTextBox.TabIndex = 2
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(731, 39)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "Nombre:"
-        '
-        'NombreTextBox
-        '
-        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(838, 36)
-        Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.NombreTextBox.TabIndex = 4
-        '
-        'CategoriaLabel
-        '
-        CategoriaLabel.AutoSize = True
-        CategoriaLabel.Location = New System.Drawing.Point(731, 65)
-        CategoriaLabel.Name = "CategoriaLabel"
-        CategoriaLabel.Size = New System.Drawing.Size(55, 13)
-        CategoriaLabel.TabIndex = 5
-        CategoriaLabel.Text = "Categoria:"
-        '
-        'CategoriaTextBox
-        '
-        Me.CategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Categoria", True))
-        Me.CategoriaTextBox.Location = New System.Drawing.Point(838, 62)
-        Me.CategoriaTextBox.Name = "CategoriaTextBox"
-        Me.CategoriaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CategoriaTextBox.TabIndex = 6
-        '
-        'Fecha_CompraLabel
-        '
-        Fecha_CompraLabel.AutoSize = True
-        Fecha_CompraLabel.Location = New System.Drawing.Point(731, 92)
-        Fecha_CompraLabel.Name = "Fecha_CompraLabel"
-        Fecha_CompraLabel.Size = New System.Drawing.Size(79, 13)
-        Fecha_CompraLabel.TabIndex = 7
-        Fecha_CompraLabel.Text = "Fecha Compra:"
-        '
-        'Fecha_CompraDateTimePicker
-        '
-        Me.Fecha_CompraDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Compra", True))
-        Me.Fecha_CompraDateTimePicker.Location = New System.Drawing.Point(838, 88)
-        Me.Fecha_CompraDateTimePicker.Name = "Fecha_CompraDateTimePicker"
-        Me.Fecha_CompraDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_CompraDateTimePicker.TabIndex = 8
-        '
-        'Fecha_VencimientoLabel
-        '
-        Fecha_VencimientoLabel.AutoSize = True
-        Fecha_VencimientoLabel.Location = New System.Drawing.Point(731, 118)
-        Fecha_VencimientoLabel.Name = "Fecha_VencimientoLabel"
-        Fecha_VencimientoLabel.Size = New System.Drawing.Size(101, 13)
-        Fecha_VencimientoLabel.TabIndex = 9
-        Fecha_VencimientoLabel.Text = "Fecha Vencimiento:"
-        '
-        'Fecha_VencimientoDateTimePicker
-        '
-        Me.Fecha_VencimientoDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Vencimiento", True))
-        Me.Fecha_VencimientoDateTimePicker.Location = New System.Drawing.Point(838, 114)
-        Me.Fecha_VencimientoDateTimePicker.Name = "Fecha_VencimientoDateTimePicker"
-        Me.Fecha_VencimientoDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_VencimientoDateTimePicker.TabIndex = 10
-        '
-        'Unidad_MedidaLabel
-        '
-        Unidad_MedidaLabel.AutoSize = True
-        Unidad_MedidaLabel.Location = New System.Drawing.Point(731, 143)
-        Unidad_MedidaLabel.Name = "Unidad_MedidaLabel"
-        Unidad_MedidaLabel.Size = New System.Drawing.Size(82, 13)
-        Unidad_MedidaLabel.TabIndex = 11
-        Unidad_MedidaLabel.Text = "Unidad Medida:"
-        '
-        'Unidad_MedidaTextBox
-        '
-        Me.Unidad_MedidaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Unidad_Medida", True))
-        Me.Unidad_MedidaTextBox.Location = New System.Drawing.Point(838, 140)
-        Me.Unidad_MedidaTextBox.Name = "Unidad_MedidaTextBox"
-        Me.Unidad_MedidaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Unidad_MedidaTextBox.TabIndex = 12
-        '
-        'CantidadLabel
-        '
-        CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(731, 169)
-        CantidadLabel.Name = "CantidadLabel"
-        CantidadLabel.Size = New System.Drawing.Size(52, 13)
-        CantidadLabel.TabIndex = 13
-        CantidadLabel.Text = "Cantidad:"
-        '
-        'CantidadTextBox
-        '
-        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Cantidad", True))
-        Me.CantidadTextBox.Location = New System.Drawing.Point(838, 166)
-        Me.CantidadTextBox.Name = "CantidadTextBox"
-        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CantidadTextBox.TabIndex = 14
-        '
-        'Costo_UnitarioLabel
-        '
-        Costo_UnitarioLabel.AutoSize = True
-        Costo_UnitarioLabel.Location = New System.Drawing.Point(731, 195)
-        Costo_UnitarioLabel.Name = "Costo_UnitarioLabel"
-        Costo_UnitarioLabel.Size = New System.Drawing.Size(76, 13)
-        Costo_UnitarioLabel.TabIndex = 15
-        Costo_UnitarioLabel.Text = "Costo Unitario:"
-        '
-        'Costo_UnitarioTextBox
-        '
-        Me.Costo_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Unitario", True))
-        Me.Costo_UnitarioTextBox.Location = New System.Drawing.Point(838, 192)
-        Me.Costo_UnitarioTextBox.Name = "Costo_UnitarioTextBox"
-        Me.Costo_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Costo_UnitarioTextBox.TabIndex = 16
-        '
-        'IVA_UnitarioLabel
-        '
-        IVA_UnitarioLabel.AutoSize = True
-        IVA_UnitarioLabel.Location = New System.Drawing.Point(731, 221)
-        IVA_UnitarioLabel.Name = "IVA_UnitarioLabel"
-        IVA_UnitarioLabel.Size = New System.Drawing.Size(66, 13)
-        IVA_UnitarioLabel.TabIndex = 17
-        IVA_UnitarioLabel.Text = "IVA Unitario:"
-        '
-        'IVA_UnitarioTextBox
-        '
-        Me.IVA_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "IVA_Unitario", True))
-        Me.IVA_UnitarioTextBox.Location = New System.Drawing.Point(838, 218)
-        Me.IVA_UnitarioTextBox.Name = "IVA_UnitarioTextBox"
-        Me.IVA_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.IVA_UnitarioTextBox.TabIndex = 18
-        '
-        'Costo_TotalLabel
-        '
-        Costo_TotalLabel.AutoSize = True
-        Costo_TotalLabel.Location = New System.Drawing.Point(731, 247)
-        Costo_TotalLabel.Name = "Costo_TotalLabel"
-        Costo_TotalLabel.Size = New System.Drawing.Size(64, 13)
-        Costo_TotalLabel.TabIndex = 19
-        Costo_TotalLabel.Text = "Costo Total:"
-        '
-        'Costo_TotalTextBox
-        '
-        Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
-        Me.Costo_TotalTextBox.Location = New System.Drawing.Point(838, 244)
-        Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
-        Me.Costo_TotalTextBox.ReadOnly = True
-        Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Costo_TotalTextBox.TabIndex = 20
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(13, 300)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(94, 300)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "Eliminar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(175, 300)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 21
-        Me.Button3.Text = "Modificar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(256, 300)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 21
-        Me.Button4.Text = "Buscar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Delis_CakeDataSet.DataSetName = "Delis_CakeDataSet"
+        Me.Delis_CakeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'MPBindingSource
         '
         Me.MPBindingSource.DataMember = "MP"
-        Me.MPBindingSource.DataSource = Me.DelisCakeSet4
-        '
-        'DelisCakeSet4
-        '
-        Me.DelisCakeSet4.DataSetName = "DelisCakeSet4"
-        Me.DelisCakeSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'IdIngredienteDataGridViewTextBoxColumn
-        '
-        Me.IdIngredienteDataGridViewTextBoxColumn.DataPropertyName = "Id_Ingrediente"
-        Me.IdIngredienteDataGridViewTextBoxColumn.HeaderText = "Id_Ingrediente"
-        Me.IdIngredienteDataGridViewTextBoxColumn.Name = "IdIngredienteDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'CategoriaDataGridViewTextBoxColumn
-        '
-        Me.CategoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria"
-        Me.CategoriaDataGridViewTextBoxColumn.Name = "CategoriaDataGridViewTextBoxColumn"
-        '
-        'FechaCompraDataGridViewTextBoxColumn
-        '
-        Me.FechaCompraDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Compra"
-        Me.FechaCompraDataGridViewTextBoxColumn.HeaderText = "Fecha_Compra"
-        Me.FechaCompraDataGridViewTextBoxColumn.Name = "FechaCompraDataGridViewTextBoxColumn"
-        '
-        'FechaVencimientoDataGridViewTextBoxColumn
-        '
-        Me.FechaVencimientoDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Vencimiento"
-        Me.FechaVencimientoDataGridViewTextBoxColumn.HeaderText = "Fecha_Vencimiento"
-        Me.FechaVencimientoDataGridViewTextBoxColumn.Name = "FechaVencimientoDataGridViewTextBoxColumn"
-        '
-        'UnidadMedidaDataGridViewTextBoxColumn
-        '
-        Me.UnidadMedidaDataGridViewTextBoxColumn.DataPropertyName = "Unidad_Medida"
-        Me.UnidadMedidaDataGridViewTextBoxColumn.HeaderText = "Unidad_Medida"
-        Me.UnidadMedidaDataGridViewTextBoxColumn.Name = "UnidadMedidaDataGridViewTextBoxColumn"
-        '
-        'CantidadDataGridViewTextBoxColumn
-        '
-        Me.CantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad"
-        Me.CantidadDataGridViewTextBoxColumn.Name = "CantidadDataGridViewTextBoxColumn"
-        '
-        'CostoUnitarioDataGridViewTextBoxColumn
-        '
-        Me.CostoUnitarioDataGridViewTextBoxColumn.DataPropertyName = "Costo_Unitario"
-        Me.CostoUnitarioDataGridViewTextBoxColumn.HeaderText = "Costo_Unitario"
-        Me.CostoUnitarioDataGridViewTextBoxColumn.Name = "CostoUnitarioDataGridViewTextBoxColumn"
-        '
-        'IVAUnitarioDataGridViewTextBoxColumn
-        '
-        Me.IVAUnitarioDataGridViewTextBoxColumn.DataPropertyName = "IVA_Unitario"
-        Me.IVAUnitarioDataGridViewTextBoxColumn.HeaderText = "IVA_Unitario"
-        Me.IVAUnitarioDataGridViewTextBoxColumn.Name = "IVAUnitarioDataGridViewTextBoxColumn"
-        '
-        'CostoTotalDataGridViewTextBoxColumn
-        '
-        Me.CostoTotalDataGridViewTextBoxColumn.DataPropertyName = "Costo_Total"
-        Me.CostoTotalDataGridViewTextBoxColumn.HeaderText = "Costo_Total"
-        Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
-        Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
+        Me.MPBindingSource.DataSource = Me.Delis_CakeDataSet
         '
         'MPTableAdapter
         '
@@ -374,17 +103,349 @@ Partial Class materia_prima_form
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.MPTableAdapter = Me.MPTableAdapter
-        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeSet4TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.PlanillaTableAdapter = Nothing
+        Me.TableAdapterManager.Productos_TerminadosTableAdapter = Nothing
+        Me.TableAdapterManager.PRTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'MPBindingNavigator
+        '
+        Me.MPBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.MPBindingNavigator.BindingSource = Me.MPBindingSource
+        Me.MPBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.MPBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.MPBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.MPBindingNavigatorSaveItem})
+        Me.MPBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.MPBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.MPBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.MPBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.MPBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.MPBindingNavigator.Name = "MPBindingNavigator"
+        Me.MPBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.MPBindingNavigator.Size = New System.Drawing.Size(1074, 25)
+        Me.MPBindingNavigator.TabIndex = 0
+        Me.MPBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'MPBindingNavigatorSaveItem
+        '
+        Me.MPBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.MPBindingNavigatorSaveItem.Image = CType(resources.GetObject("MPBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.MPBindingNavigatorSaveItem.Name = "MPBindingNavigatorSaveItem"
+        Me.MPBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.MPBindingNavigatorSaveItem.Text = "Save Data"
+        '
+        'Id_IngredienteLabel
+        '
+        Id_IngredienteLabel.AutoSize = True
+        Id_IngredienteLabel.Location = New System.Drawing.Point(752, 37)
+        Id_IngredienteLabel.Name = "Id_IngredienteLabel"
+        Id_IngredienteLabel.Size = New System.Drawing.Size(75, 13)
+        Id_IngredienteLabel.TabIndex = 1
+        Id_IngredienteLabel.Text = "Id Ingrediente:"
+        '
+        'Id_IngredienteTextBox
+        '
+        Me.Id_IngredienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Id_Ingrediente", True))
+        Me.Id_IngredienteTextBox.Location = New System.Drawing.Point(837, 34)
+        Me.Id_IngredienteTextBox.Name = "Id_IngredienteTextBox"
+        Me.Id_IngredienteTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Id_IngredienteTextBox.TabIndex = 2
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(752, 63)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "Nombre:"
+        '
+        'NombreTextBox
+        '
+        Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Nombre", True))
+        Me.NombreTextBox.Location = New System.Drawing.Point(837, 60)
+        Me.NombreTextBox.Name = "NombreTextBox"
+        Me.NombreTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.NombreTextBox.TabIndex = 4
+        '
+        'CategoriaLabel
+        '
+        CategoriaLabel.AutoSize = True
+        CategoriaLabel.Location = New System.Drawing.Point(752, 89)
+        CategoriaLabel.Name = "CategoriaLabel"
+        CategoriaLabel.Size = New System.Drawing.Size(55, 13)
+        CategoriaLabel.TabIndex = 5
+        CategoriaLabel.Text = "Categoria:"
+        '
+        'CategoriaTextBox
+        '
+        Me.CategoriaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Categoria", True))
+        Me.CategoriaTextBox.Location = New System.Drawing.Point(837, 86)
+        Me.CategoriaTextBox.Name = "CategoriaTextBox"
+        Me.CategoriaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CategoriaTextBox.TabIndex = 6
+        '
+        'Fecha_CompraLabel
+        '
+        Fecha_CompraLabel.AutoSize = True
+        Fecha_CompraLabel.Location = New System.Drawing.Point(752, 116)
+        Fecha_CompraLabel.Name = "Fecha_CompraLabel"
+        Fecha_CompraLabel.Size = New System.Drawing.Size(79, 13)
+        Fecha_CompraLabel.TabIndex = 7
+        Fecha_CompraLabel.Text = "Fecha Compra:"
+        '
+        'Fecha_CompraDateTimePicker
+        '
+        Me.Fecha_CompraDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.MPBindingSource, "Fecha_Compra", True))
+        Me.Fecha_CompraDateTimePicker.Location = New System.Drawing.Point(837, 112)
+        Me.Fecha_CompraDateTimePicker.Name = "Fecha_CompraDateTimePicker"
+        Me.Fecha_CompraDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_CompraDateTimePicker.TabIndex = 8
+        '
+        'CantidadLabel
+        '
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Location = New System.Drawing.Point(752, 141)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(52, 13)
+        CantidadLabel.TabIndex = 9
+        CantidadLabel.Text = "Cantidad:"
+        '
+        'CantidadTextBox
+        '
+        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Cantidad", True))
+        Me.CantidadTextBox.Location = New System.Drawing.Point(837, 138)
+        Me.CantidadTextBox.Name = "CantidadTextBox"
+        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CantidadTextBox.TabIndex = 10
+        '
+        'Costo_UnitarioLabel
+        '
+        Costo_UnitarioLabel.AutoSize = True
+        Costo_UnitarioLabel.Location = New System.Drawing.Point(752, 167)
+        Costo_UnitarioLabel.Name = "Costo_UnitarioLabel"
+        Costo_UnitarioLabel.Size = New System.Drawing.Size(76, 13)
+        Costo_UnitarioLabel.TabIndex = 11
+        Costo_UnitarioLabel.Text = "Costo Unitario:"
+        '
+        'Costo_UnitarioTextBox
+        '
+        Me.Costo_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Unitario", True))
+        Me.Costo_UnitarioTextBox.Location = New System.Drawing.Point(837, 164)
+        Me.Costo_UnitarioTextBox.Name = "Costo_UnitarioTextBox"
+        Me.Costo_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Costo_UnitarioTextBox.TabIndex = 12
+        '
+        'Costo_Sin_IVALabel
+        '
+        Costo_Sin_IVALabel.AutoSize = True
+        Costo_Sin_IVALabel.Location = New System.Drawing.Point(752, 193)
+        Costo_Sin_IVALabel.Name = "Costo_Sin_IVALabel"
+        Costo_Sin_IVALabel.Size = New System.Drawing.Size(75, 13)
+        Costo_Sin_IVALabel.TabIndex = 13
+        Costo_Sin_IVALabel.Text = "Costo Sin IVA:"
+        '
+        'Costo_Sin_IVATextBox
+        '
+        Me.Costo_Sin_IVATextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Sin_IVA", True))
+        Me.Costo_Sin_IVATextBox.Location = New System.Drawing.Point(837, 190)
+        Me.Costo_Sin_IVATextBox.Name = "Costo_Sin_IVATextBox"
+        Me.Costo_Sin_IVATextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Costo_Sin_IVATextBox.TabIndex = 14
+        '
+        'IVA_UnitarioLabel
+        '
+        IVA_UnitarioLabel.AutoSize = True
+        IVA_UnitarioLabel.Location = New System.Drawing.Point(752, 219)
+        IVA_UnitarioLabel.Name = "IVA_UnitarioLabel"
+        IVA_UnitarioLabel.Size = New System.Drawing.Size(66, 13)
+        IVA_UnitarioLabel.TabIndex = 15
+        IVA_UnitarioLabel.Text = "IVA Unitario:"
+        '
+        'IVA_UnitarioTextBox
+        '
+        Me.IVA_UnitarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "IVA_Unitario", True))
+        Me.IVA_UnitarioTextBox.Location = New System.Drawing.Point(837, 216)
+        Me.IVA_UnitarioTextBox.Name = "IVA_UnitarioTextBox"
+        Me.IVA_UnitarioTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.IVA_UnitarioTextBox.TabIndex = 16
+        '
+        'Costo_TotalLabel
+        '
+        Costo_TotalLabel.AutoSize = True
+        Costo_TotalLabel.Location = New System.Drawing.Point(752, 245)
+        Costo_TotalLabel.Name = "Costo_TotalLabel"
+        Costo_TotalLabel.Size = New System.Drawing.Size(64, 13)
+        Costo_TotalLabel.TabIndex = 17
+        Costo_TotalLabel.Text = "Costo Total:"
+        '
+        'Costo_TotalTextBox
+        '
+        Me.Costo_TotalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MPBindingSource, "Costo_Total", True))
+        Me.Costo_TotalTextBox.Location = New System.Drawing.Point(837, 242)
+        Me.Costo_TotalTextBox.Name = "Costo_TotalTextBox"
+        Me.Costo_TotalTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Costo_TotalTextBox.TabIndex = 18
+        '
+        'MPDataGridView
+        '
+        Me.MPDataGridView.AutoGenerateColumns = False
+        Me.MPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.MPDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.MPDataGridView.DataSource = Me.MPBindingSource
+        Me.MPDataGridView.Location = New System.Drawing.Point(0, 38)
+        Me.MPDataGridView.Name = "MPDataGridView"
+        Me.MPDataGridView.Size = New System.Drawing.Size(735, 220)
+        Me.MPDataGridView.TabIndex = 19
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id_Ingrediente"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id_Ingrediente"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Categoria"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Categoria"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Fecha_Compra"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Fecha_Compra"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Cantidad"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Cantidad"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Costo_Unitario"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Costo_Unitario"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Costo_Sin_IVA"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Costo_Sin_IVA"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "IVA_Unitario"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "IVA_Unitario"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Costo_Total"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Costo_Total"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
         '
         'materia_prima_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1049, 390)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(1074, 354)
+        Me.Controls.Add(Me.MPDataGridView)
         Me.Controls.Add(Id_IngredienteLabel)
         Me.Controls.Add(Me.Id_IngredienteTextBox)
         Me.Controls.Add(NombreLabel)
@@ -393,56 +454,64 @@ Partial Class materia_prima_form
         Me.Controls.Add(Me.CategoriaTextBox)
         Me.Controls.Add(Fecha_CompraLabel)
         Me.Controls.Add(Me.Fecha_CompraDateTimePicker)
-        Me.Controls.Add(Fecha_VencimientoLabel)
-        Me.Controls.Add(Me.Fecha_VencimientoDateTimePicker)
-        Me.Controls.Add(Unidad_MedidaLabel)
-        Me.Controls.Add(Me.Unidad_MedidaTextBox)
         Me.Controls.Add(CantidadLabel)
         Me.Controls.Add(Me.CantidadTextBox)
         Me.Controls.Add(Costo_UnitarioLabel)
         Me.Controls.Add(Me.Costo_UnitarioTextBox)
+        Me.Controls.Add(Costo_Sin_IVALabel)
+        Me.Controls.Add(Me.Costo_Sin_IVATextBox)
         Me.Controls.Add(IVA_UnitarioLabel)
         Me.Controls.Add(Me.IVA_UnitarioTextBox)
         Me.Controls.Add(Costo_TotalLabel)
         Me.Controls.Add(Me.Costo_TotalTextBox)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.MPBindingNavigator)
         Me.Name = "materia_prima_form"
         Me.Text = "materia_prima_form"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Delis_CakeDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MPBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DelisCakeSet4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MPBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MPBindingNavigator.ResumeLayout(False)
+        Me.MPBindingNavigator.PerformLayout()
+        CType(Me.MPDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents DelisCakeSet4 As DelisCakeSet4
+    Friend WithEvents Delis_CakeDataSet As Delis_CakeDataSet
     Friend WithEvents MPBindingSource As BindingSource
-    Friend WithEvents MPTableAdapter As DelisCakeSet4TableAdapters.MPTableAdapter
-    Friend WithEvents IdIngredienteDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CategoriaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaCompraDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FechaVencimientoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents UnidadMedidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CantidadDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CostoUnitarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IVAUnitarioDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CostoTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TableAdapterManager As DelisCakeSet4TableAdapters.TableAdapterManager
+    Friend WithEvents MPTableAdapter As Delis_CakeDataSetTableAdapters.MPTableAdapter
+    Friend WithEvents TableAdapterManager As Delis_CakeDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents MPBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents MPBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Id_IngredienteTextBox As TextBox
     Friend WithEvents NombreTextBox As TextBox
     Friend WithEvents CategoriaTextBox As TextBox
     Friend WithEvents Fecha_CompraDateTimePicker As DateTimePicker
-    Friend WithEvents Fecha_VencimientoDateTimePicker As DateTimePicker
-    Friend WithEvents Unidad_MedidaTextBox As TextBox
     Friend WithEvents CantidadTextBox As TextBox
     Friend WithEvents Costo_UnitarioTextBox As TextBox
+    Friend WithEvents Costo_Sin_IVATextBox As TextBox
     Friend WithEvents IVA_UnitarioTextBox As TextBox
     Friend WithEvents Costo_TotalTextBox As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents MPDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
 End Class

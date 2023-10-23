@@ -396,13 +396,11 @@ Partial Public Class Delis_CakeDataSet
         
         Private columnFecha_Compra As Global.System.Data.DataColumn
         
-        Private columnFecha_Vencimiento As Global.System.Data.DataColumn
-        
-        Private columnUnidad_Medida As Global.System.Data.DataColumn
-        
         Private columnCantidad As Global.System.Data.DataColumn
         
         Private columnCosto_Unitario As Global.System.Data.DataColumn
+        
+        Private columnCosto_Sin_IVA As Global.System.Data.DataColumn
         
         Private columnIVA_Unitario As Global.System.Data.DataColumn
         
@@ -477,22 +475,6 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Fecha_VencimientoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFecha_Vencimiento
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Unidad_MedidaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnUnidad_Medida
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property CantidadColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCantidad
@@ -504,6 +486,14 @@ Partial Public Class Delis_CakeDataSet
         Public ReadOnly Property Costo_UnitarioColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCosto_Unitario
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Costo_Sin_IVAColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCosto_Sin_IVA
             End Get
         End Property
         
@@ -560,9 +550,9 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddMPRow(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Date, ByVal Fecha_Vencimiento As Date, ByVal Unidad_Medida As String, ByVal Cantidad As Integer, ByVal Costo_Unitario As Double, ByVal IVA_Unitario As Double, ByVal Costo_Total As Double) As MPRow
+        Public Overloads Function AddMPRow(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Date, ByVal Cantidad As Integer, ByVal Costo_Unitario As Double, ByVal Costo_Sin_IVA As Double, ByVal IVA_Unitario As Double, ByVal Costo_Total As Double) As MPRow
             Dim rowMPRow As MPRow = CType(Me.NewRow,MPRow)
-            Dim columnValuesArray() As Object = New Object() {Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, Cantidad, Costo_Unitario, IVA_Unitario, Costo_Total}
+            Dim columnValuesArray() As Object = New Object() {Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Cantidad, Costo_Unitario, Costo_Sin_IVA, IVA_Unitario, Costo_Total}
             rowMPRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMPRow)
             Return rowMPRow
@@ -595,10 +585,9 @@ Partial Public Class Delis_CakeDataSet
             Me.columnNombre = MyBase.Columns("Nombre")
             Me.columnCategoria = MyBase.Columns("Categoria")
             Me.columnFecha_Compra = MyBase.Columns("Fecha_Compra")
-            Me.columnFecha_Vencimiento = MyBase.Columns("Fecha_Vencimiento")
-            Me.columnUnidad_Medida = MyBase.Columns("Unidad_Medida")
             Me.columnCantidad = MyBase.Columns("Cantidad")
             Me.columnCosto_Unitario = MyBase.Columns("Costo_Unitario")
+            Me.columnCosto_Sin_IVA = MyBase.Columns("Costo_Sin_IVA")
             Me.columnIVA_Unitario = MyBase.Columns("IVA_Unitario")
             Me.columnCosto_Total = MyBase.Columns("Costo_Total")
         End Sub
@@ -614,14 +603,12 @@ Partial Public Class Delis_CakeDataSet
             MyBase.Columns.Add(Me.columnCategoria)
             Me.columnFecha_Compra = New Global.System.Data.DataColumn("Fecha_Compra", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFecha_Compra)
-            Me.columnFecha_Vencimiento = New Global.System.Data.DataColumn("Fecha_Vencimiento", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFecha_Vencimiento)
-            Me.columnUnidad_Medida = New Global.System.Data.DataColumn("Unidad_Medida", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnUnidad_Medida)
             Me.columnCantidad = New Global.System.Data.DataColumn("Cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCantidad)
             Me.columnCosto_Unitario = New Global.System.Data.DataColumn("Costo_Unitario", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCosto_Unitario)
+            Me.columnCosto_Sin_IVA = New Global.System.Data.DataColumn("Costo_Sin_IVA", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCosto_Sin_IVA)
             Me.columnIVA_Unitario = New Global.System.Data.DataColumn("IVA_Unitario", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIVA_Unitario)
             Me.columnCosto_Total = New Global.System.Data.DataColumn("Costo_Total", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
@@ -633,10 +620,10 @@ Partial Public Class Delis_CakeDataSet
             Me.columnNombre.MaxLength = 50
             Me.columnCategoria.AllowDBNull = false
             Me.columnCategoria.MaxLength = 20
-            Me.columnUnidad_Medida.MaxLength = 10
             Me.columnCantidad.AllowDBNull = false
             Me.columnCosto_Unitario.AllowDBNull = false
-            Me.columnIVA_Unitario.AllowDBNull = false
+            Me.columnCosto_Sin_IVA.ReadOnly = true
+            Me.columnIVA_Unitario.ReadOnly = true
             Me.columnCosto_Total.ReadOnly = true
         End Sub
         
@@ -795,8 +782,6 @@ Partial Public Class Delis_CakeDataSet
         
         Private columnIGSS As Global.System.Data.DataColumn
         
-        Private columnISR As Global.System.Data.DataColumn
-        
         Private columnTotal_Descuentos As Global.System.Data.DataColumn
         
         Private columnImporte_a_Recibir As Global.System.Data.DataColumn
@@ -918,14 +903,6 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property ISRColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnISR
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property Total_DescuentosColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnTotal_Descuentos
@@ -977,9 +954,9 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddPlanillaRow(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Integer, ByVal Horas_Extras As Double, ByVal Bonificacion_Incentivo As Double, ByVal Total_Devengado As Double, ByVal Anticipo As Double, ByVal IGSS As Double, ByVal ISR As Double, ByVal Total_Descuentos As Double, ByVal Importe_a_Recibir As Double) As PlanillaRow
+        Public Overloads Function AddPlanillaRow(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Integer, ByVal Horas_Extras As Double, ByVal Bonificacion_Incentivo As Double, ByVal Total_Devengado As Double, ByVal Anticipo As Double, ByVal IGSS As Double, ByVal Total_Descuentos As Double, ByVal Importe_a_Recibir As Double) As PlanillaRow
             Dim rowPlanillaRow As PlanillaRow = CType(Me.NewRow,PlanillaRow)
-            Dim columnValuesArray() As Object = New Object() {Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Horas_Extras, Bonificacion_Incentivo, Total_Devengado, Anticipo, IGSS, ISR, Total_Descuentos, Importe_a_Recibir}
+            Dim columnValuesArray() As Object = New Object() {Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Horas_Extras, Bonificacion_Incentivo, Total_Devengado, Anticipo, IGSS, Total_Descuentos, Importe_a_Recibir}
             rowPlanillaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowPlanillaRow)
             Return rowPlanillaRow
@@ -1018,7 +995,6 @@ Partial Public Class Delis_CakeDataSet
             Me.columnTotal_Devengado = MyBase.Columns("Total_Devengado")
             Me.columnAnticipo = MyBase.Columns("Anticipo")
             Me.columnIGSS = MyBase.Columns("IGSS")
-            Me.columnISR = MyBase.Columns("ISR")
             Me.columnTotal_Descuentos = MyBase.Columns("Total_Descuentos")
             Me.columnImporte_a_Recibir = MyBase.Columns("Importe_a_Recibir")
         End Sub
@@ -1046,8 +1022,6 @@ Partial Public Class Delis_CakeDataSet
             MyBase.Columns.Add(Me.columnAnticipo)
             Me.columnIGSS = New Global.System.Data.DataColumn("IGSS", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnIGSS)
-            Me.columnISR = New Global.System.Data.DataColumn("ISR", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnISR)
             Me.columnTotal_Descuentos = New Global.System.Data.DataColumn("Total_Descuentos", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTotal_Descuentos)
             Me.columnImporte_a_Recibir = New Global.System.Data.DataColumn("Importe_a_Recibir", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
@@ -1062,7 +1036,7 @@ Partial Public Class Delis_CakeDataSet
             Me.columnSalario.AllowDBNull = false
             Me.columnHoras_Extras.ReadOnly = true
             Me.columnTotal_Devengado.ReadOnly = true
-            Me.columnIGSS.AllowDBNull = false
+            Me.columnIGSS.ReadOnly = true
             Me.columnTotal_Descuentos.ReadOnly = true
             Me.columnImporte_a_Recibir.ReadOnly = true
         End Sub
@@ -1642,10 +1616,6 @@ Partial Public Class Delis_CakeDataSet
         
         Private columnCantidad_Total As Global.System.Data.DataColumn
         
-        Private columnFecha_Elaboracion As Global.System.Data.DataColumn
-        
-        Private columnFecha_Vencimiento As Global.System.Data.DataColumn
-        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -1714,22 +1684,6 @@ Partial Public Class Delis_CakeDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Fecha_ElaboracionColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFecha_Elaboracion
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property Fecha_VencimientoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnFecha_Vencimiento
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1766,9 +1720,9 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddProductos_TerminadosRow(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Fecha_Elaboracion As Date, ByVal Fecha_Vencimiento As Date) As Productos_TerminadosRow
+        Public Overloads Function AddProductos_TerminadosRow(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer) As Productos_TerminadosRow
             Dim rowProductos_TerminadosRow As Productos_TerminadosRow = CType(Me.NewRow,Productos_TerminadosRow)
-            Dim columnValuesArray() As Object = New Object() {Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Fecha_Elaboracion, Fecha_Vencimiento}
+            Dim columnValuesArray() As Object = New Object() {Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total}
             rowProductos_TerminadosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowProductos_TerminadosRow)
             Return rowProductos_TerminadosRow
@@ -1801,8 +1755,6 @@ Partial Public Class Delis_CakeDataSet
             Me.columnNombre = MyBase.Columns("Nombre")
             Me.columnPrecio_Venta = MyBase.Columns("Precio_Venta")
             Me.columnCantidad_Total = MyBase.Columns("Cantidad_Total")
-            Me.columnFecha_Elaboracion = MyBase.Columns("Fecha_Elaboracion")
-            Me.columnFecha_Vencimiento = MyBase.Columns("Fecha_Vencimiento")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1816,10 +1768,6 @@ Partial Public Class Delis_CakeDataSet
             MyBase.Columns.Add(Me.columnPrecio_Venta)
             Me.columnCantidad_Total = New Global.System.Data.DataColumn("Cantidad_Total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCantidad_Total)
-            Me.columnFecha_Elaboracion = New Global.System.Data.DataColumn("Fecha_Elaboracion", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFecha_Elaboracion)
-            Me.columnFecha_Vencimiento = New Global.System.Data.DataColumn("Fecha_Vencimiento", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnFecha_Vencimiento)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId_Producto_Terminado}, true))
             Me.columnId_Producto_Terminado.AllowDBNull = false
             Me.columnId_Producto_Terminado.Unique = true
@@ -1827,8 +1775,6 @@ Partial Public Class Delis_CakeDataSet
             Me.columnNombre.MaxLength = 50
             Me.columnPrecio_Venta.AllowDBNull = false
             Me.columnCantidad_Total.AllowDBNull = false
-            Me.columnFecha_Elaboracion.ReadOnly = true
-            Me.columnFecha_Vencimiento.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2023,36 +1969,6 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Fecha_Vencimiento() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableMP.Fecha_VencimientoColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha_Vencimiento' in table 'MP' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableMP.Fecha_VencimientoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Unidad_Medida() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableMP.Unidad_MedidaColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Unidad_Medida' in table 'MP' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableMP.Unidad_MedidaColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property Cantidad() As Integer
             Get
                 Return CType(Me(Me.tableMP.CantidadColumn),Integer)
@@ -2075,9 +1991,28 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Costo_Sin_IVA() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableMP.Costo_Sin_IVAColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Costo_Sin_IVA' in table 'MP' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableMP.Costo_Sin_IVAColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property IVA_Unitario() As Double
             Get
-                Return CType(Me(Me.tableMP.IVA_UnitarioColumn),Double)
+                Try 
+                    Return CType(Me(Me.tableMP.IVA_UnitarioColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IVA_Unitario' in table 'MP' is DBNull.", e)
+                End Try
             End Get
             Set
                 Me(Me.tableMP.IVA_UnitarioColumn) = value
@@ -2113,26 +2048,26 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsFecha_VencimientoNull() As Boolean
-            Return Me.IsNull(Me.tableMP.Fecha_VencimientoColumn)
+        Public Function IsCosto_Sin_IVANull() As Boolean
+            Return Me.IsNull(Me.tableMP.Costo_Sin_IVAColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetFecha_VencimientoNull()
-            Me(Me.tableMP.Fecha_VencimientoColumn) = Global.System.Convert.DBNull
+        Public Sub SetCosto_Sin_IVANull()
+            Me(Me.tableMP.Costo_Sin_IVAColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsUnidad_MedidaNull() As Boolean
-            Return Me.IsNull(Me.tableMP.Unidad_MedidaColumn)
+        Public Function IsIVA_UnitarioNull() As Boolean
+            Return Me.IsNull(Me.tableMP.IVA_UnitarioColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetUnidad_MedidaNull()
-            Me(Me.tableMP.Unidad_MedidaColumn) = Global.System.Convert.DBNull
+        Public Sub SetIVA_UnitarioNull()
+            Me(Me.tableMP.IVA_UnitarioColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2286,25 +2221,14 @@ Partial Public Class Delis_CakeDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property IGSS() As Double
             Get
-                Return CType(Me(Me.tablePlanilla.IGSSColumn),Double)
-            End Get
-            Set
-                Me(Me.tablePlanilla.IGSSColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property ISR() As Double
-            Get
                 Try 
-                    Return CType(Me(Me.tablePlanilla.ISRColumn),Double)
+                    Return CType(Me(Me.tablePlanilla.IGSSColumn),Double)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ISR' in table 'Planilla' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IGSS' in table 'Planilla' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablePlanilla.ISRColumn) = value
+                Me(Me.tablePlanilla.IGSSColumn) = value
             End Set
         End Property
         
@@ -2400,14 +2324,14 @@ Partial Public Class Delis_CakeDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsISRNull() As Boolean
-            Return Me.IsNull(Me.tablePlanilla.ISRColumn)
+        Public Function IsIGSSNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla.IGSSColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetISRNull()
-            Me(Me.tablePlanilla.ISRColumn) = Global.System.Convert.DBNull
+        Public Sub SetIGSSNull()
+            Me(Me.tablePlanilla.IGSSColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2748,62 +2672,6 @@ Partial Public Class Delis_CakeDataSet
                 Me(Me.tableProductos_Terminados.Cantidad_TotalColumn) = value
             End Set
         End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Fecha_Elaboracion() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableProductos_Terminados.Fecha_ElaboracionColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha_Elaboracion' in table 'Productos_Terminados' is DBNul"& _ 
-                            "l.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableProductos_Terminados.Fecha_ElaboracionColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property Fecha_Vencimiento() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableProductos_Terminados.Fecha_VencimientoColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha_Vencimiento' in table 'Productos_Terminados' is DBNul"& _ 
-                            "l.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableProductos_Terminados.Fecha_VencimientoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsFecha_ElaboracionNull() As Boolean
-            Return Me.IsNull(Me.tableProductos_Terminados.Fecha_ElaboracionColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetFecha_ElaboracionNull()
-            Me(Me.tableProductos_Terminados.Fecha_ElaboracionColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function IsFecha_VencimientoNull() As Boolean
-            Return Me.IsNull(Me.tableProductos_Terminados.Fecha_VencimientoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Sub SetFecha_VencimientoNull()
-            Me(Me.tableProductos_Terminados.Fecha_VencimientoColumn) = Global.System.Convert.DBNull
-        End Sub
     End Class
     
     '''<summary>
@@ -3084,10 +2952,9 @@ Namespace Delis_CakeDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
             tableMapping.ColumnMappings.Add("Categoria", "Categoria")
             tableMapping.ColumnMappings.Add("Fecha_Compra", "Fecha_Compra")
-            tableMapping.ColumnMappings.Add("Fecha_Vencimiento", "Fecha_Vencimiento")
-            tableMapping.ColumnMappings.Add("Unidad_Medida", "Unidad_Medida")
             tableMapping.ColumnMappings.Add("Cantidad", "Cantidad")
             tableMapping.ColumnMappings.Add("Costo_Unitario", "Costo_Unitario")
+            tableMapping.ColumnMappings.Add("Costo_Sin_IVA", "Costo_Sin_IVA")
             tableMapping.ColumnMappings.Add("IVA_Unitario", "IVA_Unitario")
             tableMapping.ColumnMappings.Add("Costo_Total", "Costo_Total")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -3096,83 +2963,69 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MP] WHERE (([Id_Ingrediente] = @Original_Id_Ingrediente) AND ("& _ 
                 "[Nombre] = @Original_Nombre) AND ([Categoria] = @Original_Categoria) AND ((@IsNu"& _ 
                 "ll_Fecha_Compra = 1 AND [Fecha_Compra] IS NULL) OR ([Fecha_Compra] = @Original_F"& _ 
-                "echa_Compra)) AND ((@IsNull_Fecha_Vencimiento = 1 AND [Fecha_Vencimiento] IS NUL"& _ 
-                "L) OR ([Fecha_Vencimiento] = @Original_Fecha_Vencimiento)) AND ((@IsNull_Unidad_"& _ 
-                "Medida = 1 AND [Unidad_Medida] IS NULL) OR ([Unidad_Medida] = @Original_Unidad_M"& _ 
-                "edida)) AND ([Cantidad] = @Original_Cantidad) AND ([Costo_Unitario] = @Original_"& _ 
-                "Costo_Unitario) AND ([IVA_Unitario] = @Original_IVA_Unitario) AND ([Costo_Total]"& _ 
-                " = @Original_Costo_Total))"
+                "echa_Compra)) AND ([Cantidad] = @Original_Cantidad) AND ([Costo_Unitario] = @Ori"& _ 
+                "ginal_Costo_Unitario) AND ((@IsNull_Costo_Sin_IVA = 1 AND [Costo_Sin_IVA] IS NUL"& _ 
+                "L) OR ([Costo_Sin_IVA] = @Original_Costo_Sin_IVA)) AND ((@IsNull_IVA_Unitario = "& _ 
+                "1 AND [IVA_Unitario] IS NULL) OR ([IVA_Unitario] = @Original_IVA_Unitario)) AND "& _ 
+                "([Costo_Total] = @Original_Costo_Total))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Ingrediente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Ingrediente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Categoria", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Categoria", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Compra", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Compra", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Vencimiento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Unidad_Medida", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Unidad_Medida", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cantidad", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Unitario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Costo_Sin_IVA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Sin_IVA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Sin_IVA", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Sin_IVA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IVA_Unitario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IVA_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Total", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MP] ([Id_Ingrediente], [Nombre], [Categoria], [Fecha_Compra], "& _ 
-                "[Fecha_Vencimiento], [Unidad_Medida], [Cantidad], [Costo_Unitario], [IVA_Unitari"& _ 
-                "o]) VALUES (@Id_Ingrediente, @Nombre, @Categoria, @Fecha_Compra, @Fecha_Vencimie"& _ 
-                "nto, @Unidad_Medida, @Cantidad, @Costo_Unitario, @IVA_Unitario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Ingr"& _ 
-                "ediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, Cant"& _ 
-                "idad, Costo_Unitario, IVA_Unitario, Costo_Total FROM MP WHERE (Id_Ingrediente = "& _ 
-                "@Id_Ingrediente)"
+                "[Cantidad], [Costo_Unitario]) VALUES (@Id_Ingrediente, @Nombre, @Categoria, @Fec"& _ 
+                "ha_Compra, @Cantidad, @Costo_Unitario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Ingrediente, Nombre, Categori"& _ 
+                "a, Fecha_Compra, Cantidad, Costo_Unitario, Costo_Sin_IVA, IVA_Unitario, Costo_To"& _ 
+                "tal FROM MP WHERE (Id_Ingrediente = @Id_Ingrediente)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Ingrediente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Ingrediente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Categoria", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Categoria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Compra", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Unidad_Medida", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cantidad", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Costo_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IVA_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MP] SET [Id_Ingrediente] = @Id_Ingrediente, [Nombre] = @Nombre, [Ca"& _ 
-                "tegoria] = @Categoria, [Fecha_Compra] = @Fecha_Compra, [Fecha_Vencimiento] = @Fe"& _ 
-                "cha_Vencimiento, [Unidad_Medida] = @Unidad_Medida, [Cantidad] = @Cantidad, [Cost"& _ 
-                "o_Unitario] = @Costo_Unitario, [IVA_Unitario] = @IVA_Unitario WHERE (([Id_Ingred"& _ 
-                "iente] = @Original_Id_Ingrediente) AND ([Nombre] = @Original_Nombre) AND ([Categ"& _ 
-                "oria] = @Original_Categoria) AND ((@IsNull_Fecha_Compra = 1 AND [Fecha_Compra] I"& _ 
-                "S NULL) OR ([Fecha_Compra] = @Original_Fecha_Compra)) AND ((@IsNull_Fecha_Vencim"& _ 
-                "iento = 1 AND [Fecha_Vencimiento] IS NULL) OR ([Fecha_Vencimiento] = @Original_F"& _ 
-                "echa_Vencimiento)) AND ((@IsNull_Unidad_Medida = 1 AND [Unidad_Medida] IS NULL) "& _ 
-                "OR ([Unidad_Medida] = @Original_Unidad_Medida)) AND ([Cantidad] = @Original_Cant"& _ 
-                "idad) AND ([Costo_Unitario] = @Original_Costo_Unitario) AND ([IVA_Unitario] = @O"& _ 
-                "riginal_IVA_Unitario) AND ([Costo_Total] = @Original_Costo_Total));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_I"& _ 
-                "ngrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, C"& _ 
-                "antidad, Costo_Unitario, IVA_Unitario, Costo_Total FROM MP WHERE (Id_Ingrediente"& _ 
-                " = @Id_Ingrediente)"
+                "tegoria] = @Categoria, [Fecha_Compra] = @Fecha_Compra, [Cantidad] = @Cantidad, ["& _ 
+                "Costo_Unitario] = @Costo_Unitario WHERE (([Id_Ingrediente] = @Original_Id_Ingred"& _ 
+                "iente) AND ([Nombre] = @Original_Nombre) AND ([Categoria] = @Original_Categoria)"& _ 
+                " AND ((@IsNull_Fecha_Compra = 1 AND [Fecha_Compra] IS NULL) OR ([Fecha_Compra] ="& _ 
+                " @Original_Fecha_Compra)) AND ([Cantidad] = @Original_Cantidad) AND ([Costo_Unit"& _ 
+                "ario] = @Original_Costo_Unitario) AND ((@IsNull_Costo_Sin_IVA = 1 AND [Costo_Sin"& _ 
+                "_IVA] IS NULL) OR ([Costo_Sin_IVA] = @Original_Costo_Sin_IVA)) AND ((@IsNull_IVA"& _ 
+                "_Unitario = 1 AND [IVA_Unitario] IS NULL) OR ([IVA_Unitario] = @Original_IVA_Uni"& _ 
+                "tario)) AND ([Costo_Total] = @Original_Costo_Total));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Ingrediente, No"& _ 
+                "mbre, Categoria, Fecha_Compra, Cantidad, Costo_Unitario, Costo_Sin_IVA, IVA_Unit"& _ 
+                "ario, Costo_Total FROM MP WHERE (Id_Ingrediente = @Id_Ingrediente)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Ingrediente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Ingrediente", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Categoria", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Categoria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Compra", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Unidad_Medida", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cantidad", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Costo_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IVA_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Ingrediente", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Ingrediente", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Categoria", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Categoria", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Compra", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Compra", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Compra", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Vencimiento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Unidad_Medida", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Unidad_Medida", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Unidad_Medida", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cantidad", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Unitario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Costo_Sin_IVA", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Sin_IVA", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Sin_IVA", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Sin_IVA", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IVA_Unitario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IVA_Unitario", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IVA_Unitario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Costo_Total", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Costo_Total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
@@ -3190,8 +3043,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad"& _ 
-                "_Medida, Cantidad, Costo_Unitario, IVA_Unitario, Costo_Total FROM dbo.MP"
+            Me._commandCollection(0).CommandText = "SELECT Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Cantidad, Costo_Unitario,"& _ 
+                " Costo_Sin_IVA, IVA_Unitario, Costo_Total FROM dbo.MP"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3251,7 +3104,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id_Ingrediente As Integer, ByVal Original_Nombre As String, ByVal Original_Categoria As String, ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date), ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date), ByVal Original_Unidad_Medida As String, ByVal Original_Cantidad As Integer, ByVal Original_Costo_Unitario As Double, ByVal Original_IVA_Unitario As Double, ByVal Original_Costo_Total As Double) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id_Ingrediente As Integer, ByVal Original_Nombre As String, ByVal Original_Categoria As String, ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date), ByVal Original_Cantidad As Integer, ByVal Original_Costo_Unitario As Double, ByVal Original_Costo_Sin_IVA As Global.System.Nullable(Of Double), ByVal Original_IVA_Unitario As Global.System.Nullable(Of Double), ByVal Original_Costo_Total As Double) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id_Ingrediente,Integer)
             If (Original_Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre")
@@ -3270,24 +3123,23 @@ Namespace Delis_CakeDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            If (Original_Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Fecha_Vencimiento.Value,Date)
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Cantidad,Integer)
+            Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Costo_Unitario,Double)
+            If (Original_Costo_Sin_IVA.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Costo_Sin_IVA.Value,Double)
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Unidad_Medida Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Unidad_Medida,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Cantidad,Integer)
-            Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Costo_Unitario,Double)
-            Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_IVA_Unitario,Double)
-            Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Costo_Total,Double)
+            If (Original_IVA_Unitario.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_IVA_Unitario.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_Costo_Total,Double)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3307,7 +3159,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Global.System.Nullable(Of Date), ByVal Fecha_Vencimiento As Global.System.Nullable(Of Date), ByVal Unidad_Medida As String, ByVal Cantidad As Integer, ByVal Costo_Unitario As Double, ByVal IVA_Unitario As Double) As Integer
+        Public Overloads Overridable Function Insert(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Global.System.Nullable(Of Date), ByVal Cantidad As Integer, ByVal Costo_Unitario As Double) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id_Ingrediente,Integer)
             If (Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Nombre")
@@ -3324,19 +3176,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Fecha_Vencimiento.Value,Date)
-            Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Unidad_Medida Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Unidad_Medida,String)
-            End If
-            Me.Adapter.InsertCommand.Parameters(6).Value = CType(Cantidad,Integer)
-            Me.Adapter.InsertCommand.Parameters(7).Value = CType(Costo_Unitario,Double)
-            Me.Adapter.InsertCommand.Parameters(8).Value = CType(IVA_Unitario,Double)
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(Cantidad,Integer)
+            Me.Adapter.InsertCommand.Parameters(5).Value = CType(Costo_Unitario,Double)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3356,26 +3197,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal Id_Ingrediente As Integer,  _
-                    ByVal Nombre As String,  _
-                    ByVal Categoria As String,  _
-                    ByVal Fecha_Compra As Global.System.Nullable(Of Date),  _
-                    ByVal Fecha_Vencimiento As Global.System.Nullable(Of Date),  _
-                    ByVal Unidad_Medida As String,  _
-                    ByVal Cantidad As Integer,  _
-                    ByVal Costo_Unitario As Double,  _
-                    ByVal IVA_Unitario As Double,  _
-                    ByVal Original_Id_Ingrediente As Integer,  _
-                    ByVal Original_Nombre As String,  _
-                    ByVal Original_Categoria As String,  _
-                    ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Unidad_Medida As String,  _
-                    ByVal Original_Cantidad As Integer,  _
-                    ByVal Original_Costo_Unitario As Double,  _
-                    ByVal Original_IVA_Unitario As Double,  _
-                    ByVal Original_Costo_Total As Double) As Integer
+        Public Overloads Overridable Function Update(ByVal Id_Ingrediente As Integer, ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Global.System.Nullable(Of Date), ByVal Cantidad As Integer, ByVal Costo_Unitario As Double, ByVal Original_Id_Ingrediente As Integer, ByVal Original_Nombre As String, ByVal Original_Categoria As String, ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date), ByVal Original_Cantidad As Integer, ByVal Original_Costo_Unitario As Double, ByVal Original_Costo_Sin_IVA As Global.System.Nullable(Of Double), ByVal Original_IVA_Unitario As Global.System.Nullable(Of Double), ByVal Original_Costo_Total As Double) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id_Ingrediente,Integer)
             If (Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Nombre")
@@ -3392,55 +3214,43 @@ Namespace Delis_CakeDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            If (Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Fecha_Vencimiento.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
-            End If
-            If (Unidad_Medida Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Unidad_Medida,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Cantidad,Integer)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Costo_Unitario,Double)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(IVA_Unitario,Double)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Id_Ingrediente,Integer)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Cantidad,Integer)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Costo_Unitario,Double)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Id_Ingrediente,Integer)
             If (Original_Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Nombre,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Nombre,String)
             End If
             If (Original_Categoria Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Categoria")
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Categoria,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Categoria,String)
             End If
             If (Original_Fecha_Compra.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Fecha_Compra.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Fecha_Compra.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
-            If (Original_Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Fecha_Vencimiento.Value,Date)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Cantidad,Integer)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Costo_Unitario,Double)
+            If (Original_Costo_Sin_IVA.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Costo_Sin_IVA.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            If (Original_Unidad_Medida Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            If (Original_IVA_Unitario.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_IVA_Unitario.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Unidad_Medida,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Cantidad,Integer)
-            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Costo_Unitario,Double)
-            Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_IVA_Unitario,Double)
-            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Costo_Total,Double)
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Costo_Total,Double)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3460,26 +3270,8 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update( _
-                    ByVal Nombre As String,  _
-                    ByVal Categoria As String,  _
-                    ByVal Fecha_Compra As Global.System.Nullable(Of Date),  _
-                    ByVal Fecha_Vencimiento As Global.System.Nullable(Of Date),  _
-                    ByVal Unidad_Medida As String,  _
-                    ByVal Cantidad As Integer,  _
-                    ByVal Costo_Unitario As Double,  _
-                    ByVal IVA_Unitario As Double,  _
-                    ByVal Original_Id_Ingrediente As Integer,  _
-                    ByVal Original_Nombre As String,  _
-                    ByVal Original_Categoria As String,  _
-                    ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Unidad_Medida As String,  _
-                    ByVal Original_Cantidad As Integer,  _
-                    ByVal Original_Costo_Unitario As Double,  _
-                    ByVal Original_IVA_Unitario As Double,  _
-                    ByVal Original_Costo_Total As Double) As Integer
-            Return Me.Update(Original_Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Fecha_Vencimiento, Unidad_Medida, Cantidad, Costo_Unitario, IVA_Unitario, Original_Id_Ingrediente, Original_Nombre, Original_Categoria, Original_Fecha_Compra, Original_Fecha_Vencimiento, Original_Unidad_Medida, Original_Cantidad, Original_Costo_Unitario, Original_IVA_Unitario, Original_Costo_Total)
+        Public Overloads Overridable Function Update(ByVal Nombre As String, ByVal Categoria As String, ByVal Fecha_Compra As Global.System.Nullable(Of Date), ByVal Cantidad As Integer, ByVal Costo_Unitario As Double, ByVal Original_Id_Ingrediente As Integer, ByVal Original_Nombre As String, ByVal Original_Categoria As String, ByVal Original_Fecha_Compra As Global.System.Nullable(Of Date), ByVal Original_Cantidad As Integer, ByVal Original_Costo_Unitario As Double, ByVal Original_Costo_Sin_IVA As Global.System.Nullable(Of Double), ByVal Original_IVA_Unitario As Global.System.Nullable(Of Double), ByVal Original_Costo_Total As Double) As Integer
+            Return Me.Update(Original_Id_Ingrediente, Nombre, Categoria, Fecha_Compra, Cantidad, Costo_Unitario, Original_Id_Ingrediente, Original_Nombre, Original_Categoria, Original_Fecha_Compra, Original_Cantidad, Original_Costo_Unitario, Original_Costo_Sin_IVA, Original_IVA_Unitario, Original_Costo_Total)
         End Function
     End Class
     
@@ -3620,7 +3412,6 @@ Namespace Delis_CakeDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Total_Devengado", "Total_Devengado")
             tableMapping.ColumnMappings.Add("Anticipo", "Anticipo")
             tableMapping.ColumnMappings.Add("IGSS", "IGSS")
-            tableMapping.ColumnMappings.Add("ISR", "ISR")
             tableMapping.ColumnMappings.Add("Total_Descuentos", "Total_Descuentos")
             tableMapping.ColumnMappings.Add("Importe_a_Recibir", "Importe_a_Recibir")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -3635,12 +3426,11 @@ Namespace Delis_CakeDataSetTableAdapters
                 "ificacion_Incentivo] IS NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificac"& _ 
                 "ion_Incentivo)) AND ((@IsNull_Total_Devengado = 1 AND [Total_Devengado] IS NULL)"& _ 
                 " OR ([Total_Devengado] = @Original_Total_Devengado)) AND ((@IsNull_Anticipo = 1 "& _ 
-                "AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_Anticipo)) AND ([IGSS] = @Ori"& _ 
-                "ginal_IGSS) AND ((@IsNull_ISR = 1 AND [ISR] IS NULL) OR ([ISR] = @Original_ISR))"& _ 
-                " AND ((@IsNull_Total_Descuentos = 1 AND [Total_Descuentos] IS NULL) OR ([Total_D"& _ 
-                "escuentos] = @Original_Total_Descuentos)) AND ((@IsNull_Importe_a_Recibir = 1 AN"& _ 
-                "D [Importe_a_Recibir] IS NULL) OR ([Importe_a_Recibir] = @Original_Importe_a_Rec"& _ 
-                "ibir)))"
+                "AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_Anticipo)) AND ((@IsNull_IGSS"& _ 
+                " = 1 AND [IGSS] IS NULL) OR ([IGSS] = @Original_IGSS)) AND ((@IsNull_Total_Descu"& _ 
+                "entos = 1 AND [Total_Descuentos] IS NULL) OR ([Total_Descuentos] = @Original_Tot"& _ 
+                "al_Descuentos)) AND ((@IsNull_Importe_a_Recibir = 1 AND [Importe_a_Recibir] IS N"& _ 
+                "ULL) OR ([Importe_a_Recibir] = @Original_Importe_a_Recibir)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3656,9 +3446,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Devengado", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Anticipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGSS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ISR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ISR", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Descuentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Descuentos", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Importe_a_Recibir", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3666,12 +3455,12 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Planilla] ([Codigo_Empleado], [Nombre_Completo], [Puesto], [Sa"& _ 
-                "lario], [Num_Horas_Extras], [Bonificacion_Incentivo], [Anticipo], [IGSS], [ISR])"& _ 
-                " VALUES (@Codigo_Empleado, @Nombre_Completo, @Puesto, @Salario, @Num_Horas_Extra"& _ 
-                "s, @Bonificacion_Incentivo, @Anticipo, @IGSS, @ISR);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, No"& _ 
-                "mbre_Completo, Puesto, Salario, Num_Horas_Extras, Horas_Extras, Bonificacion_Inc"& _ 
-                "entivo, Total_Devengado, Anticipo, IGSS, ISR, Total_Descuentos, Importe_a_Recibi"& _ 
-                "r FROM Planilla WHERE (Codigo_Empleado = @Codigo_Empleado)"
+                "lario], [Num_Horas_Extras], [Bonificacion_Incentivo], [Anticipo]) VALUES (@Codig"& _ 
+                "o_Empleado, @Nombre_Completo, @Puesto, @Salario, @Num_Horas_Extras, @Bonificacio"& _ 
+                "n_Incentivo, @Anticipo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salar"& _ 
+                "io, Num_Horas_Extras, Horas_Extras, Bonificacion_Incentivo, Total_Devengado, Ant"& _ 
+                "icipo, IGSS, Total_Descuentos, Importe_a_Recibir FROM Planilla WHERE (Codigo_Emp"& _ 
+                "leado = @Codigo_Empleado)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3680,31 +3469,28 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Num_Horas_Extras", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Num_Horas_Extras", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ISR", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Planilla] SET [Codigo_Empleado] = @Codigo_Empleado, [Nombre_Complet"& _ 
                 "o] = @Nombre_Completo, [Puesto] = @Puesto, [Salario] = @Salario, [Num_Horas_Extr"& _ 
                 "as] = @Num_Horas_Extras, [Bonificacion_Incentivo] = @Bonificacion_Incentivo, [An"& _ 
-                "ticipo] = @Anticipo, [IGSS] = @IGSS, [ISR] = @ISR WHERE (([Codigo_Empleado] = @O"& _ 
-                "riginal_Codigo_Empleado) AND ([Nombre_Completo] = @Original_Nombre_Completo) AND"& _ 
-                " ([Puesto] = @Original_Puesto) AND ([Salario] = @Original_Salario) AND ((@IsNull"& _ 
-                "_Num_Horas_Extras = 1 AND [Num_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @"& _ 
-                "Original_Num_Horas_Extras)) AND ((@IsNull_Horas_Extras = 1 AND [Horas_Extras] IS"& _ 
-                " NULL) OR ([Horas_Extras] = @Original_Horas_Extras)) AND ((@IsNull_Bonificacion_"& _ 
-                "Incentivo = 1 AND [Bonificacion_Incentivo] IS NULL) OR ([Bonificacion_Incentivo]"& _ 
-                " = @Original_Bonificacion_Incentivo)) AND ((@IsNull_Total_Devengado = 1 AND [Tot"& _ 
-                "al_Devengado] IS NULL) OR ([Total_Devengado] = @Original_Total_Devengado)) AND ("& _ 
-                "(@IsNull_Anticipo = 1 AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_Anticip"& _ 
-                "o)) AND ([IGSS] = @Original_IGSS) AND ((@IsNull_ISR = 1 AND [ISR] IS NULL) OR (["& _ 
-                "ISR] = @Original_ISR)) AND ((@IsNull_Total_Descuentos = 1 AND [Total_Descuentos]"& _ 
-                " IS NULL) OR ([Total_Descuentos] = @Original_Total_Descuentos)) AND ((@IsNull_Im"& _ 
-                "porte_a_Recibir = 1 AND [Importe_a_Recibir] IS NULL) OR ([Importe_a_Recibir] = @"& _ 
-                "Original_Importe_a_Recibir)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Completo, Puesto,"& _ 
-                " Salario, Num_Horas_Extras, Horas_Extras, Bonificacion_Incentivo, Total_Devengad"& _ 
-                "o, Anticipo, IGSS, ISR, Total_Descuentos, Importe_a_Recibir FROM Planilla WHERE "& _ 
-                "(Codigo_Empleado = @Codigo_Empleado)"
+                "ticipo] = @Anticipo WHERE (([Codigo_Empleado] = @Original_Codigo_Empleado) AND ("& _ 
+                "[Nombre_Completo] = @Original_Nombre_Completo) AND ([Puesto] = @Original_Puesto)"& _ 
+                " AND ([Salario] = @Original_Salario) AND ((@IsNull_Num_Horas_Extras = 1 AND [Num"& _ 
+                "_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @Original_Num_Horas_Extras)) AN"& _ 
+                "D ((@IsNull_Horas_Extras = 1 AND [Horas_Extras] IS NULL) OR ([Horas_Extras] = @O"& _ 
+                "riginal_Horas_Extras)) AND ((@IsNull_Bonificacion_Incentivo = 1 AND [Bonificacio"& _ 
+                "n_Incentivo] IS NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificacion_Ince"& _ 
+                "ntivo)) AND ((@IsNull_Total_Devengado = 1 AND [Total_Devengado] IS NULL) OR ([To"& _ 
+                "tal_Devengado] = @Original_Total_Devengado)) AND ((@IsNull_Anticipo = 1 AND [Ant"& _ 
+                "icipo] IS NULL) OR ([Anticipo] = @Original_Anticipo)) AND ((@IsNull_IGSS = 1 AND"& _ 
+                " [IGSS] IS NULL) OR ([IGSS] = @Original_IGSS)) AND ((@IsNull_Total_Descuentos = "& _ 
+                "1 AND [Total_Descuentos] IS NULL) OR ([Total_Descuentos] = @Original_Total_Descu"& _ 
+                "entos)) AND ((@IsNull_Importe_a_Recibir = 1 AND [Importe_a_Recibir] IS NULL) OR "& _ 
+                "([Importe_a_Recibir] = @Original_Importe_a_Recibir)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, "& _ 
+                "Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Horas_Extras, Bonificacion_I"& _ 
+                "ncentivo, Total_Devengado, Anticipo, IGSS, Total_Descuentos, Importe_a_Recibir F"& _ 
+                "ROM Planilla WHERE (Codigo_Empleado = @Codigo_Empleado)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3713,8 +3499,6 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Num_Horas_Extras", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Num_Horas_Extras", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ISR", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Puesto", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Puesto", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3729,9 +3513,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Devengado", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Anticipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGSS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_ISR", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_ISR", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ISR", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Descuentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Descuentos", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Importe_a_Recibir", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3752,8 +3535,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Horas"& _ 
-                "_Extras, Bonificacion_Incentivo, Total_Devengado, Anticipo, IGSS, ISR, Total_Des"& _ 
-                "cuentos, Importe_a_Recibir FROM dbo.Planilla"
+                "_Extras, Bonificacion_Incentivo, Total_Devengado, Anticipo, IGSS, Total_Descuent"& _ 
+                "os, Importe_a_Recibir FROM dbo.Planilla"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3813,7 +3596,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Horas_Extras As Global.System.Nullable(Of Double), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Total_Devengado As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double), ByVal Original_IGSS As Double, ByVal Original_ISR As Global.System.Nullable(Of Double), ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double), ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Horas_Extras As Global.System.Nullable(Of Double), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Total_Devengado As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double), ByVal Original_IGSS As Global.System.Nullable(Of Double), ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double), ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Codigo_Empleado,Integer)
             If (Original_Nombre_Completo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre_Completo")
@@ -3861,27 +3644,26 @@ Namespace Delis_CakeDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_IGSS,Double)
-            If (Original_ISR.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_ISR.Value,Double)
+            If (Original_IGSS.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_IGSS.Value,Double)
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
             End If
             If (Original_Total_Descuentos.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Total_Descuentos.Value,Double)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_Total_Descuentos.Value,Double)
             Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
             If (Original_Importe_a_Recibir.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Importe_a_Recibir.Value,Double)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_Importe_a_Recibir.Value,Double)
             Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3902,7 +3684,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double), ByVal IGSS As Double, ByVal ISR As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function Insert(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(Codigo_Empleado,Integer)
             If (Nombre_Completo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Nombre_Completo")
@@ -3929,12 +3711,6 @@ Namespace Delis_CakeDataSetTableAdapters
                 Me.Adapter.InsertCommand.Parameters(6).Value = CType(Anticipo.Value,Double)
             Else
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.InsertCommand.Parameters(7).Value = CType(IGSS,Double)
-            If (ISR.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(ISR.Value,Double)
-            Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3963,8 +3739,6 @@ Namespace Delis_CakeDataSetTableAdapters
                     ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
                     ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
                     ByVal Anticipo As Global.System.Nullable(Of Double),  _
-                    ByVal IGSS As Double,  _
-                    ByVal ISR As Global.System.Nullable(Of Double),  _
                     ByVal Original_Codigo_Empleado As Integer,  _
                     ByVal Original_Nombre_Completo As String,  _
                     ByVal Original_Puesto As String,  _
@@ -3974,8 +3748,7 @@ Namespace Delis_CakeDataSetTableAdapters
                     ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
                     ByVal Original_Total_Devengado As Global.System.Nullable(Of Double),  _
                     ByVal Original_Anticipo As Global.System.Nullable(Of Double),  _
-                    ByVal Original_IGSS As Double,  _
-                    ByVal Original_ISR As Global.System.Nullable(Of Double),  _
+                    ByVal Original_IGSS As Global.System.Nullable(Of Double),  _
                     ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double),  _
                     ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Codigo_Empleado,Integer)
@@ -4005,80 +3778,73 @@ Namespace Delis_CakeDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(IGSS,Double)
-            If (ISR.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(ISR.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Codigo_Empleado,Integer)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Codigo_Empleado,Integer)
             If (Original_Nombre_Completo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre_Completo")
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Nombre_Completo,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Nombre_Completo,String)
             End If
             If (Original_Puesto Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Puesto")
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Puesto,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Puesto,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Salario,Double)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Salario,Double)
             If (Original_Num_Horas_Extras.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Num_Horas_Extras.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Horas_Extras.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Num_Horas_Extras.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Horas_Extras.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             End If
-            If (Original_Horas_Extras.HasValue = true) Then
+            If (Original_Bonificacion_Incentivo.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Horas_Extras.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Bonificacion_Incentivo.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
-            If (Original_Bonificacion_Incentivo.HasValue = true) Then
+            If (Original_Total_Devengado.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Bonificacion_Incentivo.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Total_Devengado.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
             End If
-            If (Original_Total_Devengado.HasValue = true) Then
+            If (Original_Anticipo.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Total_Devengado.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Anticipo.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
             End If
-            If (Original_Anticipo.HasValue = true) Then
+            If (Original_IGSS.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Anticipo.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_IGSS.Value,Double)
             Else
                 Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_IGSS,Double)
-            If (Original_ISR.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_ISR.Value,Double)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
-            End If
             If (Original_Total_Descuentos.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Total_Descuentos.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Total_Descuentos.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             End If
             If (Original_Importe_a_Recibir.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Importe_a_Recibir.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Importe_a_Recibir.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -4106,8 +3872,6 @@ Namespace Delis_CakeDataSetTableAdapters
                     ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
                     ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
                     ByVal Anticipo As Global.System.Nullable(Of Double),  _
-                    ByVal IGSS As Double,  _
-                    ByVal ISR As Global.System.Nullable(Of Double),  _
                     ByVal Original_Codigo_Empleado As Integer,  _
                     ByVal Original_Nombre_Completo As String,  _
                     ByVal Original_Puesto As String,  _
@@ -4117,11 +3881,10 @@ Namespace Delis_CakeDataSetTableAdapters
                     ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
                     ByVal Original_Total_Devengado As Global.System.Nullable(Of Double),  _
                     ByVal Original_Anticipo As Global.System.Nullable(Of Double),  _
-                    ByVal Original_IGSS As Double,  _
-                    ByVal Original_ISR As Global.System.Nullable(Of Double),  _
+                    ByVal Original_IGSS As Global.System.Nullable(Of Double),  _
                     ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double),  _
                     ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double)) As Integer
-            Return Me.Update(Original_Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, IGSS, ISR, Original_Codigo_Empleado, Original_Nombre_Completo, Original_Puesto, Original_Salario, Original_Num_Horas_Extras, Original_Horas_Extras, Original_Bonificacion_Incentivo, Original_Total_Devengado, Original_Anticipo, Original_IGSS, Original_ISR, Original_Total_Descuentos, Original_Importe_a_Recibir)
+            Return Me.Update(Original_Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, Original_Codigo_Empleado, Original_Nombre_Completo, Original_Puesto, Original_Salario, Original_Num_Horas_Extras, Original_Horas_Extras, Original_Bonificacion_Incentivo, Original_Total_Devengado, Original_Anticipo, Original_IGSS, Original_Total_Descuentos, Original_Importe_a_Recibir)
         End Function
     End Class
     
@@ -4971,34 +4734,24 @@ Namespace Delis_CakeDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Nombre", "Nombre")
             tableMapping.ColumnMappings.Add("Precio_Venta", "Precio_Venta")
             tableMapping.ColumnMappings.Add("Cantidad_Total", "Cantidad_Total")
-            tableMapping.ColumnMappings.Add("Fecha_Elaboracion", "Fecha_Elaboracion")
-            tableMapping.ColumnMappings.Add("Fecha_Vencimiento", "Fecha_Vencimiento")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Productos_Terminados] WHERE (([Id_Producto_Terminado] = @Origi"& _ 
                 "nal_Id_Producto_Terminado) AND ([Nombre] = @Original_Nombre) AND ([Precio_Venta]"& _ 
-                " = @Original_Precio_Venta) AND ([Cantidad_Total] = @Original_Cantidad_Total) AND"& _ 
-                " ((@IsNull_Fecha_Elaboracion = 1 AND [Fecha_Elaboracion] IS NULL) OR ([Fecha_Ela"& _ 
-                "boracion] = @Original_Fecha_Elaboracion)) AND ((@IsNull_Fecha_Vencimiento = 1 AN"& _ 
-                "D [Fecha_Vencimiento] IS NULL) OR ([Fecha_Vencimiento] = @Original_Fecha_Vencimi"& _ 
-                "ento)))"
+                " = @Original_Precio_Venta) AND ([Cantidad_Total] = @Original_Cantidad_Total))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Precio_Venta", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Precio_Venta", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cantidad_Total", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad_Total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Elaboracion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Elaboracion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Elaboracion", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Elaboracion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Vencimiento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Productos_Terminados] ([Id_Producto_Terminado], [Nombre], [Pre"& _ 
                 "cio_Venta], [Cantidad_Total]) VALUES (@Id_Producto_Terminado, @Nombre, @Precio_V"& _ 
                 "enta, @Cantidad_Total);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Producto_Terminado, Nombre, Precio_Venta, Can"& _ 
-                "tidad_Total, Fecha_Elaboracion, Fecha_Vencimiento FROM Productos_Terminados WHER"& _ 
-                "E (Id_Producto_Terminado = @Id_Producto_Terminado)"
+                "tidad_Total FROM Productos_Terminados WHERE (Id_Producto_Terminado = @Id_Product"& _ 
+                "o_Terminado)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5010,13 +4763,9 @@ Namespace Delis_CakeDataSetTableAdapters
                 "rminado, [Nombre] = @Nombre, [Precio_Venta] = @Precio_Venta, [Cantidad_Total] = "& _ 
                 "@Cantidad_Total WHERE (([Id_Producto_Terminado] = @Original_Id_Producto_Terminad"& _ 
                 "o) AND ([Nombre] = @Original_Nombre) AND ([Precio_Venta] = @Original_Precio_Vent"& _ 
-                "a) AND ([Cantidad_Total] = @Original_Cantidad_Total) AND ((@IsNull_Fecha_Elabora"& _ 
-                "cion = 1 AND [Fecha_Elaboracion] IS NULL) OR ([Fecha_Elaboracion] = @Original_Fe"& _ 
-                "cha_Elaboracion)) AND ((@IsNull_Fecha_Vencimiento = 1 AND [Fecha_Vencimiento] IS"& _ 
-                " NULL) OR ([Fecha_Vencimiento] = @Original_Fecha_Vencimiento)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Prod"& _ 
-                "ucto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Fecha_Elaboracion, Fecha_V"& _ 
-                "encimiento FROM Productos_Terminados WHERE (Id_Producto_Terminado = @Id_Producto"& _ 
-                "_Terminado)"
+                "a) AND ([Cantidad_Total] = @Original_Cantidad_Total));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Producto_Termi"& _ 
+                "nado, Nombre, Precio_Venta, Cantidad_Total FROM Productos_Terminados WHERE (Id_P"& _ 
+                "roducto_Terminado = @Id_Producto_Terminado)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5026,10 +4775,6 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Precio_Venta", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Precio_Venta", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Cantidad_Total", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad_Total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Elaboracion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Elaboracion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Elaboracion", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Elaboracion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fecha_Vencimiento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fecha_Vencimiento", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fecha_Vencimiento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5045,8 +4790,8 @@ Namespace Delis_CakeDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Fecha_Elabora"& _ 
-                "cion, Fecha_Vencimiento FROM dbo.Productos_Terminados"
+            Me._commandCollection(0).CommandText = "SELECT Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total FROM dbo.Produ"& _ 
+                "ctos_Terminados"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5106,7 +4851,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer, ByVal Original_Fecha_Elaboracion As Global.System.Nullable(Of Date), ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id_Producto_Terminado,Integer)
             If (Original_Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre")
@@ -5115,20 +4860,6 @@ Namespace Delis_CakeDataSetTableAdapters
             End If
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Precio_Venta,Double)
             Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Cantidad_Total,Integer)
-            If (Original_Fecha_Elaboracion.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Fecha_Elaboracion.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Fecha_Vencimiento.Value,Date)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5176,7 +4907,7 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer, ByVal Original_Fecha_Elaboracion As Global.System.Nullable(Of Date), ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Update(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id_Producto_Terminado,Integer)
             If (Nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Nombre")
@@ -5193,20 +4924,6 @@ Namespace Delis_CakeDataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Precio_Venta,Double)
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Cantidad_Total,Integer)
-            If (Original_Fecha_Elaboracion.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Fecha_Elaboracion.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            End If
-            If (Original_Fecha_Vencimiento.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Fecha_Vencimiento.Value,Date)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
-            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5226,8 +4943,8 @@ Namespace Delis_CakeDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer, ByVal Original_Fecha_Elaboracion As Global.System.Nullable(Of Date), ByVal Original_Fecha_Vencimiento As Global.System.Nullable(Of Date)) As Integer
-            Return Me.Update(Original_Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Original_Id_Producto_Terminado, Original_Nombre, Original_Precio_Venta, Original_Cantidad_Total, Original_Fecha_Elaboracion, Original_Fecha_Vencimiento)
+        Public Overloads Overridable Function Update(ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer) As Integer
+            Return Me.Update(Original_Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Original_Id_Producto_Terminado, Original_Nombre, Original_Precio_Venta, Original_Cantidad_Total)
         End Function
     End Class
     
