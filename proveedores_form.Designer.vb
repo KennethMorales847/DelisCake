@@ -81,6 +81,7 @@ Partial Class proveedores_form
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         Id_ProveedorLabel = New System.Windows.Forms.Label()
         Razon_SocialLabel = New System.Windows.Forms.Label()
         Nombre_RepresentanteLabel = New System.Windows.Forms.Label()
@@ -545,11 +546,21 @@ Partial Class proveedores_form
         Me.DataGridViewTextBoxColumn13.HeaderText = "Plazo_de_pago"
         Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(37, 403)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 28
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'proveedores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1042, 403)
+        Me.ClientSize = New System.Drawing.Size(1042, 437)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PRDataGridView)
         Me.Controls.Add(Id_ProveedorLabel)
         Me.Controls.Add(Me.Id_ProveedorTextBox)
@@ -635,4 +646,5 @@ Partial Class proveedores_form
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class

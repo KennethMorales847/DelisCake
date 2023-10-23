@@ -78,6 +78,7 @@ Partial Class trabajadores_form
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
         Codigo_EmpleadoLabel = New System.Windows.Forms.Label()
         Nombre_CompletoLabel = New System.Windows.Forms.Label()
         PuestoLabel = New System.Windows.Forms.Label()
@@ -523,11 +524,21 @@ Partial Class trabajadores_form
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(18, 288)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'trabajadores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1051, 381)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PlanillaDataGridView)
         Me.Controls.Add(Codigo_EmpleadoLabel)
         Me.Controls.Add(Me.Codigo_EmpleadoTextBox)
@@ -609,4 +620,5 @@ Partial Class trabajadores_form
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As Button
 End Class
