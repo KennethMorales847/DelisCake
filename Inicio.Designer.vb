@@ -101,7 +101,7 @@ Partial Class IniciarSesion
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.DelisCake.My.Resources.Resources.Cake17
-        Me.PictureBox7.Location = New System.Drawing.Point(301, 268)
+        Me.PictureBox7.Location = New System.Drawing.Point(302, 271)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(308, 276)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
