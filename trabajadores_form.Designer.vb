@@ -40,12 +40,20 @@ Partial Class trabajadores_form
         Me.PlanillaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlanillaTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.PlanillaTableAdapter()
         Me.TableAdapterManager = New DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager()
+        Me.Productos_TerminadosTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.Productos_TerminadosTableAdapter()
         Me.PlanillaBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PlanillaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Codigo_EmpleadoTextBox = New System.Windows.Forms.TextBox()
         Me.Nombre_CompletoTextBox = New System.Windows.Forms.TextBox()
         Me.PuestoTextBox = New System.Windows.Forms.TextBox()
@@ -59,6 +67,8 @@ Partial Class trabajadores_form
         Me.Total_DescuentosTextBox = New System.Windows.Forms.TextBox()
         Me.Importe_a_RecibirTextBox = New System.Windows.Forms.TextBox()
         Me.PlanillaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Productos_TerminadosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -71,14 +81,6 @@ Partial Class trabajadores_form
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
-        Me.PlanillaBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Codigo_EmpleadoLabel = New System.Windows.Forms.Label()
         Nombre_CompletoLabel = New System.Windows.Forms.Label()
         PuestoLabel = New System.Windows.Forms.Label()
@@ -96,7 +98,116 @@ Partial Class trabajadores_form
         CType(Me.PlanillaBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PlanillaBindingNavigator.SuspendLayout()
         CType(Me.PlanillaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Productos_TerminadosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Codigo_EmpleadoLabel
+        '
+        Codigo_EmpleadoLabel.AutoSize = True
+        Codigo_EmpleadoLabel.Location = New System.Drawing.Point(810, 39)
+        Codigo_EmpleadoLabel.Name = "Codigo_EmpleadoLabel"
+        Codigo_EmpleadoLabel.Size = New System.Drawing.Size(93, 13)
+        Codigo_EmpleadoLabel.TabIndex = 1
+        Codigo_EmpleadoLabel.Text = "Codigo Empleado:"
+        '
+        'Nombre_CompletoLabel
+        '
+        Nombre_CompletoLabel.AutoSize = True
+        Nombre_CompletoLabel.Location = New System.Drawing.Point(810, 65)
+        Nombre_CompletoLabel.Name = "Nombre_CompletoLabel"
+        Nombre_CompletoLabel.Size = New System.Drawing.Size(94, 13)
+        Nombre_CompletoLabel.TabIndex = 3
+        Nombre_CompletoLabel.Text = "Nombre Completo:"
+        '
+        'PuestoLabel
+        '
+        PuestoLabel.AutoSize = True
+        PuestoLabel.Location = New System.Drawing.Point(810, 91)
+        PuestoLabel.Name = "PuestoLabel"
+        PuestoLabel.Size = New System.Drawing.Size(43, 13)
+        PuestoLabel.TabIndex = 5
+        PuestoLabel.Text = "Puesto:"
+        '
+        'SalarioLabel
+        '
+        SalarioLabel.AutoSize = True
+        SalarioLabel.Location = New System.Drawing.Point(810, 117)
+        SalarioLabel.Name = "SalarioLabel"
+        SalarioLabel.Size = New System.Drawing.Size(42, 13)
+        SalarioLabel.TabIndex = 7
+        SalarioLabel.Text = "Salario:"
+        '
+        'Num_Horas_ExtrasLabel
+        '
+        Num_Horas_ExtrasLabel.AutoSize = True
+        Num_Horas_ExtrasLabel.Location = New System.Drawing.Point(810, 143)
+        Num_Horas_ExtrasLabel.Name = "Num_Horas_ExtrasLabel"
+        Num_Horas_ExtrasLabel.Size = New System.Drawing.Size(95, 13)
+        Num_Horas_ExtrasLabel.TabIndex = 9
+        Num_Horas_ExtrasLabel.Text = "Num Horas Extras:"
+        '
+        'Horas_ExtrasLabel
+        '
+        Horas_ExtrasLabel.AutoSize = True
+        Horas_ExtrasLabel.Location = New System.Drawing.Point(810, 169)
+        Horas_ExtrasLabel.Name = "Horas_ExtrasLabel"
+        Horas_ExtrasLabel.Size = New System.Drawing.Size(70, 13)
+        Horas_ExtrasLabel.TabIndex = 11
+        Horas_ExtrasLabel.Text = "Horas Extras:"
+        '
+        'Bonificacion_IncentivoLabel
+        '
+        Bonificacion_IncentivoLabel.AutoSize = True
+        Bonificacion_IncentivoLabel.Location = New System.Drawing.Point(810, 195)
+        Bonificacion_IncentivoLabel.Name = "Bonificacion_IncentivoLabel"
+        Bonificacion_IncentivoLabel.Size = New System.Drawing.Size(115, 13)
+        Bonificacion_IncentivoLabel.TabIndex = 13
+        Bonificacion_IncentivoLabel.Text = "Bonificacion Incentivo:"
+        '
+        'Total_DevengadoLabel
+        '
+        Total_DevengadoLabel.AutoSize = True
+        Total_DevengadoLabel.Location = New System.Drawing.Point(810, 221)
+        Total_DevengadoLabel.Name = "Total_DevengadoLabel"
+        Total_DevengadoLabel.Size = New System.Drawing.Size(93, 13)
+        Total_DevengadoLabel.TabIndex = 15
+        Total_DevengadoLabel.Text = "Total Devengado:"
+        '
+        'AnticipoLabel
+        '
+        AnticipoLabel.AutoSize = True
+        AnticipoLabel.Location = New System.Drawing.Point(810, 247)
+        AnticipoLabel.Name = "AnticipoLabel"
+        AnticipoLabel.Size = New System.Drawing.Size(48, 13)
+        AnticipoLabel.TabIndex = 17
+        AnticipoLabel.Text = "Anticipo:"
+        '
+        'IGSSLabel
+        '
+        IGSSLabel.AutoSize = True
+        IGSSLabel.Location = New System.Drawing.Point(810, 273)
+        IGSSLabel.Name = "IGSSLabel"
+        IGSSLabel.Size = New System.Drawing.Size(35, 13)
+        IGSSLabel.TabIndex = 19
+        IGSSLabel.Text = "IGSS:"
+        '
+        'Total_DescuentosLabel
+        '
+        Total_DescuentosLabel.AutoSize = True
+        Total_DescuentosLabel.Location = New System.Drawing.Point(810, 299)
+        Total_DescuentosLabel.Name = "Total_DescuentosLabel"
+        Total_DescuentosLabel.Size = New System.Drawing.Size(94, 13)
+        Total_DescuentosLabel.TabIndex = 21
+        Total_DescuentosLabel.Text = "Total Descuentos:"
+        '
+        'Importe_a_RecibirLabel
+        '
+        Importe_a_RecibirLabel.AutoSize = True
+        Importe_a_RecibirLabel.Location = New System.Drawing.Point(810, 325)
+        Importe_a_RecibirLabel.Name = "Importe_a_RecibirLabel"
+        Importe_a_RecibirLabel.Size = New System.Drawing.Size(90, 13)
+        Importe_a_RecibirLabel.TabIndex = 23
+        Importe_a_RecibirLabel.Text = "Importe a Recibir:"
         '
         'Delis_CakeDataSet
         '
@@ -117,9 +228,13 @@ Partial Class trabajadores_form
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.MPTableAdapter = Nothing
         Me.TableAdapterManager.PlanillaTableAdapter = Me.PlanillaTableAdapter
-        Me.TableAdapterManager.Productos_TerminadosTableAdapter = Nothing
+        Me.TableAdapterManager.Productos_TerminadosTableAdapter = Me.Productos_TerminadosTableAdapter
         Me.TableAdapterManager.PRTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Productos_TerminadosTableAdapter
+        '
+        Me.Productos_TerminadosTableAdapter.ClearBeforeFill = True
         '
         'PlanillaBindingNavigator
         '
@@ -139,6 +254,49 @@ Partial Class trabajadores_form
         Me.PlanillaBindingNavigator.TabIndex = 0
         Me.PlanillaBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
+        '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
@@ -154,31 +312,41 @@ Partial Class trabajadores_form
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveNextItem.Text = "Move next"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
-        'Codigo_EmpleadoLabel
+        'PlanillaBindingNavigatorSaveItem
         '
-        Codigo_EmpleadoLabel.AutoSize = True
-        Codigo_EmpleadoLabel.Location = New System.Drawing.Point(810, 39)
-        Codigo_EmpleadoLabel.Name = "Codigo_EmpleadoLabel"
-        Codigo_EmpleadoLabel.Size = New System.Drawing.Size(93, 13)
-        Codigo_EmpleadoLabel.TabIndex = 1
-        Codigo_EmpleadoLabel.Text = "Codigo Empleado:"
+        Me.PlanillaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PlanillaBindingNavigatorSaveItem.Image = CType(resources.GetObject("PlanillaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.PlanillaBindingNavigatorSaveItem.Name = "PlanillaBindingNavigatorSaveItem"
+        Me.PlanillaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.PlanillaBindingNavigatorSaveItem.Text = "Save Data"
         '
         'Codigo_EmpleadoTextBox
         '
@@ -188,15 +356,6 @@ Partial Class trabajadores_form
         Me.Codigo_EmpleadoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Codigo_EmpleadoTextBox.TabIndex = 2
         '
-        'Nombre_CompletoLabel
-        '
-        Nombre_CompletoLabel.AutoSize = True
-        Nombre_CompletoLabel.Location = New System.Drawing.Point(810, 65)
-        Nombre_CompletoLabel.Name = "Nombre_CompletoLabel"
-        Nombre_CompletoLabel.Size = New System.Drawing.Size(94, 13)
-        Nombre_CompletoLabel.TabIndex = 3
-        Nombre_CompletoLabel.Text = "Nombre Completo:"
-        '
         'Nombre_CompletoTextBox
         '
         Me.Nombre_CompletoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Nombre_Completo", True))
@@ -204,15 +363,6 @@ Partial Class trabajadores_form
         Me.Nombre_CompletoTextBox.Name = "Nombre_CompletoTextBox"
         Me.Nombre_CompletoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Nombre_CompletoTextBox.TabIndex = 4
-        '
-        'PuestoLabel
-        '
-        PuestoLabel.AutoSize = True
-        PuestoLabel.Location = New System.Drawing.Point(810, 91)
-        PuestoLabel.Name = "PuestoLabel"
-        PuestoLabel.Size = New System.Drawing.Size(43, 13)
-        PuestoLabel.TabIndex = 5
-        PuestoLabel.Text = "Puesto:"
         '
         'PuestoTextBox
         '
@@ -222,15 +372,6 @@ Partial Class trabajadores_form
         Me.PuestoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PuestoTextBox.TabIndex = 6
         '
-        'SalarioLabel
-        '
-        SalarioLabel.AutoSize = True
-        SalarioLabel.Location = New System.Drawing.Point(810, 117)
-        SalarioLabel.Name = "SalarioLabel"
-        SalarioLabel.Size = New System.Drawing.Size(42, 13)
-        SalarioLabel.TabIndex = 7
-        SalarioLabel.Text = "Salario:"
-        '
         'SalarioTextBox
         '
         Me.SalarioTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Salario", True))
@@ -239,15 +380,6 @@ Partial Class trabajadores_form
         Me.SalarioTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SalarioTextBox.TabIndex = 8
         '
-        'Num_Horas_ExtrasLabel
-        '
-        Num_Horas_ExtrasLabel.AutoSize = True
-        Num_Horas_ExtrasLabel.Location = New System.Drawing.Point(810, 143)
-        Num_Horas_ExtrasLabel.Name = "Num_Horas_ExtrasLabel"
-        Num_Horas_ExtrasLabel.Size = New System.Drawing.Size(95, 13)
-        Num_Horas_ExtrasLabel.TabIndex = 9
-        Num_Horas_ExtrasLabel.Text = "Num Horas Extras:"
-        '
         'Num_Horas_ExtrasTextBox
         '
         Me.Num_Horas_ExtrasTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Num_Horas_Extras", True))
@@ -255,15 +387,6 @@ Partial Class trabajadores_form
         Me.Num_Horas_ExtrasTextBox.Name = "Num_Horas_ExtrasTextBox"
         Me.Num_Horas_ExtrasTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Num_Horas_ExtrasTextBox.TabIndex = 10
-        '
-        'Horas_ExtrasLabel
-        '
-        Horas_ExtrasLabel.AutoSize = True
-        Horas_ExtrasLabel.Location = New System.Drawing.Point(810, 169)
-        Horas_ExtrasLabel.Name = "Horas_ExtrasLabel"
-        Horas_ExtrasLabel.Size = New System.Drawing.Size(70, 13)
-        Horas_ExtrasLabel.TabIndex = 11
-        Horas_ExtrasLabel.Text = "Horas Extras:"
         '
         'Horas_ExtrasTextBox
         '
@@ -274,15 +397,6 @@ Partial Class trabajadores_form
         Me.Horas_ExtrasTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Horas_ExtrasTextBox.TabIndex = 12
         '
-        'Bonificacion_IncentivoLabel
-        '
-        Bonificacion_IncentivoLabel.AutoSize = True
-        Bonificacion_IncentivoLabel.Location = New System.Drawing.Point(810, 195)
-        Bonificacion_IncentivoLabel.Name = "Bonificacion_IncentivoLabel"
-        Bonificacion_IncentivoLabel.Size = New System.Drawing.Size(115, 13)
-        Bonificacion_IncentivoLabel.TabIndex = 13
-        Bonificacion_IncentivoLabel.Text = "Bonificacion Incentivo:"
-        '
         'Bonificacion_IncentivoTextBox
         '
         Me.Bonificacion_IncentivoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Bonificacion_Incentivo", True))
@@ -290,15 +404,6 @@ Partial Class trabajadores_form
         Me.Bonificacion_IncentivoTextBox.Name = "Bonificacion_IncentivoTextBox"
         Me.Bonificacion_IncentivoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Bonificacion_IncentivoTextBox.TabIndex = 14
-        '
-        'Total_DevengadoLabel
-        '
-        Total_DevengadoLabel.AutoSize = True
-        Total_DevengadoLabel.Location = New System.Drawing.Point(810, 221)
-        Total_DevengadoLabel.Name = "Total_DevengadoLabel"
-        Total_DevengadoLabel.Size = New System.Drawing.Size(93, 13)
-        Total_DevengadoLabel.TabIndex = 15
-        Total_DevengadoLabel.Text = "Total Devengado:"
         '
         'Total_DevengadoTextBox
         '
@@ -309,15 +414,6 @@ Partial Class trabajadores_form
         Me.Total_DevengadoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Total_DevengadoTextBox.TabIndex = 16
         '
-        'AnticipoLabel
-        '
-        AnticipoLabel.AutoSize = True
-        AnticipoLabel.Location = New System.Drawing.Point(810, 247)
-        AnticipoLabel.Name = "AnticipoLabel"
-        AnticipoLabel.Size = New System.Drawing.Size(48, 13)
-        AnticipoLabel.TabIndex = 17
-        AnticipoLabel.Text = "Anticipo:"
-        '
         'AnticipoTextBox
         '
         Me.AnticipoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Anticipo", True))
@@ -325,15 +421,6 @@ Partial Class trabajadores_form
         Me.AnticipoTextBox.Name = "AnticipoTextBox"
         Me.AnticipoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.AnticipoTextBox.TabIndex = 18
-        '
-        'IGSSLabel
-        '
-        IGSSLabel.AutoSize = True
-        IGSSLabel.Location = New System.Drawing.Point(810, 273)
-        IGSSLabel.Name = "IGSSLabel"
-        IGSSLabel.Size = New System.Drawing.Size(35, 13)
-        IGSSLabel.TabIndex = 19
-        IGSSLabel.Text = "IGSS:"
         '
         'IGSSTextBox
         '
@@ -344,15 +431,6 @@ Partial Class trabajadores_form
         Me.IGSSTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IGSSTextBox.TabIndex = 20
         '
-        'Total_DescuentosLabel
-        '
-        Total_DescuentosLabel.AutoSize = True
-        Total_DescuentosLabel.Location = New System.Drawing.Point(810, 299)
-        Total_DescuentosLabel.Name = "Total_DescuentosLabel"
-        Total_DescuentosLabel.Size = New System.Drawing.Size(94, 13)
-        Total_DescuentosLabel.TabIndex = 21
-        Total_DescuentosLabel.Text = "Total Descuentos:"
-        '
         'Total_DescuentosTextBox
         '
         Me.Total_DescuentosTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PlanillaBindingSource, "Total_Descuentos", True))
@@ -361,15 +439,6 @@ Partial Class trabajadores_form
         Me.Total_DescuentosTextBox.ReadOnly = True
         Me.Total_DescuentosTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Total_DescuentosTextBox.TabIndex = 22
-        '
-        'Importe_a_RecibirLabel
-        '
-        Importe_a_RecibirLabel.AutoSize = True
-        Importe_a_RecibirLabel.Location = New System.Drawing.Point(810, 325)
-        Importe_a_RecibirLabel.Name = "Importe_a_RecibirLabel"
-        Importe_a_RecibirLabel.Size = New System.Drawing.Size(90, 13)
-        Importe_a_RecibirLabel.TabIndex = 23
-        Importe_a_RecibirLabel.Text = "Importe a Recibir:"
         '
         'Importe_a_RecibirTextBox
         '
@@ -390,6 +459,20 @@ Partial Class trabajadores_form
         Me.PlanillaDataGridView.Name = "PlanillaDataGridView"
         Me.PlanillaDataGridView.Size = New System.Drawing.Size(804, 220)
         Me.PlanillaDataGridView.TabIndex = 25
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(18, 288)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Productos_TerminadosBindingSource
+        '
+        Me.Productos_TerminadosBindingSource.DataMember = "Productos_Terminados"
+        Me.Productos_TerminadosBindingSource.DataSource = Me.Delis_CakeDataSet
         '
         'DataGridViewTextBoxColumn1
         '
@@ -468,77 +551,6 @@ Partial Class trabajadores_form
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(18, 288)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "Move first"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMovePreviousItem.Text = "Move previous"
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveNextItem.Text = "Move next"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "Move last"
-        '
-        'PlanillaBindingNavigatorSaveItem
-        '
-        Me.PlanillaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.PlanillaBindingNavigatorSaveItem.Image = CType(resources.GetObject("PlanillaBindingNavigatorSaveItem.Image"), System.Drawing.Image)
-        Me.PlanillaBindingNavigatorSaveItem.Name = "PlanillaBindingNavigatorSaveItem"
-        Me.PlanillaBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
-        Me.PlanillaBindingNavigatorSaveItem.Text = "Save Data"
-        '
         'trabajadores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -579,6 +591,7 @@ Partial Class trabajadores_form
         Me.PlanillaBindingNavigator.ResumeLayout(False)
         Me.PlanillaBindingNavigator.PerformLayout()
         CType(Me.PlanillaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Productos_TerminadosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -614,6 +627,9 @@ Partial Class trabajadores_form
     Friend WithEvents Total_DescuentosTextBox As TextBox
     Friend WithEvents Importe_a_RecibirTextBox As TextBox
     Friend WithEvents PlanillaDataGridView As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Productos_TerminadosTableAdapter As Delis_CakeDataSetTableAdapters.Productos_TerminadosTableAdapter
+    Friend WithEvents Productos_TerminadosBindingSource As BindingSource
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
@@ -626,5 +642,4 @@ Partial Class trabajadores_form
     Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class proveedores_form
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class proveedores_form
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(proveedores_form))
         Dim Id_ProveedorLabel As System.Windows.Forms.Label
         Dim Razon_SocialLabel As System.Windows.Forms.Label
         Dim Nombre_RepresentanteLabel As System.Windows.Forms.Label
@@ -37,22 +36,23 @@ Partial Class proveedores_form
         Dim Tipo_de_PagoLabel As System.Windows.Forms.Label
         Dim Cuenta_BancariaLabel As System.Windows.Forms.Label
         Dim Plazo_de_pagoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(proveedores_form))
         Me.Delis_CakeDataSet = New DelisCake.Delis_CakeDataSet()
         Me.PRBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PRTableAdapter = New DelisCake.Delis_CakeDataSetTableAdapters.PRTableAdapter()
         Me.TableAdapterManager = New DelisCake.Delis_CakeDataSetTableAdapters.TableAdapterManager()
         Me.PRBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.PRBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.Id_ProveedorTextBox = New System.Windows.Forms.TextBox()
         Me.Razon_SocialTextBox = New System.Windows.Forms.TextBox()
@@ -102,6 +102,123 @@ Partial Class proveedores_form
         CType(Me.PRDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Id_ProveedorLabel
+        '
+        Id_ProveedorLabel.AutoSize = True
+        Id_ProveedorLabel.Location = New System.Drawing.Point(797, 33)
+        Id_ProveedorLabel.Name = "Id_ProveedorLabel"
+        Id_ProveedorLabel.Size = New System.Drawing.Size(71, 13)
+        Id_ProveedorLabel.TabIndex = 1
+        Id_ProveedorLabel.Text = "Id Proveedor:"
+        '
+        'Razon_SocialLabel
+        '
+        Razon_SocialLabel.AutoSize = True
+        Razon_SocialLabel.Location = New System.Drawing.Point(797, 59)
+        Razon_SocialLabel.Name = "Razon_SocialLabel"
+        Razon_SocialLabel.Size = New System.Drawing.Size(73, 13)
+        Razon_SocialLabel.TabIndex = 3
+        Razon_SocialLabel.Text = "Razon Social:"
+        '
+        'Nombre_RepresentanteLabel
+        '
+        Nombre_RepresentanteLabel.AutoSize = True
+        Nombre_RepresentanteLabel.Location = New System.Drawing.Point(797, 85)
+        Nombre_RepresentanteLabel.Name = "Nombre_RepresentanteLabel"
+        Nombre_RepresentanteLabel.Size = New System.Drawing.Size(120, 13)
+        Nombre_RepresentanteLabel.TabIndex = 5
+        Nombre_RepresentanteLabel.Text = "Nombre Representante:"
+        '
+        'NIT_RepresentanteLabel
+        '
+        NIT_RepresentanteLabel.AutoSize = True
+        NIT_RepresentanteLabel.Location = New System.Drawing.Point(797, 111)
+        NIT_RepresentanteLabel.Name = "NIT_RepresentanteLabel"
+        NIT_RepresentanteLabel.Size = New System.Drawing.Size(101, 13)
+        NIT_RepresentanteLabel.TabIndex = 7
+        NIT_RepresentanteLabel.Text = "NIT Representante:"
+        '
+        'PaisLabel
+        '
+        PaisLabel.AutoSize = True
+        PaisLabel.Location = New System.Drawing.Point(797, 137)
+        PaisLabel.Name = "PaisLabel"
+        PaisLabel.Size = New System.Drawing.Size(30, 13)
+        PaisLabel.TabIndex = 9
+        PaisLabel.Text = "Pais:"
+        '
+        'CiudadLabel
+        '
+        CiudadLabel.AutoSize = True
+        CiudadLabel.Location = New System.Drawing.Point(797, 163)
+        CiudadLabel.Name = "CiudadLabel"
+        CiudadLabel.Size = New System.Drawing.Size(43, 13)
+        CiudadLabel.TabIndex = 11
+        CiudadLabel.Text = "Ciudad:"
+        '
+        'DireccionLabel
+        '
+        DireccionLabel.AutoSize = True
+        DireccionLabel.Location = New System.Drawing.Point(797, 189)
+        DireccionLabel.Name = "DireccionLabel"
+        DireccionLabel.Size = New System.Drawing.Size(55, 13)
+        DireccionLabel.TabIndex = 13
+        DireccionLabel.Text = "Direccion:"
+        '
+        'Codigo_PostalLabel
+        '
+        Codigo_PostalLabel.AutoSize = True
+        Codigo_PostalLabel.Location = New System.Drawing.Point(797, 215)
+        Codigo_PostalLabel.Name = "Codigo_PostalLabel"
+        Codigo_PostalLabel.Size = New System.Drawing.Size(75, 13)
+        Codigo_PostalLabel.TabIndex = 15
+        Codigo_PostalLabel.Text = "Codigo Postal:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(797, 241)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel.TabIndex = 17
+        TelefonoLabel.Text = "Telefono:"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(797, 267)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(35, 13)
+        EmailLabel.TabIndex = 19
+        EmailLabel.Text = "Email:"
+        '
+        'Tipo_de_PagoLabel
+        '
+        Tipo_de_PagoLabel.AutoSize = True
+        Tipo_de_PagoLabel.Location = New System.Drawing.Point(797, 293)
+        Tipo_de_PagoLabel.Name = "Tipo_de_PagoLabel"
+        Tipo_de_PagoLabel.Size = New System.Drawing.Size(74, 13)
+        Tipo_de_PagoLabel.TabIndex = 21
+        Tipo_de_PagoLabel.Text = "Tipo de Pago:"
+        '
+        'Cuenta_BancariaLabel
+        '
+        Cuenta_BancariaLabel.AutoSize = True
+        Cuenta_BancariaLabel.Location = New System.Drawing.Point(797, 319)
+        Cuenta_BancariaLabel.Name = "Cuenta_BancariaLabel"
+        Cuenta_BancariaLabel.Size = New System.Drawing.Size(89, 13)
+        Cuenta_BancariaLabel.TabIndex = 23
+        Cuenta_BancariaLabel.Text = "Cuenta Bancaria:"
+        '
+        'Plazo_de_pagoLabel
+        '
+        Plazo_de_pagoLabel.AutoSize = True
+        Plazo_de_pagoLabel.Location = New System.Drawing.Point(797, 345)
+        Plazo_de_pagoLabel.Name = "Plazo_de_pagoLabel"
+        Plazo_de_pagoLabel.Size = New System.Drawing.Size(78, 13)
+        Plazo_de_pagoLabel.TabIndex = 25
+        Plazo_de_pagoLabel.Text = "Plazo de pago:"
+        '
         'Delis_CakeDataSet
         '
         Me.Delis_CakeDataSet.DataSetName = "Delis_CakeDataSet"
@@ -143,6 +260,31 @@ Partial Class proveedores_form
         Me.PRBindingNavigator.TabIndex = 0
         Me.PRBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -170,22 +312,16 @@ Partial Class proveedores_form
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -193,7 +329,7 @@ Partial Class proveedores_form
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -202,48 +338,21 @@ Partial Class proveedores_form
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'PRBindingNavigatorSaveItem
         '
         Me.PRBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.PRBindingNavigatorSaveItem.Image = CType(resources.GetObject("PRBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.PRBindingNavigatorSaveItem.Name = "PRBindingNavigatorSaveItem"
-        Me.PRBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.PRBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.PRBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'Id_ProveedorLabel
-        '
-        Id_ProveedorLabel.AutoSize = True
-        Id_ProveedorLabel.Location = New System.Drawing.Point(797, 33)
-        Id_ProveedorLabel.Name = "Id_ProveedorLabel"
-        Id_ProveedorLabel.Size = New System.Drawing.Size(71, 13)
-        Id_ProveedorLabel.TabIndex = 1
-        Id_ProveedorLabel.Text = "Id Proveedor:"
         '
         'Id_ProveedorTextBox
         '
@@ -253,15 +362,6 @@ Partial Class proveedores_form
         Me.Id_ProveedorTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Id_ProveedorTextBox.TabIndex = 2
         '
-        'Razon_SocialLabel
-        '
-        Razon_SocialLabel.AutoSize = True
-        Razon_SocialLabel.Location = New System.Drawing.Point(797, 59)
-        Razon_SocialLabel.Name = "Razon_SocialLabel"
-        Razon_SocialLabel.Size = New System.Drawing.Size(73, 13)
-        Razon_SocialLabel.TabIndex = 3
-        Razon_SocialLabel.Text = "Razon Social:"
-        '
         'Razon_SocialTextBox
         '
         Me.Razon_SocialTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "Razon_Social", True))
@@ -269,15 +369,6 @@ Partial Class proveedores_form
         Me.Razon_SocialTextBox.Name = "Razon_SocialTextBox"
         Me.Razon_SocialTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Razon_SocialTextBox.TabIndex = 4
-        '
-        'Nombre_RepresentanteLabel
-        '
-        Nombre_RepresentanteLabel.AutoSize = True
-        Nombre_RepresentanteLabel.Location = New System.Drawing.Point(797, 85)
-        Nombre_RepresentanteLabel.Name = "Nombre_RepresentanteLabel"
-        Nombre_RepresentanteLabel.Size = New System.Drawing.Size(120, 13)
-        Nombre_RepresentanteLabel.TabIndex = 5
-        Nombre_RepresentanteLabel.Text = "Nombre Representante:"
         '
         'Nombre_RepresentanteTextBox
         '
@@ -287,15 +378,6 @@ Partial Class proveedores_form
         Me.Nombre_RepresentanteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Nombre_RepresentanteTextBox.TabIndex = 6
         '
-        'NIT_RepresentanteLabel
-        '
-        NIT_RepresentanteLabel.AutoSize = True
-        NIT_RepresentanteLabel.Location = New System.Drawing.Point(797, 111)
-        NIT_RepresentanteLabel.Name = "NIT_RepresentanteLabel"
-        NIT_RepresentanteLabel.Size = New System.Drawing.Size(101, 13)
-        NIT_RepresentanteLabel.TabIndex = 7
-        NIT_RepresentanteLabel.Text = "NIT Representante:"
-        '
         'NIT_RepresentanteTextBox
         '
         Me.NIT_RepresentanteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "NIT_Representante", True))
@@ -303,15 +385,6 @@ Partial Class proveedores_form
         Me.NIT_RepresentanteTextBox.Name = "NIT_RepresentanteTextBox"
         Me.NIT_RepresentanteTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NIT_RepresentanteTextBox.TabIndex = 8
-        '
-        'PaisLabel
-        '
-        PaisLabel.AutoSize = True
-        PaisLabel.Location = New System.Drawing.Point(797, 137)
-        PaisLabel.Name = "PaisLabel"
-        PaisLabel.Size = New System.Drawing.Size(30, 13)
-        PaisLabel.TabIndex = 9
-        PaisLabel.Text = "Pais:"
         '
         'PaisTextBox
         '
@@ -321,15 +394,6 @@ Partial Class proveedores_form
         Me.PaisTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PaisTextBox.TabIndex = 10
         '
-        'CiudadLabel
-        '
-        CiudadLabel.AutoSize = True
-        CiudadLabel.Location = New System.Drawing.Point(797, 163)
-        CiudadLabel.Name = "CiudadLabel"
-        CiudadLabel.Size = New System.Drawing.Size(43, 13)
-        CiudadLabel.TabIndex = 11
-        CiudadLabel.Text = "Ciudad:"
-        '
         'CiudadTextBox
         '
         Me.CiudadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "Ciudad", True))
@@ -337,15 +401,6 @@ Partial Class proveedores_form
         Me.CiudadTextBox.Name = "CiudadTextBox"
         Me.CiudadTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CiudadTextBox.TabIndex = 12
-        '
-        'DireccionLabel
-        '
-        DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(797, 189)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(55, 13)
-        DireccionLabel.TabIndex = 13
-        DireccionLabel.Text = "Direccion:"
         '
         'DireccionTextBox
         '
@@ -355,15 +410,6 @@ Partial Class proveedores_form
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 14
         '
-        'Codigo_PostalLabel
-        '
-        Codigo_PostalLabel.AutoSize = True
-        Codigo_PostalLabel.Location = New System.Drawing.Point(797, 215)
-        Codigo_PostalLabel.Name = "Codigo_PostalLabel"
-        Codigo_PostalLabel.Size = New System.Drawing.Size(75, 13)
-        Codigo_PostalLabel.TabIndex = 15
-        Codigo_PostalLabel.Text = "Codigo Postal:"
-        '
         'Codigo_PostalTextBox
         '
         Me.Codigo_PostalTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "Codigo_Postal", True))
@@ -371,15 +417,6 @@ Partial Class proveedores_form
         Me.Codigo_PostalTextBox.Name = "Codigo_PostalTextBox"
         Me.Codigo_PostalTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Codigo_PostalTextBox.TabIndex = 16
-        '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(797, 241)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
-        TelefonoLabel.TabIndex = 17
-        TelefonoLabel.Text = "Telefono:"
         '
         'TelefonoTextBox
         '
@@ -389,15 +426,6 @@ Partial Class proveedores_form
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTextBox.TabIndex = 18
         '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(797, 267)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(35, 13)
-        EmailLabel.TabIndex = 19
-        EmailLabel.Text = "Email:"
-        '
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "Email", True))
@@ -405,15 +433,6 @@ Partial Class proveedores_form
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EmailTextBox.TabIndex = 20
-        '
-        'Tipo_de_PagoLabel
-        '
-        Tipo_de_PagoLabel.AutoSize = True
-        Tipo_de_PagoLabel.Location = New System.Drawing.Point(797, 293)
-        Tipo_de_PagoLabel.Name = "Tipo_de_PagoLabel"
-        Tipo_de_PagoLabel.Size = New System.Drawing.Size(74, 13)
-        Tipo_de_PagoLabel.TabIndex = 21
-        Tipo_de_PagoLabel.Text = "Tipo de Pago:"
         '
         'Tipo_de_PagoTextBox
         '
@@ -423,15 +442,6 @@ Partial Class proveedores_form
         Me.Tipo_de_PagoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Tipo_de_PagoTextBox.TabIndex = 22
         '
-        'Cuenta_BancariaLabel
-        '
-        Cuenta_BancariaLabel.AutoSize = True
-        Cuenta_BancariaLabel.Location = New System.Drawing.Point(797, 319)
-        Cuenta_BancariaLabel.Name = "Cuenta_BancariaLabel"
-        Cuenta_BancariaLabel.Size = New System.Drawing.Size(89, 13)
-        Cuenta_BancariaLabel.TabIndex = 23
-        Cuenta_BancariaLabel.Text = "Cuenta Bancaria:"
-        '
         'Cuenta_BancariaTextBox
         '
         Me.Cuenta_BancariaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRBindingSource, "Cuenta_Bancaria", True))
@@ -439,15 +449,6 @@ Partial Class proveedores_form
         Me.Cuenta_BancariaTextBox.Name = "Cuenta_BancariaTextBox"
         Me.Cuenta_BancariaTextBox.Size = New System.Drawing.Size(100, 20)
         Me.Cuenta_BancariaTextBox.TabIndex = 24
-        '
-        'Plazo_de_pagoLabel
-        '
-        Plazo_de_pagoLabel.AutoSize = True
-        Plazo_de_pagoLabel.Location = New System.Drawing.Point(797, 345)
-        Plazo_de_pagoLabel.Name = "Plazo_de_pagoLabel"
-        Plazo_de_pagoLabel.Size = New System.Drawing.Size(78, 13)
-        Plazo_de_pagoLabel.TabIndex = 25
-        Plazo_de_pagoLabel.Text = "Plazo de pago:"
         '
         'Plazo_de_pagoTextBox
         '
@@ -548,7 +549,7 @@ Partial Class proveedores_form
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(37, 403)
+        Me.Button1.Location = New System.Drawing.Point(31, 371)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 28

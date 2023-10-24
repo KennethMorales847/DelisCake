@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.DelisCake.MenuAdmin
+            Me.MainForm = Global.DelisCake.proveedores_form
         End Sub
     End Class
 End Namespace

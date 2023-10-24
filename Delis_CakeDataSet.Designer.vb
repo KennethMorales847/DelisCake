@@ -4154,13 +4154,37 @@ Namespace Delis_CakeDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante, Pais,"& _ 
                 " Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_Bancari"& _ 
                 "a, Plazo_de_pago FROM dbo.PR"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[PR] ([Id_Proveedor], [Razon_Social], [Nombre_Representante], ["& _ 
+                "NIT_Representante], [Pais], [Ciudad], [Direccion], [Codigo_Postal], [Telefono], "& _ 
+                "[Email], [Tipo_de_Pago], [Cuenta_Bancaria], [Plazo_de_pago]) VALUES (@Id_Proveed"& _ 
+                "or, @Razon_Social, @Nombre_Representante, @NIT_Representante, @Pais, @Ciudad, @D"& _ 
+                "ireccion, @Codigo_Postal, @Telefono, @Email, @Tipo_de_Pago, @Cuenta_Bancaria, @P"& _ 
+                "lazo_de_pago);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Rep"& _ 
+                "resentante, Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pag"& _ 
+                "o, Cuenta_Bancaria, Plazo_de_pago FROM PR WHERE (Id_Proveedor = @Id_Proveedor)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Razon_Social", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Razon_Social", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Representante", Global.System.Data.SqlDbType.NVarChar, 130, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NIT_Representante", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "NIT_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Pais", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Pais", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ciudad", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Ciudad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Direccion", Global.System.Data.SqlDbType.NVarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, "Direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Postal", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Postal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Telefono", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Email", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tipo_de_Pago", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Tipo_de_Pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cuenta_Bancaria", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cuenta_Bancaria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plazo_de_pago", Global.System.Data.SqlDbType.NVarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "Plazo_de_pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4600,6 +4624,89 @@ Namespace Delis_CakeDataSetTableAdapters
                     ByVal Original_Cuenta_Bancaria As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Plazo_de_pago As String) As Integer
             Return Me.Update(Original_Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante, Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_Bancaria, Plazo_de_pago, Original_Id_Proveedor, Original_Razon_Social, Original_Nombre_Representante, Original_NIT_Representante, Original_Pais, Original_Ciudad, Original_Direccion, Original_Codigo_Postal, Original_Telefono, Original_Email, Original_Tipo_de_Pago, Original_Cuenta_Bancaria, Original_Plazo_de_pago)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function agregar(ByVal Id_Proveedor As Integer, ByVal Razon_Social As String, ByVal Nombre_Representante As String, ByVal NIT_Representante As String, ByVal Pais As String, ByVal Ciudad As String, ByVal Direccion As String, ByVal Codigo_Postal As Global.System.Nullable(Of Integer), ByVal Telefono As Global.System.Nullable(Of Integer), ByVal Email As String, ByVal Tipo_de_Pago As String, ByVal Cuenta_Bancaria As Global.System.Nullable(Of Integer), ByVal Plazo_de_pago As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Id_Proveedor,Integer)
+            If (Razon_Social Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(Razon_Social,String)
+            End If
+            If (Nombre_Representante Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(Nombre_Representante,String)
+            End If
+            If (NIT_Representante Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(NIT_Representante,String)
+            End If
+            If (Pais Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Pais,String)
+            End If
+            If (Ciudad Is Nothing) Then
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(5).Value = CType(Ciudad,String)
+            End If
+            If (Direccion Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(Direccion,String)
+            End If
+            If (Codigo_Postal.HasValue = true) Then
+                command.Parameters(7).Value = CType(Codigo_Postal.Value,Integer)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Telefono.HasValue = true) Then
+                command.Parameters(8).Value = CType(Telefono.Value,Integer)
+            Else
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Email Is Nothing) Then
+                command.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(9).Value = CType(Email,String)
+            End If
+            If (Tipo_de_Pago Is Nothing) Then
+                command.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(10).Value = CType(Tipo_de_Pago,String)
+            End If
+            If (Cuenta_Bancaria.HasValue = true) Then
+                command.Parameters(11).Value = CType(Cuenta_Bancaria.Value,Integer)
+            Else
+                command.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Plazo_de_pago Is Nothing) Then
+                command.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(12).Value = CType(Plazo_de_pago,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
