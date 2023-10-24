@@ -32,9 +32,9 @@ Partial Class Registro
         Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
         Me.CheckBox_Admin = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.L_Registro = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.L_Registro = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,10 +42,10 @@ Partial Class Registro
         'L_Usuario
         '
         Me.L_Usuario.AutoSize = True
-        Me.L_Usuario.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Usuario.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Usuario.Location = New System.Drawing.Point(68, 151)
         Me.L_Usuario.Name = "L_Usuario"
-        Me.L_Usuario.Size = New System.Drawing.Size(208, 18)
+        Me.L_Usuario.Size = New System.Drawing.Size(211, 17)
         Me.L_Usuario.TabIndex = 1
         Me.L_Usuario.Text = "Ingrese nombre de usuario"
         '
@@ -59,10 +59,10 @@ Partial Class Registro
         'L_Contraseña
         '
         Me.L_Contraseña.AutoSize = True
-        Me.L_Contraseña.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Contraseña.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Contraseña.Location = New System.Drawing.Point(68, 225)
         Me.L_Contraseña.Name = "L_Contraseña"
-        Me.L_Contraseña.Size = New System.Drawing.Size(184, 18)
+        Me.L_Contraseña.Size = New System.Drawing.Size(188, 17)
         Me.L_Contraseña.TabIndex = 3
         Me.L_Contraseña.Text = "Ingrese una contraseña"
         '
@@ -75,8 +75,9 @@ Partial Class Registro
         '
         'btn_registrar
         '
-        Me.btn_registrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_registrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_registrar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_registrar.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_registrar.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_registrar.Location = New System.Drawing.Point(189, 302)
         Me.btn_registrar.Name = "btn_registrar"
         Me.btn_registrar.Size = New System.Drawing.Size(111, 40)
@@ -86,8 +87,9 @@ Partial Class Registro
         '
         'btn_limpiar
         '
-        Me.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_limpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_limpiar.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_limpiar.Location = New System.Drawing.Point(50, 302)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(112, 40)
@@ -98,11 +100,11 @@ Partial Class Registro
         'CheckBox_Usuario
         '
         Me.CheckBox_Usuario.AutoSize = True
-        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Purple
+        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Usuario.Location = New System.Drawing.Point(66, 107)
         Me.CheckBox_Usuario.Name = "CheckBox_Usuario"
-        Me.CheckBox_Usuario.Size = New System.Drawing.Size(80, 20)
+        Me.CheckBox_Usuario.Size = New System.Drawing.Size(77, 19)
         Me.CheckBox_Usuario.TabIndex = 10
         Me.CheckBox_Usuario.Text = "Usuario"
         Me.CheckBox_Usuario.UseVisualStyleBackColor = True
@@ -110,11 +112,11 @@ Partial Class Registro
         'CheckBox_Admin
         '
         Me.CheckBox_Admin.AutoSize = True
-        Me.CheckBox_Admin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Purple
+        Me.CheckBox_Admin.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Admin.Location = New System.Drawing.Point(189, 107)
         Me.CheckBox_Admin.Name = "CheckBox_Admin"
-        Me.CheckBox_Admin.Size = New System.Drawing.Size(122, 20)
+        Me.CheckBox_Admin.Size = New System.Drawing.Size(124, 19)
         Me.CheckBox_Admin.TabIndex = 11
         Me.CheckBox_Admin.Text = "Administrador"
         Me.CheckBox_Admin.UseVisualStyleBackColor = True
@@ -122,12 +124,22 @@ Partial Class Registro
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 75)
+        Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 77)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 16)
+        Me.Label1.Size = New System.Drawing.Size(200, 15)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Seleccione el Tipo de Usuario:"
+        '
+        'L_Registro
+        '
+        Me.L_Registro.AutoSize = True
+        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Registro.Location = New System.Drawing.Point(135, 19)
+        Me.L_Registro.Name = "L_Registro"
+        Me.L_Registro.Size = New System.Drawing.Size(106, 28)
+        Me.L_Registro.TabIndex = 13
+        Me.L_Registro.Text = "Registro"
         '
         'PictureBox3
         '
@@ -149,21 +161,11 @@ Partial Class Registro
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
         '
-        'L_Registro
-        '
-        Me.L_Registro.AutoSize = True
-        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Registro.Location = New System.Drawing.Point(135, 19)
-        Me.L_Registro.Name = "L_Registro"
-        Me.L_Registro.Size = New System.Drawing.Size(106, 28)
-        Me.L_Registro.TabIndex = 13
-        Me.L_Registro.Text = "Registro"
-        '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(365, 388)
         Me.Controls.Add(Me.L_Registro)
         Me.Controls.Add(Me.Label1)

@@ -49,9 +49,9 @@ Partial Class MenuAdmin
         '
         'btn_planilla
         '
-        Me.btn_planilla.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_planilla.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_planilla.ForeColor = System.Drawing.Color.Black
+        Me.btn_planilla.BackColor = System.Drawing.Color.Sienna
+        Me.btn_planilla.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_planilla.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_planilla.Location = New System.Drawing.Point(36, 126)
         Me.btn_planilla.Name = "btn_planilla"
         Me.btn_planilla.Size = New System.Drawing.Size(227, 54)
@@ -61,8 +61,9 @@ Partial Class MenuAdmin
         '
         'btn_ajustes
         '
-        Me.btn_ajustes.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_ajustes.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ajustes.BackColor = System.Drawing.Color.Sienna
+        Me.btn_ajustes.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ajustes.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_ajustes.Location = New System.Drawing.Point(698, 389)
         Me.btn_ajustes.Name = "btn_ajustes"
         Me.btn_ajustes.Size = New System.Drawing.Size(190, 49)
@@ -72,8 +73,9 @@ Partial Class MenuAdmin
         '
         'btn_productos
         '
-        Me.btn_productos.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_productos.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_productos.BackColor = System.Drawing.Color.Sienna
+        Me.btn_productos.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_productos.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_productos.Location = New System.Drawing.Point(353, 324)
         Me.btn_productos.Name = "btn_productos"
         Me.btn_productos.Size = New System.Drawing.Size(227, 54)
@@ -83,8 +85,9 @@ Partial Class MenuAdmin
         '
         'btn_materiaPrima
         '
-        Me.btn_materiaPrima.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_materiaPrima.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_materiaPrima.BackColor = System.Drawing.Color.Sienna
+        Me.btn_materiaPrima.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_materiaPrima.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_materiaPrima.Location = New System.Drawing.Point(353, 126)
         Me.btn_materiaPrima.Name = "btn_materiaPrima"
         Me.btn_materiaPrima.Size = New System.Drawing.Size(227, 54)
@@ -94,8 +97,9 @@ Partial Class MenuAdmin
         '
         'btn_proveedores
         '
-        Me.btn_proveedores.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_proveedores.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_proveedores.BackColor = System.Drawing.Color.Sienna
+        Me.btn_proveedores.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_proveedores.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_proveedores.Location = New System.Drawing.Point(36, 324)
         Me.btn_proveedores.Name = "btn_proveedores"
         Me.btn_proveedores.Size = New System.Drawing.Size(227, 54)
@@ -106,9 +110,9 @@ Partial Class MenuAdmin
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.DelisCake.My.Resources.Resources.Ajustes_Usuario
-        Me.PictureBox5.Location = New System.Drawing.Point(733, 281)
+        Me.PictureBox5.Location = New System.Drawing.Point(736, 281)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(121, 102)
+        Me.PictureBox5.Size = New System.Drawing.Size(113, 102)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 13
         Me.PictureBox5.TabStop = False
@@ -157,7 +161,7 @@ Partial Class MenuAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(906, 450)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)

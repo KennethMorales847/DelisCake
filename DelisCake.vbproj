@@ -100,11 +100,31 @@
     <Compile Include="AjustesUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Delis_CakeDataSet.Designer.vb">
+    <Compile Include="BitacoraUsuarios.Designer.vb">
+      <DependentUpon>BitacoraUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelisCakeSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>DelisCakeSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelisCakeSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelisCakeSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelisCakeSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelisCakeSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DelisCakeSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="EliminarUsuario.Designer.vb">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
@@ -128,12 +148,6 @@
       <DependentUpon>IniciarSesion.vb</DependentUpon>
     </Compile>
     <Compile Include="IniciarSesion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="materia_prima_empleados.Designer.vb">
-      <DependentUpon>materia_prima_empleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="materia_prima_empleados.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="materia_prima_form.Designer.vb">
@@ -169,12 +183,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="productos_terminados_empleados.Designer.vb">
-      <DependentUpon>productos_terminados_empleados.vb</DependentUpon>
-    </Compile>
-    <Compile Include="productos_terminados_empleados.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="productos_terminados_form.Designer.vb">
       <DependentUpon>productos_terminados_form.vb</DependentUpon>
@@ -217,6 +225,9 @@
     <EmbeddedResource Include="AjustesUsuario.resx">
       <DependentUpon>AjustesUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraUsuarios.resx">
+      <DependentUpon>BitacoraUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarUsuario.resx">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="materia_prima_empleados.resx">
-      <DependentUpon>materia_prima_empleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="materia_prima_form.resx">
       <DependentUpon>materia_prima_form.vb</DependentUpon>
@@ -243,9 +251,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="productos_terminados_empleados.resx">
-      <DependentUpon>productos_terminados_empleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="productos_terminados_form.resx">
       <DependentUpon>productos_terminados_form.vb</DependentUpon>
@@ -267,19 +272,49 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Delis_CakeDataSet.xsc">
-      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="DelisCakeSet1.xsc">
+      <DependentUpon>DelisCakeSet1.xsd</DependentUpon>
     </None>
-    <None Include="Delis_CakeDataSet.xsd">
+    <None Include="DelisCakeSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Delis_CakeDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>DelisCakeSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Delis_CakeDataSet.xss">
-      <DependentUpon>Delis_CakeDataSet.xsd</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="DelisCakeSet1.xss">
+      <DependentUpon>DelisCakeSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet2.xsc">
+      <DependentUpon>DelisCakeSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelisCakeSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelisCakeSet2.xss">
+      <DependentUpon>DelisCakeSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet3.xsc">
+      <DependentUpon>DelisCakeSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelisCakeSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelisCakeSet3.xss">
+      <DependentUpon>DelisCakeSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet4.xsc">
+      <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DelisCakeSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DelisCakeSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DelisCakeSet4.xss">
+      <DependentUpon>DelisCakeSet4.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -293,6 +328,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Cake17.png" />
+    <None Include="Imagenes\Cake14.png" />
+    <None Include="Imagenes\Icon.png" />
+    <None Include="Imagenes\Icon2.png" />
+    <None Include="Imagenes\Cake19.png" />
+    <None Include="Imagenes\Cake18.png" />
+    <None Include="Imagenes\Cake15.png" />
+    <None Include="Imagenes\Cake10.png" />
+    <None Include="Imagenes\Cake9.png" />
+    <None Include="Imagenes\Cake8.png" />
+    <None Include="Imagenes\Cake7.png" />
+    <None Include="Imagenes\Cake6.png" />
+    <None Include="Imagenes\Cake5.png" />
+    <None Include="Imagenes\Cake4.png" />
+    <None Include="Imagenes\Cake3.png" />
+    <None Include="Imagenes\Cake2.png" />
+    <None Include="Imagenes\Cake1.png" />
+    <None Include="Imagenes\Logo_DelisCake.png" />
     <None Include="Imagenes\Registrarse.png" />
     <None Include="Imagenes\IniciarSesion.png" />
     <None Include="Imagenes\Vitacora.png" />
