@@ -193,12 +193,6 @@
     <Compile Include="RestablecerContraseña.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Test.Designer.vb">
-      <DependentUpon>Test.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Test.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="trabajadores_form.Designer.vb">
       <DependentUpon>trabajadores_form.vb</DependentUpon>
     </Compile>
@@ -222,6 +216,9 @@
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Materia_Prima_Form.resx">
+      <DependentUpon>Materia_Prima_Form.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.vb</DependentUpon>
     </EmbeddedResource>
@@ -239,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RestablecerContraseña.resx">
       <DependentUpon>RestablecerContraseña.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -301,10 +295,10 @@
     <None Include="Imagenes\Pass.png" />
     <None Include="Imagenes\Registrar.png" />
     <Content Include="DelisCakeDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DelisCakeDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DelisCakeDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Icon_Inicio %282%29.ico" />
