@@ -40,43 +40,51 @@ Partial Class AjustesUsuario
         '
         'btn_vitacora
         '
-        Me.btn_vitacora.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_vitacora.Location = New System.Drawing.Point(112, 107)
+        Me.btn_vitacora.BackColor = System.Drawing.Color.Sienna
+        Me.btn_vitacora.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_vitacora.ForeColor = System.Drawing.SystemColors.Window
+        Me.btn_vitacora.Location = New System.Drawing.Point(111, 97)
         Me.btn_vitacora.Name = "btn_vitacora"
         Me.btn_vitacora.Size = New System.Drawing.Size(232, 61)
         Me.btn_vitacora.TabIndex = 0
-        Me.btn_vitacora.Text = "Bitácora de Usuarios"
-        Me.btn_vitacora.UseVisualStyleBackColor = True
+        Me.btn_vitacora.Text = "Gestión de Usuarios"
+        Me.btn_vitacora.UseVisualStyleBackColor = False
         '
         'btn_restablecer
         '
-        Me.btn_restablecer.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_restablecer.Location = New System.Drawing.Point(112, 190)
+        Me.btn_restablecer.BackColor = System.Drawing.Color.Sienna
+        Me.btn_restablecer.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_restablecer.ForeColor = System.Drawing.SystemColors.Window
+        Me.btn_restablecer.Location = New System.Drawing.Point(111, 180)
         Me.btn_restablecer.Name = "btn_restablecer"
         Me.btn_restablecer.Size = New System.Drawing.Size(232, 61)
         Me.btn_restablecer.TabIndex = 2
         Me.btn_restablecer.Text = "Restablecer Contraseña"
-        Me.btn_restablecer.UseVisualStyleBackColor = True
+        Me.btn_restablecer.UseVisualStyleBackColor = False
         '
         'btn_eliminar
         '
-        Me.btn_eliminar.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_eliminar.Location = New System.Drawing.Point(112, 273)
+        Me.btn_eliminar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_eliminar.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eliminar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btn_eliminar.Location = New System.Drawing.Point(111, 263)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(232, 61)
         Me.btn_eliminar.TabIndex = 4
         Me.btn_eliminar.Text = "Eliminar Usuarios"
-        Me.btn_eliminar.UseVisualStyleBackColor = True
+        Me.btn_eliminar.UseVisualStyleBackColor = False
         '
         'btn_agregar
         '
-        Me.btn_agregar.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_agregar.Location = New System.Drawing.Point(112, 356)
+        Me.btn_agregar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_agregar.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_agregar.ForeColor = System.Drawing.SystemColors.Window
+        Me.btn_agregar.Location = New System.Drawing.Point(111, 346)
         Me.btn_agregar.Name = "btn_agregar"
         Me.btn_agregar.Size = New System.Drawing.Size(232, 61)
         Me.btn_agregar.TabIndex = 6
         Me.btn_agregar.Text = "Agregar Nuevo Usuario"
-        Me.btn_agregar.UseVisualStyleBackColor = True
+        Me.btn_agregar.UseVisualStyleBackColor = False
         '
         'L_Registro
         '
@@ -91,7 +99,7 @@ Partial Class AjustesUsuario
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.DelisCake.My.Resources.Resources.Registrar
-        Me.PictureBox4.Location = New System.Drawing.Point(40, 356)
+        Me.PictureBox4.Location = New System.Drawing.Point(39, 346)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(66, 61)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -101,7 +109,7 @@ Partial Class AjustesUsuario
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.DelisCake.My.Resources.Resources.Eliminar
-        Me.PictureBox3.Location = New System.Drawing.Point(40, 273)
+        Me.PictureBox3.Location = New System.Drawing.Point(39, 263)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(66, 61)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -111,7 +119,7 @@ Partial Class AjustesUsuario
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.DelisCake.My.Resources.Resources.Cambiar_Usuario
-        Me.PictureBox2.Location = New System.Drawing.Point(40, 190)
+        Me.PictureBox2.Location = New System.Drawing.Point(39, 180)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(66, 61)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -121,7 +129,7 @@ Partial Class AjustesUsuario
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.DelisCake.My.Resources.Resources.Vitacora
-        Me.PictureBox1.Location = New System.Drawing.Point(40, 107)
+        Me.PictureBox1.Location = New System.Drawing.Point(39, 97)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(66, 61)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -132,6 +140,7 @@ Partial Class AjustesUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(385, 450)
         Me.Controls.Add(Me.L_Registro)
         Me.Controls.Add(Me.PictureBox4)

@@ -42,21 +42,21 @@ Partial Class EliminarUsuario
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(4, 75)
+        Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 76)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 16)
+        Me.Label1.Size = New System.Drawing.Size(200, 15)
         Me.Label1.TabIndex = 24
         Me.Label1.Text = "Seleccione el Tipo de Usuario:"
         '
         'CheckBox_Admin
         '
         Me.CheckBox_Admin.AutoSize = True
-        Me.CheckBox_Admin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Purple
+        Me.CheckBox_Admin.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Admin.Location = New System.Drawing.Point(189, 107)
         Me.CheckBox_Admin.Name = "CheckBox_Admin"
-        Me.CheckBox_Admin.Size = New System.Drawing.Size(122, 20)
+        Me.CheckBox_Admin.Size = New System.Drawing.Size(124, 19)
         Me.CheckBox_Admin.TabIndex = 23
         Me.CheckBox_Admin.Text = "Administrador"
         Me.CheckBox_Admin.UseVisualStyleBackColor = True
@@ -64,11 +64,11 @@ Partial Class EliminarUsuario
         'CheckBox_Usuario
         '
         Me.CheckBox_Usuario.AutoSize = True
-        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Purple
+        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Usuario.Location = New System.Drawing.Point(66, 107)
         Me.CheckBox_Usuario.Name = "CheckBox_Usuario"
-        Me.CheckBox_Usuario.Size = New System.Drawing.Size(80, 20)
+        Me.CheckBox_Usuario.Size = New System.Drawing.Size(77, 19)
         Me.CheckBox_Usuario.TabIndex = 22
         Me.CheckBox_Usuario.Text = "Usuario"
         Me.CheckBox_Usuario.UseVisualStyleBackColor = True
@@ -95,8 +95,9 @@ Partial Class EliminarUsuario
         '
         'btn_limpiar
         '
-        Me.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_limpiar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_limpiar.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_limpiar.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_limpiar.Location = New System.Drawing.Point(50, 302)
         Me.btn_limpiar.Name = "btn_limpiar"
         Me.btn_limpiar.Size = New System.Drawing.Size(112, 40)
@@ -106,8 +107,9 @@ Partial Class EliminarUsuario
         '
         'btn_eliminar
         '
-        Me.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btn_eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eliminar.BackColor = System.Drawing.Color.Sienna
+        Me.btn_eliminar.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_eliminar.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_eliminar.Location = New System.Drawing.Point(189, 302)
         Me.btn_eliminar.Name = "btn_eliminar"
         Me.btn_eliminar.Size = New System.Drawing.Size(111, 40)
@@ -125,10 +127,10 @@ Partial Class EliminarUsuario
         'L_Contraseña
         '
         Me.L_Contraseña.AutoSize = True
-        Me.L_Contraseña.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Contraseña.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Contraseña.Location = New System.Drawing.Point(68, 225)
         Me.L_Contraseña.Name = "L_Contraseña"
-        Me.L_Contraseña.Size = New System.Drawing.Size(171, 18)
+        Me.L_Contraseña.Size = New System.Drawing.Size(174, 17)
         Me.L_Contraseña.TabIndex = 16
         Me.L_Contraseña.Text = "Ingrese la contraseña"
         '
@@ -142,10 +144,10 @@ Partial Class EliminarUsuario
         'L_Usuario
         '
         Me.L_Usuario.AutoSize = True
-        Me.L_Usuario.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Usuario.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Usuario.Location = New System.Drawing.Point(68, 151)
         Me.L_Usuario.Name = "L_Usuario"
-        Me.L_Usuario.Size = New System.Drawing.Size(226, 18)
+        Me.L_Usuario.Size = New System.Drawing.Size(229, 17)
         Me.L_Usuario.TabIndex = 14
         Me.L_Usuario.Text = "Ingrese el nombre de usuario"
         '
@@ -163,6 +165,7 @@ Partial Class EliminarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(355, 363)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox_Admin)

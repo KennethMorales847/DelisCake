@@ -26,7 +26,6 @@ Partial Class RestablecerContraseña
         Me.L_Registro = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox_Admin = New System.Windows.Forms.CheckBox()
-        Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox_Contraseña = New System.Windows.Forms.TextBox()
@@ -35,6 +34,7 @@ Partial Class RestablecerContraseña
         Me.L_Usuario = New System.Windows.Forms.Label()
         Me.BT_limpiar = New System.Windows.Forms.Button()
         Me.BT_confirmar = New System.Windows.Forms.Button()
+        Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,36 +52,24 @@ Partial Class RestablecerContraseña
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 61)
+        Me.Label1.Font = New System.Drawing.Font("Lucida Sans", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(24, 63)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 16)
+        Me.Label1.Size = New System.Drawing.Size(200, 15)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Seleccione el Tipo de Usuario:"
         '
         'CheckBox_Admin
         '
         Me.CheckBox_Admin.AutoSize = True
-        Me.CheckBox_Admin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Purple
+        Me.CheckBox_Admin.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Admin.Location = New System.Drawing.Point(193, 93)
         Me.CheckBox_Admin.Name = "CheckBox_Admin"
-        Me.CheckBox_Admin.Size = New System.Drawing.Size(122, 20)
+        Me.CheckBox_Admin.Size = New System.Drawing.Size(124, 19)
         Me.CheckBox_Admin.TabIndex = 32
         Me.CheckBox_Admin.Text = "Administrador"
         Me.CheckBox_Admin.UseVisualStyleBackColor = True
-        '
-        'CheckBox_Usuario
-        '
-        Me.CheckBox_Usuario.AutoSize = True
-        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Purple
-        Me.CheckBox_Usuario.Location = New System.Drawing.Point(70, 93)
-        Me.CheckBox_Usuario.Name = "CheckBox_Usuario"
-        Me.CheckBox_Usuario.Size = New System.Drawing.Size(80, 20)
-        Me.CheckBox_Usuario.TabIndex = 31
-        Me.CheckBox_Usuario.Text = "Usuario"
-        Me.CheckBox_Usuario.UseVisualStyleBackColor = True
         '
         'PictureBox3
         '
@@ -113,10 +101,10 @@ Partial Class RestablecerContraseña
         'L_Contraseña
         '
         Me.L_Contraseña.AutoSize = True
-        Me.L_Contraseña.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Contraseña.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Contraseña.Location = New System.Drawing.Point(72, 211)
         Me.L_Contraseña.Name = "L_Contraseña"
-        Me.L_Contraseña.Size = New System.Drawing.Size(233, 18)
+        Me.L_Contraseña.Size = New System.Drawing.Size(239, 17)
         Me.L_Contraseña.TabIndex = 27
         Me.L_Contraseña.Text = "Ingrese una nueva contraseña"
         '
@@ -130,35 +118,54 @@ Partial Class RestablecerContraseña
         'L_Usuario
         '
         Me.L_Usuario.AutoSize = True
-        Me.L_Usuario.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Usuario.Font = New System.Drawing.Font("Lucida Sans", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.L_Usuario.Location = New System.Drawing.Point(72, 137)
         Me.L_Usuario.Name = "L_Usuario"
-        Me.L_Usuario.Size = New System.Drawing.Size(226, 18)
+        Me.L_Usuario.Size = New System.Drawing.Size(229, 17)
         Me.L_Usuario.TabIndex = 25
         Me.L_Usuario.Text = "Ingrese el nombre de usuario"
         '
         'BT_limpiar
         '
+        Me.BT_limpiar.BackColor = System.Drawing.Color.Sienna
+        Me.BT_limpiar.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BT_limpiar.ForeColor = System.Drawing.SystemColors.Window
         Me.BT_limpiar.Location = New System.Drawing.Point(70, 288)
         Me.BT_limpiar.Name = "BT_limpiar"
         Me.BT_limpiar.Size = New System.Drawing.Size(110, 39)
         Me.BT_limpiar.TabIndex = 34
         Me.BT_limpiar.Text = "Limpiar"
-        Me.BT_limpiar.UseVisualStyleBackColor = True
+        Me.BT_limpiar.UseVisualStyleBackColor = False
         '
         'BT_confirmar
         '
+        Me.BT_confirmar.BackColor = System.Drawing.Color.Sienna
+        Me.BT_confirmar.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BT_confirmar.ForeColor = System.Drawing.SystemColors.Window
         Me.BT_confirmar.Location = New System.Drawing.Point(205, 288)
         Me.BT_confirmar.Name = "BT_confirmar"
         Me.BT_confirmar.Size = New System.Drawing.Size(110, 39)
         Me.BT_confirmar.TabIndex = 35
         Me.BT_confirmar.Text = "Confirmar"
-        Me.BT_confirmar.UseVisualStyleBackColor = True
+        Me.BT_confirmar.UseVisualStyleBackColor = False
+        '
+        'CheckBox_Usuario
+        '
+        Me.CheckBox_Usuario.AutoSize = True
+        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Lucida Sans", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Sienna
+        Me.CheckBox_Usuario.Location = New System.Drawing.Point(70, 93)
+        Me.CheckBox_Usuario.Name = "CheckBox_Usuario"
+        Me.CheckBox_Usuario.Size = New System.Drawing.Size(77, 19)
+        Me.CheckBox_Usuario.TabIndex = 31
+        Me.CheckBox_Usuario.Text = "Usuario"
+        Me.CheckBox_Usuario.UseVisualStyleBackColor = True
         '
         'RestablecerContraseña
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(368, 349)
         Me.Controls.Add(Me.BT_confirmar)
         Me.Controls.Add(Me.BT_limpiar)
@@ -185,7 +192,6 @@ Partial Class RestablecerContraseña
     Friend WithEvents L_Registro As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CheckBox_Admin As CheckBox
-    Friend WithEvents CheckBox_Usuario As CheckBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TextBox_Contraseña As TextBox
@@ -194,4 +200,5 @@ Partial Class RestablecerContraseña
     Friend WithEvents L_Usuario As Label
     Friend WithEvents BT_limpiar As Button
     Friend WithEvents BT_confirmar As Button
+    Friend WithEvents CheckBox_Usuario As CheckBox
 End Class

@@ -100,6 +100,12 @@
     <Compile Include="AjustesUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BitacoraUsuarios.Designer.vb">
+      <DependentUpon>BitacoraUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BitacoraUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DelisCakeSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +213,9 @@
     <EmbeddedResource Include="AjustesUsuario.resx">
       <DependentUpon>AjustesUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraUsuarios.resx">
+      <DependentUpon>BitacoraUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarUsuario.resx">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +313,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Cake17.png" />
+    <None Include="Imagenes\Cake14.png" />
+    <None Include="Imagenes\Icon.png" />
+    <None Include="Imagenes\Icon2.png" />
+    <None Include="Imagenes\Cake19.png" />
+    <None Include="Imagenes\Cake18.png" />
+    <None Include="Imagenes\Cake15.png" />
+    <None Include="Imagenes\Cake10.png" />
+    <None Include="Imagenes\Cake9.png" />
+    <None Include="Imagenes\Cake8.png" />
+    <None Include="Imagenes\Cake7.png" />
+    <None Include="Imagenes\Cake6.png" />
+    <None Include="Imagenes\Cake5.png" />
+    <None Include="Imagenes\Cake4.png" />
+    <None Include="Imagenes\Cake3.png" />
+    <None Include="Imagenes\Cake2.png" />
+    <None Include="Imagenes\Cake1.png" />
+    <None Include="Imagenes\Logo_DelisCake.png" />
     <None Include="Imagenes\Registrarse.png" />
     <None Include="Imagenes\IniciarSesion.png" />
     <None Include="Imagenes\Vitacora.png" />

@@ -54,7 +54,7 @@ Public Class InicioSesion
         End Try
     End Sub
 
-    Private Sub btn_registrarse_Click(sender As Object, e As EventArgs) Handles btn_registrarse.Click
+    Private Sub btn_registrarse_Click(sender As Object, e As EventArgs)
         ' Ocultar el formulario actual
         Me.Hide()
 
