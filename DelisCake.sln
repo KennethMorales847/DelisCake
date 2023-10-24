@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33717.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DelisCake", "DelisCake.vbproj", "{77B7AC18-FEA2-4164-83B6-5A27608310C9}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DelisCakev0.2", "DelisCakev0.2.vbproj", "{77B7AC18-FEA2-4164-83B6-5A27608310C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
