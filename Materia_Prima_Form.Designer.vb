@@ -23,18 +23,16 @@ Partial Class Materia_Prima_Form
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim Id_IngredienteLabel As System.Windows.Forms.Label
+        Dim NombreLabel As System.Windows.Forms.Label
+        Dim CategoriaLabel As System.Windows.Forms.Label
+        Dim Fecha_CompraLabel As System.Windows.Forms.Label
+        Dim CantidadLabel As System.Windows.Forms.Label
+        Dim Costo_UnitarioLabel As System.Windows.Forms.Label
+        Dim Costo_Sin_IVALabel As System.Windows.Forms.Label
+        Dim IVA_UnitarioLabel As System.Windows.Forms.Label
+        Dim Costo_TotalLabel As System.Windows.Forms.Label
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.FechaCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoSinIVADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MateriaPrimaTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -48,8 +46,29 @@ Partial Class Materia_Prima_Form
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Materia_Prima_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Materia_Prima_TableTableAdapter()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.MateriaPrimaTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
+        Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FechaCompraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CantidadDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoSinIVADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Materia_Prima_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Materia_Prima_TableTableAdapter()
+        Me.TableAdapterManager = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager()
+        Id_IngredienteLabel = New System.Windows.Forms.Label()
+        NombreLabel = New System.Windows.Forms.Label()
+        CategoriaLabel = New System.Windows.Forms.Label()
+        Fecha_CompraLabel = New System.Windows.Forms.Label()
+        CantidadLabel = New System.Windows.Forms.Label()
+        Costo_UnitarioLabel = New System.Windows.Forms.Label()
+        Costo_Sin_IVALabel = New System.Windows.Forms.Label()
+        IVA_UnitarioLabel = New System.Windows.Forms.Label()
+        Costo_TotalLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MateriaPrimaTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,8 +82,138 @@ Partial Class Materia_Prima_Form
         Me.DataGridView1.DataSource = Me.MateriaPrimaTableBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(950, 160)
+        Me.DataGridView1.Size = New System.Drawing.Size(950, 296)
         Me.DataGridView1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1041, 260)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "&Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1122, 260)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "&Modificar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Id_Ingrediente", True))
+        Me.TextBox1.Location = New System.Drawing.Point(1082, 12)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox1.TabIndex = 21
+        '
+        'TextBox2
+        '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Nombre", True))
+        Me.TextBox2.Location = New System.Drawing.Point(1082, 38)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox2.TabIndex = 21
+        '
+        'TextBox3
+        '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Categoria", True))
+        Me.TextBox3.Location = New System.Drawing.Point(1082, 64)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox3.TabIndex = 21
+        '
+        'TextBox5
+        '
+        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Cantidad", True))
+        Me.TextBox5.Location = New System.Drawing.Point(1082, 116)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox5.TabIndex = 21
+        '
+        'TextBox6
+        '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Unitario", True))
+        Me.TextBox6.Location = New System.Drawing.Point(1082, 142)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox6.TabIndex = 21
+        '
+        'TextBox7
+        '
+        Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Sin_IVA", True))
+        Me.TextBox7.Location = New System.Drawing.Point(1082, 168)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox7.TabIndex = 21
+        '
+        'TextBox8
+        '
+        Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "IVA_Unitario", True))
+        Me.TextBox8.Location = New System.Drawing.Point(1082, 194)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
+        Me.TextBox8.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox8.TabIndex = 21
+        '
+        'TextBox9
+        '
+        Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Total", True))
+        Me.TextBox9.Location = New System.Drawing.Point(1082, 220)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
+        Me.TextBox9.Size = New System.Drawing.Size(220, 20)
+        Me.TextBox9.TabIndex = 21
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Fecha_Compra", True))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1082, 90)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(220, 20)
+        Me.DateTimePicker1.TabIndex = 22
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(1203, 260)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "&Eliminar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(1083, 300)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 20
+        Me.Button4.Text = "&Buscar"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(1164, 300)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(90, 23)
+        Me.Button5.TabIndex = 20
+        Me.Button5.Text = "&Mostrar Todo"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'MateriaPrimaTableBindingSource
+        '
+        Me.MateriaPrimaTableBindingSource.DataMember = "Materia_Prima_Table"
+        Me.MateriaPrimaTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
+        '
+        'DelisCakeDatabaseDataSet
+        '
+        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
+        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'IdIngredienteDataGridViewTextBoxColumn
         '
@@ -123,142 +272,114 @@ Partial Class Materia_Prima_Form
         Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
         Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'MateriaPrimaTableBindingSource
-        '
-        Me.MateriaPrimaTableBindingSource.DataMember = "Materia_Prima_Table"
-        Me.MateriaPrimaTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
-        '
-        'DelisCakeDatabaseDataSet
-        '
-        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
-        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(12, 196)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "&Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(93, 196)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "&Modificar"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Id_Ingrediente", True))
-        Me.TextBox1.Location = New System.Drawing.Point(1050, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox1.TabIndex = 21
-        '
-        'TextBox2
-        '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Nombre", True))
-        Me.TextBox2.Location = New System.Drawing.Point(1050, 39)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox2.TabIndex = 21
-        '
-        'TextBox3
-        '
-        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Categoria", True))
-        Me.TextBox3.Location = New System.Drawing.Point(1050, 65)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox3.TabIndex = 21
-        '
-        'TextBox5
-        '
-        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Cantidad", True))
-        Me.TextBox5.Location = New System.Drawing.Point(1050, 117)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox5.TabIndex = 21
-        '
-        'TextBox6
-        '
-        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Unitario", True))
-        Me.TextBox6.Location = New System.Drawing.Point(1050, 143)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox6.TabIndex = 21
-        '
-        'TextBox7
-        '
-        Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Sin_IVA", True))
-        Me.TextBox7.Location = New System.Drawing.Point(1050, 169)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox7.TabIndex = 21
-        '
-        'TextBox8
-        '
-        Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "IVA_Unitario", True))
-        Me.TextBox8.Location = New System.Drawing.Point(1050, 195)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox8.TabIndex = 21
-        '
-        'TextBox9
-        '
-        Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Total", True))
-        Me.TextBox9.Location = New System.Drawing.Point(1050, 221)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(220, 20)
-        Me.TextBox9.TabIndex = 21
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Fecha_Compra", True))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1050, 91)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(220, 20)
-        Me.DateTimePicker1.TabIndex = 22
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(174, 196)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 20
-        Me.Button3.Text = "&Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(255, 196)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 20
-        Me.Button4.Text = "&Buscar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Materia_Prima_TableTableAdapter
         '
         Me.Materia_Prima_TableTableAdapter.ClearBeforeFill = True
         '
-        'Button5
+        'TableAdapterManager
         '
-        Me.Button5.Location = New System.Drawing.Point(336, 196)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(90, 23)
-        Me.Button5.TabIndex = 20
-        Me.Button5.Text = "&Mostrar Todo"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Materia_Prima_TableTableAdapter = Me.Materia_Prima_TableTableAdapter
+        Me.TableAdapterManager.Planilla_Empleados_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Productos_Terminados_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Proveedores_TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Id_IngredienteLabel
+        '
+        Id_IngredienteLabel.AutoSize = True
+        Id_IngredienteLabel.Location = New System.Drawing.Point(988, 15)
+        Id_IngredienteLabel.Name = "Id_IngredienteLabel"
+        Id_IngredienteLabel.Size = New System.Drawing.Size(75, 13)
+        Id_IngredienteLabel.TabIndex = 22
+        Id_IngredienteLabel.Text = "Id Ingrediente:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(988, 41)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 24
+        NombreLabel.Text = "Nombre:"
+        '
+        'CategoriaLabel
+        '
+        CategoriaLabel.AutoSize = True
+        CategoriaLabel.Location = New System.Drawing.Point(988, 67)
+        CategoriaLabel.Name = "CategoriaLabel"
+        CategoriaLabel.Size = New System.Drawing.Size(55, 13)
+        CategoriaLabel.TabIndex = 26
+        CategoriaLabel.Text = "Categoria:"
+        '
+        'Fecha_CompraLabel
+        '
+        Fecha_CompraLabel.AutoSize = True
+        Fecha_CompraLabel.Location = New System.Drawing.Point(988, 94)
+        Fecha_CompraLabel.Name = "Fecha_CompraLabel"
+        Fecha_CompraLabel.Size = New System.Drawing.Size(79, 13)
+        Fecha_CompraLabel.TabIndex = 28
+        Fecha_CompraLabel.Text = "Fecha Compra:"
+        '
+        'CantidadLabel
+        '
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Location = New System.Drawing.Point(988, 119)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(52, 13)
+        CantidadLabel.TabIndex = 30
+        CantidadLabel.Text = "Cantidad:"
+        '
+        'Costo_UnitarioLabel
+        '
+        Costo_UnitarioLabel.AutoSize = True
+        Costo_UnitarioLabel.Location = New System.Drawing.Point(988, 145)
+        Costo_UnitarioLabel.Name = "Costo_UnitarioLabel"
+        Costo_UnitarioLabel.Size = New System.Drawing.Size(76, 13)
+        Costo_UnitarioLabel.TabIndex = 32
+        Costo_UnitarioLabel.Text = "Costo Unitario:"
+        '
+        'Costo_Sin_IVALabel
+        '
+        Costo_Sin_IVALabel.AutoSize = True
+        Costo_Sin_IVALabel.Location = New System.Drawing.Point(988, 171)
+        Costo_Sin_IVALabel.Name = "Costo_Sin_IVALabel"
+        Costo_Sin_IVALabel.Size = New System.Drawing.Size(75, 13)
+        Costo_Sin_IVALabel.TabIndex = 34
+        Costo_Sin_IVALabel.Text = "Costo Sin IVA:"
+        '
+        'IVA_UnitarioLabel
+        '
+        IVA_UnitarioLabel.AutoSize = True
+        IVA_UnitarioLabel.Location = New System.Drawing.Point(988, 197)
+        IVA_UnitarioLabel.Name = "IVA_UnitarioLabel"
+        IVA_UnitarioLabel.Size = New System.Drawing.Size(66, 13)
+        IVA_UnitarioLabel.TabIndex = 36
+        IVA_UnitarioLabel.Text = "IVA Unitario:"
+        '
+        'Costo_TotalLabel
+        '
+        Costo_TotalLabel.AutoSize = True
+        Costo_TotalLabel.Location = New System.Drawing.Point(988, 223)
+        Costo_TotalLabel.Name = "Costo_TotalLabel"
+        Costo_TotalLabel.Size = New System.Drawing.Size(64, 13)
+        Costo_TotalLabel.TabIndex = 38
+        Costo_TotalLabel.Text = "Costo Total:"
         '
         'Materia_Prima_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1306, 295)
+        Me.ClientSize = New System.Drawing.Size(1314, 357)
+        Me.Controls.Add(Id_IngredienteLabel)
+        Me.Controls.Add(NombreLabel)
+        Me.Controls.Add(CategoriaLabel)
+        Me.Controls.Add(Fecha_CompraLabel)
+        Me.Controls.Add(CantidadLabel)
+        Me.Controls.Add(Costo_UnitarioLabel)
+        Me.Controls.Add(Costo_Sin_IVALabel)
+        Me.Controls.Add(IVA_UnitarioLabel)
+        Me.Controls.Add(Costo_TotalLabel)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.TextBox6)
@@ -311,4 +432,5 @@ Partial Class Materia_Prima_Form
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents TableAdapterManager As DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager
 End Class

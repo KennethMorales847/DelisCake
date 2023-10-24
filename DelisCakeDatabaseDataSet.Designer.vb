@@ -776,6 +776,16 @@ Partial Public Class DelisCakeDatabaseDataSet
         
         Private columnAnticipo As Global.System.Data.DataColumn
         
+        Private columnHoras_Extras As Global.System.Data.DataColumn
+        
+        Private columnTotal_Devengado As Global.System.Data.DataColumn
+        
+        Private columnIGSS As Global.System.Data.DataColumn
+        
+        Private columnTotal_Descuentos As Global.System.Data.DataColumn
+        
+        Private columnImporte_a_Recibir As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -868,6 +878,46 @@ Partial Public Class DelisCakeDatabaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Horas_ExtrasColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHoras_Extras
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Total_DevengadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotal_Devengado
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property IGSSColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIGSS
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Total_DescuentosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotal_Descuentos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Importe_a_RecibirColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnImporte_a_Recibir
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -904,9 +954,9 @@ Partial Public Class DelisCakeDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddPlanilla_Empleados_TableRow(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Integer, ByVal Bonificacion_Incentivo As Double, ByVal Anticipo As Double) As Planilla_Empleados_TableRow
+        Public Overloads Function AddPlanilla_Empleados_TableRow(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Integer, ByVal Bonificacion_Incentivo As Double, ByVal Anticipo As Double, ByVal Horas_Extras As Double, ByVal Total_Devengado As Double, ByVal IGSS As Double, ByVal Total_Descuentos As Double, ByVal Importe_a_Recibir As Double) As Planilla_Empleados_TableRow
             Dim rowPlanilla_Empleados_TableRow As Planilla_Empleados_TableRow = CType(Me.NewRow,Planilla_Empleados_TableRow)
-            Dim columnValuesArray() As Object = New Object() {Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo}
+            Dim columnValuesArray() As Object = New Object() {Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, Horas_Extras, Total_Devengado, IGSS, Total_Descuentos, Importe_a_Recibir}
             rowPlanilla_Empleados_TableRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowPlanilla_Empleados_TableRow)
             Return rowPlanilla_Empleados_TableRow
@@ -942,6 +992,11 @@ Partial Public Class DelisCakeDatabaseDataSet
             Me.columnNum_Horas_Extras = MyBase.Columns("Num_Horas_Extras")
             Me.columnBonificacion_Incentivo = MyBase.Columns("Bonificacion_Incentivo")
             Me.columnAnticipo = MyBase.Columns("Anticipo")
+            Me.columnHoras_Extras = MyBase.Columns("Horas_Extras")
+            Me.columnTotal_Devengado = MyBase.Columns("Total_Devengado")
+            Me.columnIGSS = MyBase.Columns("IGSS")
+            Me.columnTotal_Descuentos = MyBase.Columns("Total_Descuentos")
+            Me.columnImporte_a_Recibir = MyBase.Columns("Importe_a_Recibir")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -961,6 +1016,16 @@ Partial Public Class DelisCakeDatabaseDataSet
             MyBase.Columns.Add(Me.columnBonificacion_Incentivo)
             Me.columnAnticipo = New Global.System.Data.DataColumn("Anticipo", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAnticipo)
+            Me.columnHoras_Extras = New Global.System.Data.DataColumn("Horas_Extras", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHoras_Extras)
+            Me.columnTotal_Devengado = New Global.System.Data.DataColumn("Total_Devengado", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotal_Devengado)
+            Me.columnIGSS = New Global.System.Data.DataColumn("IGSS", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIGSS)
+            Me.columnTotal_Descuentos = New Global.System.Data.DataColumn("Total_Descuentos", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotal_Descuentos)
+            Me.columnImporte_a_Recibir = New Global.System.Data.DataColumn("Importe_a_Recibir", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnImporte_a_Recibir)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCodigo_Empleado}, true))
             Me.columnCodigo_Empleado.AllowDBNull = false
             Me.columnCodigo_Empleado.Unique = true
@@ -969,6 +1034,11 @@ Partial Public Class DelisCakeDatabaseDataSet
             Me.columnPuesto.AllowDBNull = false
             Me.columnPuesto.MaxLength = 50
             Me.columnSalario.AllowDBNull = false
+            Me.columnHoras_Extras.ReadOnly = true
+            Me.columnTotal_Devengado.ReadOnly = true
+            Me.columnIGSS.ReadOnly = true
+            Me.columnTotal_Descuentos.ReadOnly = true
+            Me.columnImporte_a_Recibir.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2115,6 +2185,85 @@ Partial Public Class DelisCakeDatabaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Horas_Extras() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tablePlanilla_Empleados_Table.Horas_ExtrasColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Horas_Extras' in table 'Planilla_Empleados_Table' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePlanilla_Empleados_Table.Horas_ExtrasColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Total_Devengado() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tablePlanilla_Empleados_Table.Total_DevengadoColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Devengado' in table 'Planilla_Empleados_Table' is DBN"& _ 
+                            "ull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePlanilla_Empleados_Table.Total_DevengadoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property IGSS() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tablePlanilla_Empleados_Table.IGSSColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'IGSS' in table 'Planilla_Empleados_Table' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePlanilla_Empleados_Table.IGSSColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Total_Descuentos() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tablePlanilla_Empleados_Table.Total_DescuentosColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Total_Descuentos' in table 'Planilla_Empleados_Table' is DB"& _ 
+                            "Null.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePlanilla_Empleados_Table.Total_DescuentosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Importe_a_Recibir() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tablePlanilla_Empleados_Table.Importe_a_RecibirColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Importe_a_Recibir' in table 'Planilla_Empleados_Table' is D"& _ 
+                            "BNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePlanilla_Empleados_Table.Importe_a_RecibirColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsNum_Horas_ExtrasNull() As Boolean
             Return Me.IsNull(Me.tablePlanilla_Empleados_Table.Num_Horas_ExtrasColumn)
         End Function
@@ -2147,6 +2296,66 @@ Partial Public Class DelisCakeDatabaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetAnticipoNull()
             Me(Me.tablePlanilla_Empleados_Table.AnticipoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsHoras_ExtrasNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla_Empleados_Table.Horas_ExtrasColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetHoras_ExtrasNull()
+            Me(Me.tablePlanilla_Empleados_Table.Horas_ExtrasColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTotal_DevengadoNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla_Empleados_Table.Total_DevengadoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTotal_DevengadoNull()
+            Me(Me.tablePlanilla_Empleados_Table.Total_DevengadoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsIGSSNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla_Empleados_Table.IGSSColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetIGSSNull()
+            Me(Me.tablePlanilla_Empleados_Table.IGSSColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTotal_DescuentosNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla_Empleados_Table.Total_DescuentosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTotal_DescuentosNull()
+            Me(Me.tablePlanilla_Empleados_Table.Total_DescuentosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsImporte_a_RecibirNull() As Boolean
+            Return Me.IsNull(Me.tablePlanilla_Empleados_Table.Importe_a_RecibirColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetImporte_a_RecibirNull()
+            Me(Me.tablePlanilla_Empleados_Table.Importe_a_RecibirColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3503,17 +3712,28 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Num_Horas_Extras", "Num_Horas_Extras")
             tableMapping.ColumnMappings.Add("Bonificacion_Incentivo", "Bonificacion_Incentivo")
             tableMapping.ColumnMappings.Add("Anticipo", "Anticipo")
+            tableMapping.ColumnMappings.Add("Horas_Extras", "Horas_Extras")
+            tableMapping.ColumnMappings.Add("Total_Devengado", "Total_Devengado")
+            tableMapping.ColumnMappings.Add("IGSS", "IGSS")
+            tableMapping.ColumnMappings.Add("Total_Descuentos", "Total_Descuentos")
+            tableMapping.ColumnMappings.Add("Importe_a_Recibir", "Importe_a_Recibir")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Planilla_Empleados_Table] WHERE (([Codigo_Empleado] = @Origina"& _ 
-                "l_Codigo_Empleado) AND ([Nombre_Completo] = @Original_Nombre_Completo) AND ([Pue"& _ 
-                "sto] = @Original_Puesto) AND ([Salario] = @Original_Salario) AND ((@IsNull_Num_H"& _ 
-                "oras_Extras = 1 AND [Num_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @Origin"& _ 
-                "al_Num_Horas_Extras)) AND ((@IsNull_Bonificacion_Incentivo = 1 AND [Bonificacion"& _ 
-                "_Incentivo] IS NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificacion_Incen"& _ 
-                "tivo)) AND ((@IsNull_Anticipo = 1 AND [Anticipo] IS NULL) OR ([Anticipo] = @Orig"& _ 
-                "inal_Anticipo)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Planilla_Empleados_Table] WHERE (([Codigo_Empleado] = @Original_Codi"& _ 
+                "go_Empleado) AND ([Nombre_Completo] = @Original_Nombre_Completo) AND ([Puesto] ="& _ 
+                " @Original_Puesto) AND ([Salario] = @Original_Salario) AND ((@IsNull_Num_Horas_E"& _ 
+                "xtras = 1 AND [Num_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @Original_Num"& _ 
+                "_Horas_Extras)) AND ((@IsNull_Bonificacion_Incentivo = 1 AND [Bonificacion_Incen"& _ 
+                "tivo] IS NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificacion_Incentivo))"& _ 
+                " AND ((@IsNull_Anticipo = 1 AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_A"& _ 
+                "nticipo)) AND ((@IsNull_Horas_Extras = 1 AND [Horas_Extras] IS NULL) OR ([Horas_"& _ 
+                "Extras] = @Original_Horas_Extras)) AND ((@IsNull_IGSS = 1 AND [IGSS] IS NULL) OR"& _ 
+                " ([IGSS] = @Original_IGSS)) AND ((@IsNull_Importe_a_Recibir = 1 AND [Importe_a_R"& _ 
+                "ecibir] IS NULL) OR ([Importe_a_Recibir] = @Original_Importe_a_Recibir)) AND ((@"& _ 
+                "IsNull_Total_Descuentos = 1 AND [Total_Descuentos] IS NULL) OR ([Total_Descuento"& _ 
+                "s] = @Original_Total_Descuentos)) AND ((@IsNull_Total_Devengado = 1 AND [Total_D"& _ 
+                "evengado] IS NULL) OR ([Total_Devengado] = @Original_Total_Devengado)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3525,14 +3745,25 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Anticipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Horas_Extras", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Horas_Extras", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Horas_Extras", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Horas_Extras", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGSS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Importe_a_Recibir", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Importe_a_Recibir", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Descuentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Descuentos", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Devengado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Devengado", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Planilla_Empleados_Table] ([Codigo_Empleado], [Nombre_Completo"& _ 
-                "], [Puesto], [Salario], [Num_Horas_Extras], [Bonificacion_Incentivo], [Anticipo]"& _ 
-                ") VALUES (@Codigo_Empleado, @Nombre_Completo, @Puesto, @Salario, @Num_Horas_Extr"& _ 
-                "as, @Bonificacion_Incentivo, @Anticipo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Complet"& _ 
-                "o, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo FROM Plan"& _ 
-                "illa_Empleados_Table WHERE (Codigo_Empleado = @Codigo_Empleado)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Planilla_Empleados_Table] ([Codigo_Empleado], [Nombre_Completo], [Pu"& _ 
+                "esto], [Salario], [Num_Horas_Extras], [Bonificacion_Incentivo], [Anticipo]) VALU"& _ 
+                "ES (@Codigo_Empleado, @Nombre_Completo, @Puesto, @Salario, @Num_Horas_Extras, @B"& _ 
+                "onificacion_Incentivo, @Anticipo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Completo, Pue"& _ 
+                "sto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, Horas_Extras, "& _ 
+                "IGSS, Importe_a_Recibir, Total_Descuentos, Total_Devengado FROM Planilla_Emplead"& _ 
+                "os_Table WHERE (Codigo_Empleado = @Codigo_Empleado)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3543,19 +3774,27 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Planilla_Empleados_Table] SET [Codigo_Empleado] = @Codigo_Empleado,"& _ 
-                " [Nombre_Completo] = @Nombre_Completo, [Puesto] = @Puesto, [Salario] = @Salario,"& _ 
-                " [Num_Horas_Extras] = @Num_Horas_Extras, [Bonificacion_Incentivo] = @Bonificacio"& _ 
-                "n_Incentivo, [Anticipo] = @Anticipo WHERE (([Codigo_Empleado] = @Original_Codigo"& _ 
-                "_Empleado) AND ([Nombre_Completo] = @Original_Nombre_Completo) AND ([Puesto] = @"& _ 
-                "Original_Puesto) AND ([Salario] = @Original_Salario) AND ((@IsNull_Num_Horas_Ext"& _ 
-                "ras = 1 AND [Num_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @Original_Num_H"& _ 
-                "oras_Extras)) AND ((@IsNull_Bonificacion_Incentivo = 1 AND [Bonificacion_Incenti"& _ 
-                "vo] IS NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificacion_Incentivo)) A"& _ 
-                "ND ((@IsNull_Anticipo = 1 AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_Ant"& _ 
-                "icipo)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_E"& _ 
-                "xtras, Bonificacion_Incentivo, Anticipo FROM Planilla_Empleados_Table WHERE (Cod"& _ 
-                "igo_Empleado = @Codigo_Empleado)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Planilla_Empleados_Table] SET [Codigo_Empleado] = @Codigo_Empleado, [Nomb"& _ 
+                "re_Completo] = @Nombre_Completo, [Puesto] = @Puesto, [Salario] = @Salario, [Num_"& _ 
+                "Horas_Extras] = @Num_Horas_Extras, [Bonificacion_Incentivo] = @Bonificacion_Ince"& _ 
+                "ntivo, [Anticipo] = @Anticipo WHERE (([Codigo_Empleado] = @Original_Codigo_Emple"& _ 
+                "ado) AND ([Nombre_Completo] = @Original_Nombre_Completo) AND ([Puesto] = @Origin"& _ 
+                "al_Puesto) AND ([Salario] = @Original_Salario) AND ((@IsNull_Num_Horas_Extras = "& _ 
+                "1 AND [Num_Horas_Extras] IS NULL) OR ([Num_Horas_Extras] = @Original_Num_Horas_E"& _ 
+                "xtras)) AND ((@IsNull_Bonificacion_Incentivo = 1 AND [Bonificacion_Incentivo] IS"& _ 
+                " NULL) OR ([Bonificacion_Incentivo] = @Original_Bonificacion_Incentivo)) AND ((@"& _ 
+                "IsNull_Anticipo = 1 AND [Anticipo] IS NULL) OR ([Anticipo] = @Original_Anticipo)"& _ 
+                ") AND ((@IsNull_Horas_Extras = 1 AND [Horas_Extras] IS NULL) OR ([Horas_Extras] "& _ 
+                "= @Original_Horas_Extras)) AND ((@IsNull_IGSS = 1 AND [IGSS] IS NULL) OR ([IGSS]"& _ 
+                " = @Original_IGSS)) AND ((@IsNull_Importe_a_Recibir = 1 AND [Importe_a_Recibir] "& _ 
+                "IS NULL) OR ([Importe_a_Recibir] = @Original_Importe_a_Recibir)) AND ((@IsNull_T"& _ 
+                "otal_Descuentos = 1 AND [Total_Descuentos] IS NULL) OR ([Total_Descuentos] = @Or"& _ 
+                "iginal_Total_Descuentos)) AND ((@IsNull_Total_Devengado = 1 AND [Total_Devengado"& _ 
+                "] IS NULL) OR ([Total_Devengado] = @Original_Total_Devengado)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_"& _ 
+                "Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incen"& _ 
+                "tivo, Anticipo, Horas_Extras, IGSS, Importe_a_Recibir, Total_Descuentos, Total_D"& _ 
+                "evengado FROM Planilla_Empleados_Table WHERE (Codigo_Empleado = @Codigo_Empleado"& _ 
+                ")"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -3574,6 +3813,16 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Anticipo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Anticipo", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Horas_Extras", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Horas_Extras", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Horas_Extras", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Horas_Extras", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_IGSS", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_IGSS", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IGSS", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Importe_a_Recibir", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Importe_a_Recibir", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Importe_a_Recibir", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Descuentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Descuentos", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Descuentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Total_Devengado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_Devengado", Global.System.Data.SqlDbType.Float, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_Devengado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3586,12 +3835,67 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonif"& _ 
-                "icacion_Incentivo, Anticipo FROM dbo.Planilla_Empleados_Table"
+                "icacion_Incentivo, Anticipo, Horas_Extras, IGSS, Importe_a_Recibir, Total_Descue"& _ 
+                "ntos, Total_Devengado FROM Planilla_Empleados_Table"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO Planilla_Empleados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (Codigo_Empleado, "& _ 
+                "Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anti"& _ 
+                "cipo)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (@Codigo_Empleado,@Nombre_Completo,@Puesto,@Salario,@Num_Ho"& _ 
+                "ras_Extras,@Bonificacion_Incentivo,@Anticipo); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_"& _ 
+                "Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo FR"& _ 
+                "OM Planilla_Empleados_Table WHERE (Codigo_Empleado = @Codigo_Empleado)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Puesto", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Puesto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salario", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Salario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Num_Horas_Extras", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Num_Horas_Extras", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Anticipo", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "DELETE FROM Planilla_Empleados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Codigo_Empleado = @Original_C"& _ 
+                "odigo_Empleado)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Codigo_Empleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonif"& _ 
+                "icacion_Incentivo, Anticipo, Horas_Extras, IGSS, Importe_a_Recibir, Total_Descue"& _ 
+                "ntos, Total_Devengado FROM Planilla_Empleados_Table WHERE (Codigo_Empleado = @Pa"& _ 
+                "ram1)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "UPDATE       Planilla_Empleados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                Codigo_Empleado = @Codi"& _ 
+                "go_Empleado, Nombre_Completo = @Nombre_Completo, Puesto = @Puesto, Salario = @Sa"& _ 
+                "lario, Num_Horas_Extras = @Num_Horas_Extras, Bonificacion_Incentivo = @Bonificac"& _ 
+                "ion_Incentivo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Anticipo = @Anticipo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Co"& _ 
+                "digo_Empleado = @Original_Codigo_Empleado);  "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codigo_Empleado, Nombre_Co"& _ 
+                "mpleto, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo FROM"& _ 
+                " Planilla_Empleados_Table WHERE (Codigo_Empleado = @Codigo_Empleado)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Empleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Completo", Global.System.Data.SqlDbType.VarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Completo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Puesto", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Puesto", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Salario", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Salario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Num_Horas_Extras", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Num_Horas_Extras", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Bonificacion_Incentivo", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Bonificacion_Incentivo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Anticipo", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Anticipo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Codigo_Empleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Empleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonif"& _ 
+                "icacion_Incentivo, Anticipo, Horas_Extras, IGSS, Importe_a_Recibir, Total_Descue"& _ 
+                "ntos, Total_Devengado FROM Planilla_Empleados_Table"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3613,6 +3917,56 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable = New DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function buscar(ByVal dataTable As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable, ByVal Param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy3(ByVal Param1 As Integer) As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            Dim dataTable As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable = New DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function mostrar(ByVal dataTable As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy4() As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             Dim dataTable As DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable = New DelisCakeDatabaseDataSet.Planilla_Empleados_TableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3650,7 +4004,7 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double), ByVal Original_Horas_Extras As Global.System.Nullable(Of Double), ByVal Original_IGSS As Global.System.Nullable(Of Double), ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double), ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double), ByVal Original_Total_Devengado As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Codigo_Empleado,Integer)
             If (Original_Nombre_Completo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Nombre_Completo")
@@ -3683,6 +4037,41 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
             Else
                 Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Horas_Extras.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_Horas_Extras.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Original_IGSS.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_IGSS.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Importe_a_Recibir.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_Importe_a_Recibir.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Total_Descuentos.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_Total_Descuentos.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Total_Devengado.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_Total_Devengado.Value,Double)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -3750,7 +4139,26 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double), ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double)) As Integer
+        Public Overloads Overridable Function Update( _
+                    ByVal Codigo_Empleado As Integer,  _
+                    ByVal Nombre_Completo As String,  _
+                    ByVal Puesto As String,  _
+                    ByVal Salario As Double,  _
+                    ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
+                    ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
+                    ByVal Anticipo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Codigo_Empleado As Integer,  _
+                    ByVal Original_Nombre_Completo As String,  _
+                    ByVal Original_Puesto As String,  _
+                    ByVal Original_Salario As Double,  _
+                    ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Anticipo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Horas_Extras As Global.System.Nullable(Of Double),  _
+                    ByVal Original_IGSS As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Total_Devengado As Global.System.Nullable(Of Double)) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Codigo_Empleado,Integer)
             If (Nombre_Completo Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Nombre_Completo")
@@ -3811,6 +4219,41 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
             End If
+            If (Original_Horas_Extras.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Horas_Extras.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+            End If
+            If (Original_IGSS.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_IGSS.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Importe_a_Recibir.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Importe_a_Recibir.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Total_Descuentos.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Total_Descuentos.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Total_Devengado.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Total_Devengado.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -3830,8 +4273,148 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double), ByVal Original_Codigo_Empleado As Integer, ByVal Original_Nombre_Completo As String, ByVal Original_Puesto As String, ByVal Original_Salario As Double, ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Original_Anticipo As Global.System.Nullable(Of Double)) As Integer
-            Return Me.Update(Original_Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, Original_Codigo_Empleado, Original_Nombre_Completo, Original_Puesto, Original_Salario, Original_Num_Horas_Extras, Original_Bonificacion_Incentivo, Original_Anticipo)
+        Public Overloads Overridable Function Update( _
+                    ByVal Nombre_Completo As String,  _
+                    ByVal Puesto As String,  _
+                    ByVal Salario As Double,  _
+                    ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
+                    ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
+                    ByVal Anticipo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Codigo_Empleado As Integer,  _
+                    ByVal Original_Nombre_Completo As String,  _
+                    ByVal Original_Puesto As String,  _
+                    ByVal Original_Salario As Double,  _
+                    ByVal Original_Num_Horas_Extras As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_Bonificacion_Incentivo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Anticipo As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Horas_Extras As Global.System.Nullable(Of Double),  _
+                    ByVal Original_IGSS As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Importe_a_Recibir As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Total_Descuentos As Global.System.Nullable(Of Double),  _
+                    ByVal Original_Total_Devengado As Global.System.Nullable(Of Double)) As Integer
+            Return Me.Update(Original_Codigo_Empleado, Nombre_Completo, Puesto, Salario, Num_Horas_Extras, Bonificacion_Incentivo, Anticipo, Original_Codigo_Empleado, Original_Nombre_Completo, Original_Puesto, Original_Salario, Original_Num_Horas_Extras, Original_Bonificacion_Incentivo, Original_Anticipo, Original_Horas_Extras, Original_IGSS, Original_Importe_a_Recibir, Original_Total_Descuentos, Original_Total_Devengado)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function agregar(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double)) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Codigo_Empleado,Integer)
+            If (Nombre_Completo Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre_Completo")
+            Else
+                command.Parameters(1).Value = CType(Nombre_Completo,String)
+            End If
+            If (Puesto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Puesto")
+            Else
+                command.Parameters(2).Value = CType(Puesto,String)
+            End If
+            command.Parameters(3).Value = CType(Salario,Double)
+            If (Num_Horas_Extras.HasValue = true) Then
+                command.Parameters(4).Value = CType(Num_Horas_Extras.Value,Integer)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Bonificacion_Incentivo.HasValue = true) Then
+                command.Parameters(5).Value = CType(Bonificacion_Incentivo.Value,Double)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Anticipo.HasValue = true) Then
+                command.Parameters(6).Value = CType(Anticipo.Value,Double)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function borrar(ByVal Original_Codigo_Empleado As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            command.Parameters(0).Value = CType(Original_Codigo_Empleado,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function modificar(ByVal Codigo_Empleado As Integer, ByVal Nombre_Completo As String, ByVal Puesto As String, ByVal Salario As Double, ByVal Num_Horas_Extras As Global.System.Nullable(Of Integer), ByVal Bonificacion_Incentivo As Global.System.Nullable(Of Double), ByVal Anticipo As Global.System.Nullable(Of Double), ByVal Original_Codigo_Empleado As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            command.Parameters(0).Value = CType(Codigo_Empleado,Integer)
+            If (Nombre_Completo Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre_Completo")
+            Else
+                command.Parameters(1).Value = CType(Nombre_Completo,String)
+            End If
+            If (Puesto Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Puesto")
+            Else
+                command.Parameters(2).Value = CType(Puesto,String)
+            End If
+            command.Parameters(3).Value = CType(Salario,Double)
+            If (Num_Horas_Extras.HasValue = true) Then
+                command.Parameters(4).Value = CType(Num_Horas_Extras.Value,Integer)
+            Else
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            End If
+            If (Bonificacion_Incentivo.HasValue = true) Then
+                command.Parameters(5).Value = CType(Bonificacion_Incentivo.Value,Double)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Anticipo.HasValue = true) Then
+                command.Parameters(6).Value = CType(Anticipo.Value,Double)
+            Else
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            command.Parameters(7).Value = CType(Original_Codigo_Empleado,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -4020,12 +4603,56 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total FROM dbo.Produ"& _ 
                 "ctos_Terminados_Table"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[Productos_Terminados_Table] ([Id_Producto_Terminado], [Nombre]"& _ 
+                ", [Precio_Venta], [Cantidad_Total]) VALUES (@Id_Producto_Terminado, @Nombre, @Pr"& _ 
+                "ecio_Venta, @Cantidad_Total);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Producto_Terminado, Nombre, Precio_Vent"& _ 
+                "a, Cantidad_Total FROM Productos_Terminados_Table WHERE (Id_Producto_Terminado ="& _ 
+                " @Id_Producto_Terminado)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Precio_Venta", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Precio_Venta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cantidad_Total", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad_Total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "DELETE FROM Productos_Terminados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Producto_Terminado = @Or"& _ 
+                "iginal_Id_Producto_Terminado)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "          Productos_Terminados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Producto_Terminado = @Par"& _ 
+                "am1)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "UPDATE       Productos_Terminados_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                Id_Producto_Terminado"& _ 
+                " = @Id_Producto_Terminado, Nombre = @Nombre, Precio_Venta = @Precio_Venta, Canti"& _ 
+                "dad_Total = @Cantidad_Total"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Producto_Terminado = @Original_Id_"& _ 
+                "Producto_Terminado);   "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Producto_Terminado, Nombre, Precio_Venta, Can"& _ 
+                "tidad_Total FROM Productos_Terminados_Table WHERE (Id_Producto_Terminado = @Id_P"& _ 
+                "roducto_Terminado)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Precio_Venta", Global.System.Data.SqlDbType.Float, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "Precio_Venta", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cantidad_Total", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cantidad_Total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Producto_Terminado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Producto_Terminado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT        Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM  "& _ 
+                "          Productos_Terminados_Table"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4047,6 +4674,56 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable = New DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function buscar(ByVal dataTable As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable, ByVal Param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy3(ByVal Param1 As Integer) As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            Dim dataTable As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable = New DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function mostrar(ByVal dataTable As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy4() As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             Dim dataTable As DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable = New DelisCakeDatabaseDataSet.Productos_Terminados_TableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -4178,6 +4855,90 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update(ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer, ByVal Original_Nombre As String, ByVal Original_Precio_Venta As Double, ByVal Original_Cantidad_Total As Integer) As Integer
             Return Me.Update(Original_Id_Producto_Terminado, Nombre, Precio_Venta, Cantidad_Total, Original_Id_Producto_Terminado, Original_Nombre, Original_Precio_Venta, Original_Cantidad_Total)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function agregar(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Id_Producto_Terminado,Integer)
+            If (Nombre Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre")
+            Else
+                command.Parameters(1).Value = CType(Nombre,String)
+            End If
+            command.Parameters(2).Value = CType(Precio_Venta,Double)
+            command.Parameters(3).Value = CType(Cantidad_Total,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function borrar(ByVal Original_Id_Producto_Terminado As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            command.Parameters(0).Value = CType(Original_Id_Producto_Terminado,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function modificar(ByVal Id_Producto_Terminado As Integer, ByVal Nombre As String, ByVal Precio_Venta As Double, ByVal Cantidad_Total As Integer, ByVal Original_Id_Producto_Terminado As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            command.Parameters(0).Value = CType(Id_Producto_Terminado,Integer)
+            If (Nombre Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre")
+            Else
+                command.Parameters(1).Value = CType(Nombre,String)
+            End If
+            command.Parameters(2).Value = CType(Precio_Venta,Double)
+            command.Parameters(3).Value = CType(Cantidad_Total,Integer)
+            command.Parameters(4).Value = CType(Original_Id_Producto_Terminado,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     
@@ -4470,13 +5231,85 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(5) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante, Pais,"& _ 
                 " Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_Bancari"& _ 
                 "a, Plazo_de_pago FROM dbo.Proveedores_Table"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[Proveedores_Table] ([Id_Proveedor], [Razon_Social], [Nombre_Re"& _ 
+                "presentante], [NIT_Representante], [Pais], [Ciudad], [Direccion], [Codigo_Postal"& _ 
+                "], [Telefono], [Email], [Tipo_de_Pago], [Cuenta_Bancaria], [Plazo_de_pago]) VALU"& _ 
+                "ES (@Id_Proveedor, @Razon_Social, @Nombre_Representante, @NIT_Representante, @Pa"& _ 
+                "is, @Ciudad, @Direccion, @Codigo_Postal, @Telefono, @Email, @Tipo_de_Pago, @Cuen"& _ 
+                "ta_Bancaria, @Plazo_de_pago);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Proveedor, Razon_Social, Nombre_Represe"& _ 
+                "ntante, NIT_Representante, Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Ema"& _ 
+                "il, Tipo_de_Pago, Cuenta_Bancaria, Plazo_de_pago FROM Proveedores_Table WHERE (I"& _ 
+                "d_Proveedor = @Id_Proveedor)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Razon_Social", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Razon_Social", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Representante", Global.System.Data.SqlDbType.NVarChar, 130, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NIT_Representante", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "NIT_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Pais", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Pais", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ciudad", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Ciudad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Direccion", Global.System.Data.SqlDbType.NVarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, "Direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Postal", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Postal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Telefono", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Email", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tipo_de_Pago", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Tipo_de_Pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cuenta_Bancaria", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cuenta_Bancaria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plazo_de_pago", Global.System.Data.SqlDbType.NVarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "Plazo_de_pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "DELETE FROM Proveedores_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Proveedor = @Original_Id_Proveedo"& _ 
+                "r)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante"& _ 
+                ", Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_"& _ 
+                "Bancaria, Plazo_de_pago"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Proveedores_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Pro"& _ 
+                "veedor = @Param1)"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Param1", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(4).Connection = Me.Connection
+            Me._commandCollection(4).CommandText = "UPDATE       Proveedores_Table"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                Id_Proveedor = @Id_Proveedor, "& _ 
+                "Razon_Social = @Razon_Social, Nombre_Representante = @Nombre_Representante, NIT_"& _ 
+                "Representante = @NIT_Representante, Pais = @Pais, Ciudad = @Ciudad, Direccion = "& _ 
+                "@Direccion, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Codigo_Postal = @Codigo_Postal, Telefono "& _ 
+                "= @Telefono, Email = @Email, Tipo_de_Pago = @Tipo_de_Pago, Cuenta_Bancaria = @Cu"& _ 
+                "enta_Bancaria, Plazo_de_pago = @Plazo_de_pago"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Id_Proveedor = @Ori"& _ 
+                "ginal_Id_Proveedor); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id_Proveedor, Razon_Social, Nombre_Representante, "& _ 
+                "NIT_Representante, Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo"& _ 
+                "_de_Pago, Cuenta_Bancaria, Plazo_de_pago FROM Proveedores_Table WHERE (Id_Provee"& _ 
+                "dor = @Id_Proveedor)"
+            Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id_Proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Razon_Social", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Razon_Social", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre_Representante", Global.System.Data.SqlDbType.NVarChar, 130, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NIT_Representante", Global.System.Data.SqlDbType.NChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "NIT_Representante", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Pais", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Pais", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ciudad", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Ciudad", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Direccion", Global.System.Data.SqlDbType.NVarChar, 150, Global.System.Data.ParameterDirection.Input, 0, 0, "Direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Codigo_Postal", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Codigo_Postal", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Telefono", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Email", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Tipo_de_Pago", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Tipo_de_Pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Cuenta_Bancaria", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Cuenta_Bancaria", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plazo_de_pago", Global.System.Data.SqlDbType.NVarChar, 25, Global.System.Data.ParameterDirection.Input, 0, 0, "Plazo_de_pago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id_Proveedor", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Id_Proveedor", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._commandCollection(5) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(5).Connection = Me.Connection
+            Me._commandCollection(5).CommandText = "SELECT Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante, Pais,"& _ 
+                " Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_Bancari"& _ 
+                "a, Plazo_de_pago FROM dbo.Proveedores_Table"
+            Me._commandCollection(5).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4498,6 +5331,56 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As DelisCakeDatabaseDataSet.Proveedores_TableDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As DelisCakeDatabaseDataSet.Proveedores_TableDataTable = New DelisCakeDatabaseDataSet.Proveedores_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function buscar(ByVal dataTable As DelisCakeDatabaseDataSet.Proveedores_TableDataTable, ByVal Param1 As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy3(ByVal Param1 As Integer) As DelisCakeDatabaseDataSet.Proveedores_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(Param1,Integer)
+            Dim dataTable As DelisCakeDatabaseDataSet.Proveedores_TableDataTable = New DelisCakeDatabaseDataSet.Proveedores_TableDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function mostrar(ByVal dataTable As DelisCakeDatabaseDataSet.Proveedores_TableDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataBy4() As DelisCakeDatabaseDataSet.Proveedores_TableDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(5)
             Dim dataTable As DelisCakeDatabaseDataSet.Proveedores_TableDataTable = New DelisCakeDatabaseDataSet.Proveedores_TableDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -4940,6 +5823,196 @@ Namespace DelisCakeDatabaseDataSetTableAdapters
                     ByVal Original_Cuenta_Bancaria As Global.System.Nullable(Of Integer),  _
                     ByVal Original_Plazo_de_pago As String) As Integer
             Return Me.Update(Original_Id_Proveedor, Razon_Social, Nombre_Representante, NIT_Representante, Pais, Ciudad, Direccion, Codigo_Postal, Telefono, Email, Tipo_de_Pago, Cuenta_Bancaria, Plazo_de_pago, Original_Id_Proveedor, Original_Razon_Social, Original_Nombre_Representante, Original_NIT_Representante, Original_Pais, Original_Ciudad, Original_Direccion, Original_Codigo_Postal, Original_Telefono, Original_Email, Original_Tipo_de_Pago, Original_Cuenta_Bancaria, Original_Plazo_de_pago)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function agregar(ByVal Id_Proveedor As Integer, ByVal Razon_Social As String, ByVal Nombre_Representante As String, ByVal NIT_Representante As String, ByVal Pais As String, ByVal Ciudad As String, ByVal Direccion As String, ByVal Codigo_Postal As Global.System.Nullable(Of Integer), ByVal Telefono As Global.System.Nullable(Of Integer), ByVal Email As String, ByVal Tipo_de_Pago As String, ByVal Cuenta_Bancaria As Global.System.Nullable(Of Integer), ByVal Plazo_de_pago As String) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            command.Parameters(0).Value = CType(Id_Proveedor,Integer)
+            If (Razon_Social Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(Razon_Social,String)
+            End If
+            If (Nombre_Representante Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(Nombre_Representante,String)
+            End If
+            If (NIT_Representante Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(NIT_Representante,String)
+            End If
+            If (Pais Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Pais,String)
+            End If
+            If (Ciudad Is Nothing) Then
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(5).Value = CType(Ciudad,String)
+            End If
+            If (Direccion Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(Direccion,String)
+            End If
+            If (Codigo_Postal.HasValue = true) Then
+                command.Parameters(7).Value = CType(Codigo_Postal.Value,Integer)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Telefono.HasValue = true) Then
+                command.Parameters(8).Value = CType(Telefono.Value,Integer)
+            Else
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Email Is Nothing) Then
+                command.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(9).Value = CType(Email,String)
+            End If
+            If (Tipo_de_Pago Is Nothing) Then
+                command.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(10).Value = CType(Tipo_de_Pago,String)
+            End If
+            If (Cuenta_Bancaria.HasValue = true) Then
+                command.Parameters(11).Value = CType(Cuenta_Bancaria.Value,Integer)
+            Else
+                command.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Plazo_de_pago Is Nothing) Then
+                command.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(12).Value = CType(Plazo_de_pago,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function borrar(ByVal Original_Id_Proveedor As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
+            command.Parameters(0).Value = CType(Original_Id_Proveedor,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function modificar(ByVal Id_Proveedor As Integer, ByVal Razon_Social As String, ByVal Nombre_Representante As String, ByVal NIT_Representante As String, ByVal Pais As String, ByVal Ciudad As String, ByVal Direccion As String, ByVal Codigo_Postal As Global.System.Nullable(Of Integer), ByVal Telefono As Global.System.Nullable(Of Integer), ByVal Email As String, ByVal Tipo_de_Pago As String, ByVal Cuenta_Bancaria As Global.System.Nullable(Of Integer), ByVal Plazo_de_pago As String, ByVal Original_Id_Proveedor As Integer) As Integer
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(4)
+            command.Parameters(0).Value = CType(Id_Proveedor,Integer)
+            If (Razon_Social Is Nothing) Then
+                command.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(1).Value = CType(Razon_Social,String)
+            End If
+            If (Nombre_Representante Is Nothing) Then
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(2).Value = CType(Nombre_Representante,String)
+            End If
+            If (NIT_Representante Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(NIT_Representante,String)
+            End If
+            If (Pais Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Pais,String)
+            End If
+            If (Ciudad Is Nothing) Then
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(5).Value = CType(Ciudad,String)
+            End If
+            If (Direccion Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(Direccion,String)
+            End If
+            If (Codigo_Postal.HasValue = true) Then
+                command.Parameters(7).Value = CType(Codigo_Postal.Value,Integer)
+            Else
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Telefono.HasValue = true) Then
+                command.Parameters(8).Value = CType(Telefono.Value,Integer)
+            Else
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Email Is Nothing) Then
+                command.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(9).Value = CType(Email,String)
+            End If
+            If (Tipo_de_Pago Is Nothing) Then
+                command.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(10).Value = CType(Tipo_de_Pago,String)
+            End If
+            If (Cuenta_Bancaria.HasValue = true) Then
+                command.Parameters(11).Value = CType(Cuenta_Bancaria.Value,Integer)
+            Else
+                command.Parameters(11).Value = Global.System.DBNull.Value
+            End If
+            If (Plazo_de_pago Is Nothing) Then
+                command.Parameters(12).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(12).Value = CType(Plazo_de_pago,String)
+            End If
+            command.Parameters(13).Value = CType(Original_Id_Proveedor,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
         End Function
     End Class
     

@@ -110,6 +110,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DelisCakeDatabaseDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="EliminarUsuario.Designer.vb">
       <DependentUpon>EliminarUsuario.vb</DependentUpon>
@@ -231,24 +232,36 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="productos_terminados_form.resx">
+      <DependentUpon>productos_terminados_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="proveedores_form.resx">
+      <DependentUpon>proveedores_form.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestablecerContraseña.resx">
       <DependentUpon>RestablecerContraseña.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="trabajadores_form.resx">
+      <DependentUpon>trabajadores_form.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="DelisCakeDatabaseDataSet.xsc">
       <DependentUpon>DelisCakeDatabaseDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="DelisCakeDatabaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DelisCakeDatabaseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="DelisCakeDatabaseDataSet.xss">
       <DependentUpon>DelisCakeDatabaseDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
