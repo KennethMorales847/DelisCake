@@ -28,7 +28,7 @@ Public Class InicioSesion
                                 ' Ocultar el formulario actual
                                 Me.Hide()
 
-                                ' Abrir el formulario correspondiente (puedes crear un formulario para usuarios y otro para administradores)
+                                ' Abrir el formulario correspondiente 
                                 Dim formulario As Form
                                 If CheckBox_Usuario.Checked Then
                                     formulario = New MenuEmpleados()
@@ -66,5 +66,9 @@ Public Class InicioSesion
     Private Sub InicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Configurar TextBox_ContraseñaLogin para mostrar asteriscos
         TextBox_ContraseñaLogin.UseSystemPasswordChar = True
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        End
     End Sub
 End Class
