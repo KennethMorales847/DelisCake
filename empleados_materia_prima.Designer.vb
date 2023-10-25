@@ -47,9 +47,6 @@ Partial Class empleados_materia_prima
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
-        Me.MateriaPrimaTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Materia_Prima_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Materia_Prima_TableTableAdapter()
         Me.IdIngredienteDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CategoriaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,6 +56,9 @@ Partial Class empleados_materia_prima
         Me.CostoSinIVADataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.IVAUnitarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CostoTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MateriaPrimaTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
+        Me.Materia_Prima_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Materia_Prima_TableTableAdapter()
         Id_IngredienteLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CategoriaLabel = New System.Windows.Forms.Label()
@@ -69,8 +69,8 @@ Partial Class empleados_materia_prima
         IVA_UnitarioLabel = New System.Windows.Forms.Label()
         Costo_TotalLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MateriaPrimaTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_IngredienteLabel
@@ -276,20 +276,6 @@ Partial Class empleados_materia_prima
         Me.DataGridView1.Size = New System.Drawing.Size(950, 296)
         Me.DataGridView1.TabIndex = 39
         '
-        'DelisCakeDatabaseDataSet
-        '
-        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
-        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MateriaPrimaTableBindingSource
-        '
-        Me.MateriaPrimaTableBindingSource.DataMember = "Materia_Prima_Table"
-        Me.MateriaPrimaTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
-        '
-        'Materia_Prima_TableTableAdapter
-        '
-        Me.Materia_Prima_TableTableAdapter.ClearBeforeFill = True
-        '
         'IdIngredienteDataGridViewTextBoxColumn
         '
         Me.IdIngredienteDataGridViewTextBoxColumn.DataPropertyName = "Id_Ingrediente"
@@ -347,11 +333,25 @@ Partial Class empleados_materia_prima
         Me.CostoTotalDataGridViewTextBoxColumn.Name = "CostoTotalDataGridViewTextBoxColumn"
         Me.CostoTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'MateriaPrimaTableBindingSource
+        '
+        Me.MateriaPrimaTableBindingSource.DataMember = "Materia_Prima_Table"
+        Me.MateriaPrimaTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
+        '
+        'DelisCakeDatabaseDataSet
+        '
+        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
+        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Materia_Prima_TableTableAdapter
+        '
+        Me.Materia_Prima_TableTableAdapter.ClearBeforeFill = True
+        '
         'empleados_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1316, 342)
+        Me.ClientSize = New System.Drawing.Size(1316, 364)
         Me.Controls.Add(Id_IngredienteLabel)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(CategoriaLabel)
@@ -379,8 +379,8 @@ Partial Class empleados_materia_prima
         Me.Name = "empleados_materia_prima"
         Me.Text = "empleados_materia_prima"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MateriaPrimaTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

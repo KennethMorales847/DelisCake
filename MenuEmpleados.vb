@@ -1,19 +1,22 @@
 ﻿Public Class MenuEmpleados
-    Private Sub btn_materiaPrima_Click(sender As Object, e As EventArgs) Handles btn_materiaPrima.Click
-        materia_prima_form.Show()
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        End
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
         Me.Hide()
+        InicioSesion.Show()
+
+    End Sub
+
+    Private Sub btn_materiaPrima_Click(sender As Object, e As EventArgs) Handles btn_materiaPrima.Click
+        Me.Hide()
+        empleados_materia_prima.Show()
     End Sub
 
     Private Sub btn_productos_Click(sender As Object, e As EventArgs) Handles btn_productos.Click
-        productos_terminados_form.Show()
         Me.Hide()
-    End Sub
+        empleados_productos_terminados.Show()
 
-    Private Sub MenuEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        End
     End Sub
 End Class
