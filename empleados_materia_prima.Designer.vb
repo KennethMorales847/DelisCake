@@ -455,7 +455,7 @@ Partial Class empleados_materia_prima
         Label2.Size = New System.Drawing.Size(115, 26)
         Label2.TabIndex = 67
         Label2.Text = "EMPLEADOS"
-        AddHandler Label2.Click, AddressOf Me.Label2_Click
+
         '
         'empleados_materia_prima
         '
