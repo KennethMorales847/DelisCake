@@ -420,13 +420,15 @@ Partial Class Materia_Prima_Form
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(99, 495)
+        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Button6.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(100, 484)
         Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(88, 27)
+        Me.Button6.Size = New System.Drawing.Size(103, 48)
         Me.Button6.TabIndex = 39
         Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'PictureBox3
         '
