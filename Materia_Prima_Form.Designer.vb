@@ -61,7 +61,6 @@ Partial Class Materia_Prima_Form
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Materia_Prima_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Materia_Prima_TableTableAdapter()
         Me.TableAdapterManager = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
@@ -418,18 +417,6 @@ Partial Class Materia_Prima_Form
         Me.TableAdapterManager.Proveedores_TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.Button6.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(100, 484)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(103, 48)
-        Me.Button6.TabIndex = 39
-        Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
@@ -472,7 +459,6 @@ Partial Class Materia_Prima_Form
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Id_IngredienteLabel)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(CategoriaLabel)
@@ -539,7 +525,6 @@ Partial Class Materia_Prima_Form
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents TableAdapterManager As DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox5 As PictureBox

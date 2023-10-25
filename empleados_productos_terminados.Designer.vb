@@ -27,14 +27,16 @@ Partial Class empleados_productos_terminados
         Dim NombreLabel As System.Windows.Forms.Label
         Dim Precio_VentaLabel As System.Windows.Forms.Label
         Dim Cantidad_TotalLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empleados_productos_terminados))
         Dim Label2 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empleados_productos_terminados))
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.ProductosTerminadosTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -43,21 +45,18 @@ Partial Class empleados_productos_terminados
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioVentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CantidadTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductosTerminadosTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
         Me.Productos_Terminados_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Productos_Terminados_TableTableAdapter()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Id_Producto_TerminadoLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Precio_VentaLabel = New System.Windows.Forms.Label()
         Cantidad_TotalLabel = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosTerminadosTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -101,6 +100,17 @@ Partial Class empleados_productos_terminados
         Cantidad_TotalLabel.Size = New System.Drawing.Size(121, 17)
         Cantidad_TotalLabel.TabIndex = 30
         Cantidad_TotalLabel.Text = "Cantidad Total:"
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Black Mango Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label2.Location = New System.Drawing.Point(841, 0)
+        Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(115, 26)
+        Label2.TabIndex = 68
+        Label2.Text = "EMPLEADOS"
         '
         'Button5
         '
@@ -164,14 +174,26 @@ Partial Class empleados_productos_terminados
         '
         'TextBox4
         '
+        Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosTerminadosTableBindingSource, "Cantidad_Total", True))
         Me.TextBox4.Location = New System.Drawing.Point(751, 221)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(151, 22)
         Me.TextBox4.TabIndex = 31
         '
+        'ProductosTerminadosTableBindingSource
+        '
+        Me.ProductosTerminadosTableBindingSource.DataMember = "Productos_Terminados_Table"
+        Me.ProductosTerminadosTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
+        '
+        'DelisCakeDatabaseDataSet
+        '
+        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
+        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'TextBox3
         '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosTerminadosTableBindingSource, "Precio_Venta", True))
         Me.TextBox3.Location = New System.Drawing.Point(751, 191)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox3.Name = "TextBox3"
@@ -180,6 +202,7 @@ Partial Class empleados_productos_terminados
         '
         'TextBox2
         '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosTerminadosTableBindingSource, "Nombre", True))
         Me.TextBox2.Location = New System.Drawing.Point(751, 161)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Name = "TextBox2"
@@ -188,6 +211,7 @@ Partial Class empleados_productos_terminados
         '
         'TextBox1
         '
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProductosTerminadosTableBindingSource, "Id_Producto_Terminado", True))
         Me.TextBox1.Location = New System.Drawing.Point(751, 131)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Name = "TextBox1"
@@ -231,16 +255,6 @@ Partial Class empleados_productos_terminados
         Me.CantidadTotalDataGridViewTextBoxColumn.HeaderText = "Cantidad_Total"
         Me.CantidadTotalDataGridViewTextBoxColumn.Name = "CantidadTotalDataGridViewTextBoxColumn"
         '
-        'ProductosTerminadosTableBindingSource
-        '
-        Me.ProductosTerminadosTableBindingSource.DataMember = "Productos_Terminados_Table"
-        Me.ProductosTerminadosTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
-        '
-        'DelisCakeDatabaseDataSet
-        '
-        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
-        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Productos_Terminados_TableTableAdapter
         '
         Me.Productos_Terminados_TableTableAdapter.ClearBeforeFill = True
@@ -267,29 +281,6 @@ Partial Class empleados_productos_terminados
         Me.Label1.TabIndex = 65
         Me.Label1.Text = "Productos Terminados"
         '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Black Mango Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(841, 0)
-        Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(115, 26)
-        Label2.TabIndex = 68
-        Label2.Text = "EMPLEADOS"
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.Button6.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(98, 415)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(103, 48)
-        Me.Button6.TabIndex = 70
-        Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
@@ -307,7 +298,6 @@ Partial Class empleados_productos_terminados
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(957, 484)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Label2)
         Me.Controls.Add(Me.PictureBox3)
@@ -330,9 +320,9 @@ Partial Class empleados_productos_terminados
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "empleados_productos_terminados"
         Me.Text = "empleados_productos_terminados"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosTerminadosTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -359,6 +349,5 @@ Partial Class empleados_productos_terminados
     Friend WithEvents CantidadTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox5 As PictureBox
 End Class

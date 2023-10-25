@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class empleados_materia_prima
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class empleados_materia_prima
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Id_IngredienteLabel As System.Windows.Forms.Label
@@ -32,8 +32,8 @@ Partial Class empleados_materia_prima
         Dim Costo_Sin_IVALabel As System.Windows.Forms.Label
         Dim IVA_UnitarioLabel As System.Windows.Forms.Label
         Dim Costo_TotalLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empleados_materia_prima))
         Dim Label2 As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(empleados_materia_prima))
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -64,7 +64,6 @@ Partial Class empleados_materia_prima
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Button6 = New System.Windows.Forms.Button()
         Id_IngredienteLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         CategoriaLabel = New System.Windows.Forms.Label()
@@ -181,8 +180,20 @@ Partial Class empleados_materia_prima
         Costo_TotalLabel.TabIndex = 62
         Costo_TotalLabel.Text = "Costo Total:"
         '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Black Mango Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label2.Location = New System.Drawing.Point(1255, 0)
+        Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(115, 26)
+        Label2.TabIndex = 67
+        Label2.Text = "EMPLEADOS"
+        '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Fecha_Compra", True))
         Me.DateTimePicker1.Location = New System.Drawing.Point(1089, 210)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -191,6 +202,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox9
         '
+        Me.TextBox9.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Total", True))
         Me.TextBox9.Location = New System.Drawing.Point(1089, 360)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox9.Name = "TextBox9"
@@ -200,6 +212,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox6
         '
+        Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Unitario", True))
         Me.TextBox6.Location = New System.Drawing.Point(1089, 270)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox6.Name = "TextBox6"
@@ -208,6 +221,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox3
         '
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Categoria", True))
         Me.TextBox3.Location = New System.Drawing.Point(1089, 180)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox3.Name = "TextBox3"
@@ -216,6 +230,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox8
         '
+        Me.TextBox8.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "IVA_Unitario", True))
         Me.TextBox8.Location = New System.Drawing.Point(1089, 330)
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox8.Name = "TextBox8"
@@ -225,6 +240,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox5
         '
+        Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Cantidad", True))
         Me.TextBox5.Location = New System.Drawing.Point(1089, 240)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox5.Name = "TextBox5"
@@ -233,6 +249,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox2
         '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Nombre", True))
         Me.TextBox2.Location = New System.Drawing.Point(1089, 150)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
@@ -241,6 +258,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox7
         '
+        Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Costo_Sin_IVA", True))
         Me.TextBox7.Location = New System.Drawing.Point(1089, 300)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox7.Name = "TextBox7"
@@ -250,6 +268,7 @@ Partial Class empleados_materia_prima
         '
         'TextBox1
         '
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MateriaPrimaTableBindingSource, "Id_Ingrediente", True))
         Me.TextBox1.Location = New System.Drawing.Point(1089, 120)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox1.Name = "TextBox1"
@@ -433,30 +452,6 @@ Partial Class empleados_materia_prima
         Me.PictureBox5.TabIndex = 65
         Me.PictureBox5.TabStop = False
         '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.Button6.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(101, 529)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(103, 48)
-        Me.Button6.TabIndex = 66
-        Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Black Mango Bold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.Location = New System.Drawing.Point(1255, 0)
-        Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(115, 26)
-        Label2.TabIndex = 67
-        Label2.Text = "EMPLEADOS"
-
-        '
         'empleados_materia_prima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -464,7 +459,6 @@ Partial Class empleados_materia_prima
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1370, 599)
         Me.Controls.Add(Label2)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
@@ -536,5 +530,4 @@ Partial Class empleados_materia_prima
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Button6 As Button
 End Class

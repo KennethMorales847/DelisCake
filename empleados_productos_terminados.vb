@@ -28,4 +28,10 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Productos_Terminados_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Productos_Terminados_Table)
     End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Me.Hide()
+        MenuEmpleados.Show()
+
+    End Sub
 End Class

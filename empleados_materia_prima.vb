@@ -29,4 +29,8 @@
         Me.Materia_Prima_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Materia_Prima_Table)
     End Sub
 
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+        Me.Hide()
+        MenuEmpleados.Show()
+    End Sub
 End Class
