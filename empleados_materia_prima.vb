@@ -28,4 +28,5 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Materia_Prima_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Materia_Prima_Table)
     End Sub
+
 End Class
