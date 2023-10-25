@@ -28,6 +28,7 @@ Partial Class MenuEmpleados
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -82,12 +83,22 @@ Partial Class MenuEmpleados
         Me.PictureBox2.TabIndex = 16
         Me.PictureBox2.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(452, 12)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MenuEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightYellow
         Me.ClientSize = New System.Drawing.Size(539, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btn_materiaPrima)
@@ -107,4 +118,5 @@ Partial Class MenuEmpleados
     Friend WithEvents btn_materiaPrima As Button
     Friend WithEvents btn_productos As Button
     Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents Button1 As Button
 End Class

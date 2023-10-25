@@ -1,7 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class productos_terminados_form
-    Private Sub productos_terminados_form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class empleados_productos_terminados
+    Private Sub empleados_productos_terminados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DelisCakeDatabaseDataSet.Productos_Terminados_Table' table. You can move, or remove it, as needed.
         Me.Productos_Terminados_TableTableAdapter.Fill(Me.DelisCakeDatabaseDataSet.Productos_Terminados_Table)
 
@@ -29,10 +27,5 @@ Public Class productos_terminados_form
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Productos_Terminados_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Productos_Terminados_Table)
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        MenuAdmin.Show()
-        Me.Hide()
     End Sub
 End Class

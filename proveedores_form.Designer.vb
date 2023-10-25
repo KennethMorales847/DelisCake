@@ -72,6 +72,7 @@ Partial Class proveedores_form
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Id_ProveedorLabel = New System.Windows.Forms.Label()
         Razon_SocialLabel = New System.Windows.Forms.Label()
         Nombre_RepresentanteLabel = New System.Windows.Forms.Label()
@@ -156,7 +157,7 @@ Partial Class proveedores_form
         'Codigo_PostalLabel
         '
         Codigo_PostalLabel.AutoSize = True
-        Codigo_PostalLabel.Location = New System.Drawing.Point(12, 456)
+        Codigo_PostalLabel.Location = New System.Drawing.Point(325, 271)
         Codigo_PostalLabel.Name = "Codigo_PostalLabel"
         Codigo_PostalLabel.Size = New System.Drawing.Size(75, 13)
         Codigo_PostalLabel.TabIndex = 15
@@ -165,7 +166,7 @@ Partial Class proveedores_form
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(12, 482)
+        TelefonoLabel.Location = New System.Drawing.Point(325, 297)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel.TabIndex = 17
@@ -174,7 +175,7 @@ Partial Class proveedores_form
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(12, 508)
+        EmailLabel.Location = New System.Drawing.Point(325, 323)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(35, 13)
         EmailLabel.TabIndex = 19
@@ -183,7 +184,7 @@ Partial Class proveedores_form
         'Tipo_de_PagoLabel
         '
         Tipo_de_PagoLabel.AutoSize = True
-        Tipo_de_PagoLabel.Location = New System.Drawing.Point(12, 534)
+        Tipo_de_PagoLabel.Location = New System.Drawing.Point(325, 349)
         Tipo_de_PagoLabel.Name = "Tipo_de_PagoLabel"
         Tipo_de_PagoLabel.Size = New System.Drawing.Size(74, 13)
         Tipo_de_PagoLabel.TabIndex = 21
@@ -192,7 +193,7 @@ Partial Class proveedores_form
         'Cuenta_BancariaLabel
         '
         Cuenta_BancariaLabel.AutoSize = True
-        Cuenta_BancariaLabel.Location = New System.Drawing.Point(12, 560)
+        Cuenta_BancariaLabel.Location = New System.Drawing.Point(325, 375)
         Cuenta_BancariaLabel.Name = "Cuenta_BancariaLabel"
         Cuenta_BancariaLabel.Size = New System.Drawing.Size(89, 13)
         Cuenta_BancariaLabel.TabIndex = 23
@@ -201,7 +202,7 @@ Partial Class proveedores_form
         'Plazo_de_pagoLabel
         '
         Plazo_de_pagoLabel.AutoSize = True
-        Plazo_de_pagoLabel.Location = New System.Drawing.Point(12, 586)
+        Plazo_de_pagoLabel.Location = New System.Drawing.Point(325, 401)
         Plazo_de_pagoLabel.Name = "Plazo_de_pagoLabel"
         Plazo_de_pagoLabel.Size = New System.Drawing.Size(78, 13)
         Plazo_de_pagoLabel.TabIndex = 25
@@ -321,28 +322,28 @@ Partial Class proveedores_form
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(130, 482)
+        Me.TextBox9.Location = New System.Drawing.Point(443, 297)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(178, 20)
         Me.TextBox9.TabIndex = 64
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(130, 560)
+        Me.TextBox12.Location = New System.Drawing.Point(443, 375)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(178, 20)
         Me.TextBox12.TabIndex = 65
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(130, 534)
+        Me.TextBox11.Location = New System.Drawing.Point(443, 349)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(178, 20)
         Me.TextBox11.TabIndex = 66
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(130, 508)
+        Me.TextBox10.Location = New System.Drawing.Point(443, 323)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(178, 20)
         Me.TextBox10.TabIndex = 67
@@ -363,7 +364,7 @@ Partial Class proveedores_form
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(130, 456)
+        Me.TextBox8.Location = New System.Drawing.Point(443, 271)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(178, 20)
         Me.TextBox8.TabIndex = 70
@@ -405,14 +406,14 @@ Partial Class proveedores_form
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(130, 585)
+        Me.TextBox13.Location = New System.Drawing.Point(443, 400)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(178, 20)
         Me.TextBox13.TabIndex = 65
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(494, 314)
+        Me.Button5.Location = New System.Drawing.Point(801, 314)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(90, 23)
         Me.Button5.TabIndex = 80
@@ -421,7 +422,7 @@ Partial Class proveedores_form
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(413, 314)
+        Me.Button4.Location = New System.Drawing.Point(720, 314)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 79
@@ -430,7 +431,7 @@ Partial Class proveedores_form
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(533, 274)
+        Me.Button3.Location = New System.Drawing.Point(840, 274)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 78
@@ -439,7 +440,7 @@ Partial Class proveedores_form
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(452, 274)
+        Me.Button2.Location = New System.Drawing.Point(759, 274)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 77
@@ -448,18 +449,28 @@ Partial Class proveedores_form
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(371, 274)
+        Me.Button1.Location = New System.Drawing.Point(678, 274)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 76
         Me.Button1.Text = "&Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(10, 465)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 81
+        Me.Button6.Text = "&Regresar"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'proveedores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1398, 618)
+        Me.ClientSize = New System.Drawing.Size(1398, 500)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -538,4 +549,5 @@ Partial Class proveedores_form
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button6 As Button
 End Class

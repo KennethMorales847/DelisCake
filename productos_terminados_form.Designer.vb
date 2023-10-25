@@ -28,13 +28,13 @@ Partial Class productos_terminados_form
         Dim Precio_VentaLabel As System.Windows.Forms.Label
         Dim Cantidad_TotalLabel As System.Windows.Forms.Label
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
-        Me.ProductosTerminadosTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Productos_Terminados_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Productos_Terminados_TableTableAdapter()
         Me.IdProductoTerminadoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PrecioVentaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CantidadTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductosTerminadosTableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DelisCakeDatabaseDataSet = New DelisCake.DelisCakeDatabaseDataSet()
+        Me.Productos_Terminados_TableTableAdapter = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.Productos_Terminados_TableTableAdapter()
         Me.TableAdapterManager = New DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -45,72 +45,15 @@ Partial Class productos_terminados_form
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Id_Producto_TerminadoLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Precio_VentaLabel = New System.Windows.Forms.Label()
         Cantidad_TotalLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosTerminadosTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoTerminadoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.PrecioVentaDataGridViewTextBoxColumn, Me.CantidadTotalDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.ProductosTerminadosTableBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 13)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(480, 245)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'DelisCakeDatabaseDataSet
-        '
-        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
-        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ProductosTerminadosTableBindingSource
-        '
-        Me.ProductosTerminadosTableBindingSource.DataMember = "Productos_Terminados_Table"
-        Me.ProductosTerminadosTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
-        '
-        'Productos_Terminados_TableTableAdapter
-        '
-        Me.Productos_Terminados_TableTableAdapter.ClearBeforeFill = True
-        '
-        'IdProductoTerminadoDataGridViewTextBoxColumn
-        '
-        Me.IdProductoTerminadoDataGridViewTextBoxColumn.DataPropertyName = "Id_Producto_Terminado"
-        Me.IdProductoTerminadoDataGridViewTextBoxColumn.HeaderText = "Id_Producto_Terminado"
-        Me.IdProductoTerminadoDataGridViewTextBoxColumn.Name = "IdProductoTerminadoDataGridViewTextBoxColumn"
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'PrecioVentaDataGridViewTextBoxColumn
-        '
-        Me.PrecioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta"
-        Me.PrecioVentaDataGridViewTextBoxColumn.HeaderText = "Precio_Venta"
-        Me.PrecioVentaDataGridViewTextBoxColumn.Name = "PrecioVentaDataGridViewTextBoxColumn"
-        '
-        'CantidadTotalDataGridViewTextBoxColumn
-        '
-        Me.CantidadTotalDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Total"
-        Me.CantidadTotalDataGridViewTextBoxColumn.HeaderText = "Cantidad_Total"
-        Me.CantidadTotalDataGridViewTextBoxColumn.Name = "CantidadTotalDataGridViewTextBoxColumn"
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.Materia_Prima_TableTableAdapter = Nothing
-        Me.TableAdapterManager.Planilla_Empleados_TableTableAdapter = Nothing
-        Me.TableAdapterManager.Productos_Terminados_TableTableAdapter = Me.Productos_Terminados_TableTableAdapter
-        Me.TableAdapterManager.Proveedores_TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Id_Producto_TerminadoLabel
         '
@@ -147,6 +90,64 @@ Partial Class productos_terminados_form
         Cantidad_TotalLabel.Size = New System.Drawing.Size(79, 13)
         Cantidad_TotalLabel.TabIndex = 7
         Cantidad_TotalLabel.Text = "Cantidad Total:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProductoTerminadoDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.PrecioVentaDataGridViewTextBoxColumn, Me.CantidadTotalDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.ProductosTerminadosTableBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 13)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(480, 245)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'IdProductoTerminadoDataGridViewTextBoxColumn
+        '
+        Me.IdProductoTerminadoDataGridViewTextBoxColumn.DataPropertyName = "Id_Producto_Terminado"
+        Me.IdProductoTerminadoDataGridViewTextBoxColumn.HeaderText = "Id_Producto_Terminado"
+        Me.IdProductoTerminadoDataGridViewTextBoxColumn.Name = "IdProductoTerminadoDataGridViewTextBoxColumn"
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        '
+        'PrecioVentaDataGridViewTextBoxColumn
+        '
+        Me.PrecioVentaDataGridViewTextBoxColumn.DataPropertyName = "Precio_Venta"
+        Me.PrecioVentaDataGridViewTextBoxColumn.HeaderText = "Precio_Venta"
+        Me.PrecioVentaDataGridViewTextBoxColumn.Name = "PrecioVentaDataGridViewTextBoxColumn"
+        '
+        'CantidadTotalDataGridViewTextBoxColumn
+        '
+        Me.CantidadTotalDataGridViewTextBoxColumn.DataPropertyName = "Cantidad_Total"
+        Me.CantidadTotalDataGridViewTextBoxColumn.HeaderText = "Cantidad_Total"
+        Me.CantidadTotalDataGridViewTextBoxColumn.Name = "CantidadTotalDataGridViewTextBoxColumn"
+        '
+        'ProductosTerminadosTableBindingSource
+        '
+        Me.ProductosTerminadosTableBindingSource.DataMember = "Productos_Terminados_Table"
+        Me.ProductosTerminadosTableBindingSource.DataSource = Me.DelisCakeDatabaseDataSet
+        '
+        'DelisCakeDatabaseDataSet
+        '
+        Me.DelisCakeDatabaseDataSet.DataSetName = "DelisCakeDatabaseDataSet"
+        Me.DelisCakeDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Productos_Terminados_TableTableAdapter
+        '
+        Me.Productos_Terminados_TableTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Materia_Prima_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Planilla_Empleados_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Productos_Terminados_TableTableAdapter = Me.Productos_Terminados_TableTableAdapter
+        Me.TableAdapterManager.Proveedores_TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = DelisCake.DelisCakeDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TextBox1
         '
@@ -225,11 +226,21 @@ Partial Class productos_terminados_form
         Me.Button1.Text = "&Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(12, 268)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 40
+        Me.Button6.Text = "&Regresar"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'productos_terminados_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(805, 287)
+        Me.ClientSize = New System.Drawing.Size(805, 303)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -247,8 +258,8 @@ Partial Class productos_terminados_form
         Me.Name = "productos_terminados_form"
         Me.Text = "productos_terminados_form"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosTerminadosTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,4 +283,5 @@ Partial Class productos_terminados_form
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button6 As Button
 End Class

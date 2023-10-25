@@ -1,5 +1,5 @@
-﻿Public Class Materia_Prima_Form
-    Private Sub Materia_Prima_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Public Class empleados_materia_prima
+    Private Sub empleados_materia_prima_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DelisCakeDatabaseDataSet.Materia_Prima_Table' table. You can move, or remove it, as needed.
         Me.Materia_Prima_TableTableAdapter.Fill(Me.DelisCakeDatabaseDataSet.Materia_Prima_Table)
 
@@ -27,11 +27,5 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Materia_Prima_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Materia_Prima_Table)
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        MenuAdmin.Show()
-        Me.Hide()
-
     End Sub
 End Class

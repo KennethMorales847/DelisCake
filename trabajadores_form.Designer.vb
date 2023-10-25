@@ -69,6 +69,7 @@ Partial Class trabajadores_form
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         Codigo_EmpleadoLabel = New System.Windows.Forms.Label()
         Nombre_CompletoLabel = New System.Windows.Forms.Label()
         PuestoLabel = New System.Windows.Forms.Label()
@@ -451,12 +452,22 @@ Partial Class trabajadores_form
         Me.TextBox12.Size = New System.Drawing.Size(178, 20)
         Me.TextBox12.TabIndex = 47
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(12, 427)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 76
+        Me.Button6.Text = "&Regresar"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'trabajadores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1604, 432)
+        Me.ClientSize = New System.Drawing.Size(1604, 462)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Codigo_EmpleadoLabel)
         Me.Controls.Add(Nombre_CompletoLabel)
         Me.Controls.Add(PuestoLabel)
@@ -530,4 +541,5 @@ Partial Class trabajadores_form
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents Button6 As Button
 End Class

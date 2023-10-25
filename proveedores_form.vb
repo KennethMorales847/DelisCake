@@ -27,4 +27,9 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Proveedores_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Proveedores_Table)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        MenuAdmin.Show()
+        Me.Hide()
+    End Sub
 End Class

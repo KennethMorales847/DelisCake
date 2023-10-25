@@ -28,4 +28,9 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Planilla_Empleados_TableTableAdapter.mostrar(DelisCakeDatabaseDataSet.Planilla_Empleados_Table)
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        MenuAdmin.Show()
+        Me.Hide()
+    End Sub
 End Class
