@@ -36,6 +36,7 @@ Partial Class proveedores_form
         Dim Tipo_de_PagoLabel As System.Windows.Forms.Label
         Dim Cuenta_BancariaLabel As System.Windows.Forms.Label
         Dim Plazo_de_pagoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(proveedores_form))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.IdProveedorDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RazonSocialDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -72,7 +73,7 @@ Partial Class proveedores_form
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Id_ProveedorLabel = New System.Windows.Forms.Label()
         Razon_SocialLabel = New System.Windows.Forms.Label()
         Nombre_RepresentanteLabel = New System.Windows.Forms.Label()
@@ -89,6 +90,7 @@ Partial Class proveedores_form
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_ProveedorLabel
@@ -456,21 +458,23 @@ Partial Class proveedores_form
         Me.Button1.Text = "&Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button6
+        'PictureBox5
         '
-        Me.Button6.Location = New System.Drawing.Point(10, 465)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 81
-        Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(15, 459)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(78, 80)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 82
+        Me.PictureBox5.TabStop = False
         '
         'proveedores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1398, 500)
-        Me.Controls.Add(Me.Button6)
+        Me.ClientSize = New System.Drawing.Size(1398, 534)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -508,6 +512,7 @@ Partial Class proveedores_form
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -549,5 +554,5 @@ Partial Class proveedores_form
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents PictureBox5 As PictureBox
 End Class

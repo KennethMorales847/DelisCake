@@ -35,6 +35,7 @@ Partial Class trabajadores_form
         Dim IGSSLabel As System.Windows.Forms.Label
         Dim Total_DescuentosLabel As System.Windows.Forms.Label
         Dim Importe_a_RecibirLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(trabajadores_form))
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -69,7 +70,7 @@ Partial Class trabajadores_form
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Codigo_EmpleadoLabel = New System.Windows.Forms.Label()
         Nombre_CompletoLabel = New System.Windows.Forms.Label()
         PuestoLabel = New System.Windows.Forms.Label()
@@ -85,6 +86,7 @@ Partial Class trabajadores_form
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PlanillaEmpleadosTableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Codigo_EmpleadoLabel
@@ -452,22 +454,24 @@ Partial Class trabajadores_form
         Me.TextBox12.Size = New System.Drawing.Size(178, 20)
         Me.TextBox12.TabIndex = 47
         '
-        'Button6
+        'PictureBox5
         '
-        Me.Button6.Location = New System.Drawing.Point(12, 427)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 76
-        Me.Button6.Text = "&Regresar"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(13, 418)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(78, 80)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 77
+        Me.PictureBox5.TabStop = False
         '
         'trabajadores_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1604, 462)
-        Me.Controls.Add(Me.Button6)
+        Me.ClientSize = New System.Drawing.Size(1604, 503)
+        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Codigo_EmpleadoLabel)
         Me.Controls.Add(Nombre_CompletoLabel)
         Me.Controls.Add(PuestoLabel)
@@ -503,6 +507,7 @@ Partial Class trabajadores_form
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PlanillaEmpleadosTableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DelisCakeDatabaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -541,5 +546,5 @@ Partial Class trabajadores_form
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents Button6 As Button
+    Friend WithEvents PictureBox5 As PictureBox
 End Class
