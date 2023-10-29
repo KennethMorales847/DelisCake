@@ -46,7 +46,7 @@ Partial Class MenuAdmin
         Me.btn_planilla.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_planilla.FlatAppearance.BorderSize = 5
         Me.btn_planilla.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_planilla.Font = New System.Drawing.Font("Louis George Cafe", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_planilla.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_planilla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_planilla.Image = CType(resources.GetObject("btn_planilla.Image"), System.Drawing.Image)
         Me.btn_planilla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -64,11 +64,11 @@ Partial Class MenuAdmin
         Me.btn_ajustes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_ajustes.FlatAppearance.BorderSize = 5
         Me.btn_ajustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_ajustes.Font = New System.Drawing.Font("Louis George Cafe", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_ajustes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_ajustes.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_ajustes.Location = New System.Drawing.Point(155, 399)
         Me.btn_ajustes.Name = "btn_ajustes"
-        Me.btn_ajustes.Size = New System.Drawing.Size(171, 67)
+        Me.btn_ajustes.Size = New System.Drawing.Size(141, 67)
         Me.btn_ajustes.TabIndex = 3
         Me.btn_ajustes.Text = "Ajustes de Usuario"
         Me.btn_ajustes.UseVisualStyleBackColor = False
@@ -79,7 +79,7 @@ Partial Class MenuAdmin
         Me.btn_productos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_productos.FlatAppearance.BorderSize = 5
         Me.btn_productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_productos.Font = New System.Drawing.Font("Louis George Cafe", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_productos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_productos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_productos.Image = CType(resources.GetObject("btn_productos.Image"), System.Drawing.Image)
         Me.btn_productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -97,7 +97,7 @@ Partial Class MenuAdmin
         Me.btn_materiaPrima.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_materiaPrima.FlatAppearance.BorderSize = 5
         Me.btn_materiaPrima.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_materiaPrima.Font = New System.Drawing.Font("Louis George Cafe", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_materiaPrima.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_materiaPrima.ForeColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_materiaPrima.Image = CType(resources.GetObject("btn_materiaPrima.Image"), System.Drawing.Image)
         Me.btn_materiaPrima.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -115,7 +115,7 @@ Partial Class MenuAdmin
         Me.btn_proveedores.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_proveedores.FlatAppearance.BorderSize = 5
         Me.btn_proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_proveedores.Font = New System.Drawing.Font("Louis George Cafe", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_proveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_proveedores.ForeColor = System.Drawing.Color.FromArgb(CType(CType(249, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(200, Byte), Integer))
         Me.btn_proveedores.Image = CType(resources.GetObject("btn_proveedores.Image"), System.Drawing.Image)
         Me.btn_proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -140,10 +140,10 @@ Partial Class MenuAdmin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Amsterdam", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(70, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(256, 61)
+        Me.Label1.Size = New System.Drawing.Size(207, 24)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Menú de Administrador"
         '
