@@ -68,7 +68,7 @@ Public Class InicioSesion
         TextBox_ContraseñaLogin.UseSystemPasswordChar = True
     End Sub
 
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
         End
     End Sub
 End Class

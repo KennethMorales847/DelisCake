@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class InicioSesion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class InicioSesion
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InicioSesion))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -36,12 +36,10 @@ Partial Class InicioSesion
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -178,23 +176,12 @@ Partial Class InicioSesion
         Me.PictureBox4.TabIndex = 16
         Me.PictureBox4.TabStop = False
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(761, 12)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(43, 38)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 17
-        Me.PictureBox5.TabStop = False
-        '
         'InicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(816, 486)
-        Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.CheckBox_Admin)
@@ -215,7 +202,6 @@ Partial Class InicioSesion
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -234,5 +220,4 @@ Partial Class InicioSesion
     Friend WithEvents CheckBox_Admin As CheckBox
     Friend WithEvents CheckBox_Usuario As CheckBox
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
 End Class
