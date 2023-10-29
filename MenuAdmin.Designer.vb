@@ -66,7 +66,7 @@ Partial Class MenuAdmin
         Me.btn_ajustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_ajustes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_ajustes.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_ajustes.Location = New System.Drawing.Point(155, 399)
+        Me.btn_ajustes.Location = New System.Drawing.Point(173, 404)
         Me.btn_ajustes.Name = "btn_ajustes"
         Me.btn_ajustes.Size = New System.Drawing.Size(141, 67)
         Me.btn_ajustes.TabIndex = 3
@@ -130,9 +130,9 @@ Partial Class MenuAdmin
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 393)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 402)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(67, 69)
+        Me.PictureBox5.Size = New System.Drawing.Size(94, 69)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 13
         Me.PictureBox5.TabStop = False
@@ -161,7 +161,7 @@ Partial Class MenuAdmin
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(73, 399)
+        Me.PictureBox2.Location = New System.Drawing.Point(91, 404)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(76, 63)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
