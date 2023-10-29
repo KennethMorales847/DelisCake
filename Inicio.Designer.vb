@@ -23,28 +23,18 @@ Partial Class IniciarSesion
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IniciarSesion))
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btn_iniciarSesion = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(134, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(234, 28)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "B I E N V E N I D O S"
         '
         'btn_iniciarSesion
         '
@@ -71,7 +61,7 @@ Partial Class IniciarSesion
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.DelisCake.My.Resources.Resources.IniciarSesion
-        Me.PictureBox1.Location = New System.Drawing.Point(112, 325)
+        Me.PictureBox1.Location = New System.Drawing.Point(108, 325)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(63, 65)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -91,9 +81,9 @@ Partial Class IniciarSesion
         'PictureBox9
         '
         Me.PictureBox9.Image = Global.DelisCake.My.Resources.Resources.Icon
-        Me.PictureBox9.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox9.Location = New System.Drawing.Point(7, 4)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(101, 94)
+        Me.PictureBox9.Size = New System.Drawing.Size(87, 87)
         Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox9.TabIndex = 14
         Me.PictureBox9.TabStop = False
@@ -108,19 +98,29 @@ Partial Class IniciarSesion
         Me.PictureBox7.TabIndex = 12
         Me.PictureBox7.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(100, 4)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(313, 33)
+        Me.Label1.TabIndex = 19
+        Me.Label1.Text = "B I E N V E N I D O S"
+        '
         'IniciarSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightYellow
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(503, 438)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btn_iniciarSesion)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Bauhaus 93", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "IniciarSesion"
@@ -133,11 +133,11 @@ Partial Class IniciarSesion
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As Label
     Friend WithEvents btn_iniciarSesion As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

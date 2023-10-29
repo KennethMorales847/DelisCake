@@ -34,7 +34,7 @@ Partial Class EliminarUsuario
         Me.L_Contraseña = New System.Windows.Forms.Label()
         Me.TextBox_Nombre = New System.Windows.Forms.TextBox()
         Me.L_Usuario = New System.Windows.Forms.Label()
-        Me.L_Registro = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -151,22 +151,23 @@ Partial Class EliminarUsuario
         Me.L_Usuario.TabIndex = 14
         Me.L_Usuario.Text = "Ingrese el nombre de usuario"
         '
-        'L_Registro
+        'Label2
         '
-        Me.L_Registro.AutoSize = True
-        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Registro.Location = New System.Drawing.Point(91, 9)
-        Me.L_Registro.Name = "L_Registro"
-        Me.L_Registro.Size = New System.Drawing.Size(199, 28)
-        Me.L_Registro.TabIndex = 13
-        Me.L_Registro.Text = "Eliminar Usuario"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(50, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(263, 33)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Eliminar Usuarios"
         '
         'EliminarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightYellow
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(355, 363)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox_Admin)
         Me.Controls.Add(Me.CheckBox_Usuario)
@@ -178,7 +179,6 @@ Partial Class EliminarUsuario
         Me.Controls.Add(Me.L_Contraseña)
         Me.Controls.Add(Me.TextBox_Nombre)
         Me.Controls.Add(Me.L_Usuario)
-        Me.Controls.Add(Me.L_Registro)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "EliminarUsuario"
         Me.Text = "Eliminar Usuario"
@@ -200,5 +200,5 @@ Partial Class EliminarUsuario
     Friend WithEvents L_Contraseña As Label
     Friend WithEvents TextBox_Nombre As TextBox
     Friend WithEvents L_Usuario As Label
-    Friend WithEvents L_Registro As Label
+    Friend WithEvents Label2 As Label
 End Class

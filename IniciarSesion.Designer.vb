@@ -47,57 +47,57 @@ Partial Class InicioSesion
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Black Mango ExtraBold", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(60, 178)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(87, 182)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(259, 46)
+        Me.Label1.Size = New System.Drawing.Size(237, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "&Inicio de Sesión"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Louis George Cafe", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(61, 278)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 21)
+        Me.Label2.Size = New System.Drawing.Size(81, 24)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "&Usuario"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Louis George Cafe", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.Location = New System.Drawing.Point(61, 352)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 21)
+        Me.Label3.Size = New System.Drawing.Size(116, 24)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "&Contraseña"
         '
         'TextBox_NombreLogin
         '
-        Me.TextBox_NombreLogin.Font = New System.Drawing.Font("Louis George Cafe", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_NombreLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_NombreLogin.Location = New System.Drawing.Point(61, 302)
         Me.TextBox_NombreLogin.Name = "TextBox_NombreLogin"
-        Me.TextBox_NombreLogin.Size = New System.Drawing.Size(296, 25)
+        Me.TextBox_NombreLogin.Size = New System.Drawing.Size(296, 24)
         Me.TextBox_NombreLogin.TabIndex = 4
         '
         'TextBox_ContraseñaLogin
         '
-        Me.TextBox_ContraseñaLogin.Font = New System.Drawing.Font("Louis George Cafe", 11.25!)
+        Me.TextBox_ContraseñaLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
         Me.TextBox_ContraseñaLogin.Location = New System.Drawing.Point(62, 376)
         Me.TextBox_ContraseñaLogin.Name = "TextBox_ContraseñaLogin"
-        Me.TextBox_ContraseñaLogin.Size = New System.Drawing.Size(296, 25)
+        Me.TextBox_ContraseñaLogin.Size = New System.Drawing.Size(296, 24)
         Me.TextBox_ContraseñaLogin.TabIndex = 5
         '
         'btn_iniciar
         '
         Me.btn_iniciar.BackColor = System.Drawing.Color.Sienna
-        Me.btn_iniciar.Font = New System.Drawing.Font("Lucida Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_iniciar.Font = New System.Drawing.Font("Lucida Sans", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_iniciar.ForeColor = System.Drawing.SystemColors.Window
         Me.btn_iniciar.Location = New System.Drawing.Point(110, 417)
         Me.btn_iniciar.Name = "btn_iniciar"
-        Me.btn_iniciar.Size = New System.Drawing.Size(155, 42)
+        Me.btn_iniciar.Size = New System.Drawing.Size(187, 46)
         Me.btn_iniciar.TabIndex = 8
         Me.btn_iniciar.Text = "Iniciar Sesión"
         Me.btn_iniciar.UseVisualStyleBackColor = False
@@ -105,21 +105,21 @@ Partial Class InicioSesion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Louis George Cafe", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(128, 224)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 17)
+        Me.Label4.Size = New System.Drawing.Size(133, 18)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Tipo de Usuario:"
         '
         'CheckBox_Admin
         '
         Me.CheckBox_Admin.AutoSize = True
-        Me.CheckBox_Admin.Font = New System.Drawing.Font("Louis George Cafe", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Admin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox_Admin.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Admin.Location = New System.Drawing.Point(190, 246)
         Me.CheckBox_Admin.Name = "CheckBox_Admin"
-        Me.CheckBox_Admin.Size = New System.Drawing.Size(112, 19)
+        Me.CheckBox_Admin.Size = New System.Drawing.Size(122, 20)
         Me.CheckBox_Admin.TabIndex = 14
         Me.CheckBox_Admin.Text = "Administrador"
         Me.CheckBox_Admin.UseVisualStyleBackColor = True
@@ -127,11 +127,11 @@ Partial Class InicioSesion
         'CheckBox_Usuario
         '
         Me.CheckBox_Usuario.AutoSize = True
-        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Louis George Cafe", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox_Usuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox_Usuario.ForeColor = System.Drawing.Color.Sienna
         Me.CheckBox_Usuario.Location = New System.Drawing.Point(93, 246)
         Me.CheckBox_Usuario.Name = "CheckBox_Usuario"
-        Me.CheckBox_Usuario.Size = New System.Drawing.Size(71, 19)
+        Me.CheckBox_Usuario.Size = New System.Drawing.Size(80, 20)
         Me.CheckBox_Usuario.TabIndex = 13
         Me.CheckBox_Usuario.Text = "Usuario"
         Me.CheckBox_Usuario.UseVisualStyleBackColor = True
@@ -159,7 +159,7 @@ Partial Class InicioSesion
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(88, 18)
+        Me.PictureBox1.Location = New System.Drawing.Point(109, 22)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(188, 160)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Registro
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Registro
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registro))
         Me.L_Usuario = New System.Windows.Forms.Label()
@@ -32,9 +32,9 @@ Partial Class Registro
         Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
         Me.CheckBox_Admin = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.L_Registro = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -131,16 +131,6 @@ Partial Class Registro
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Seleccione el Tipo de Usuario:"
         '
-        'L_Registro
-        '
-        Me.L_Registro.AutoSize = True
-        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Registro.Location = New System.Drawing.Point(135, 19)
-        Me.L_Registro.Name = "L_Registro"
-        Me.L_Registro.Size = New System.Drawing.Size(106, 28)
-        Me.L_Registro.TabIndex = 13
-        Me.L_Registro.Text = "Registro"
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.DelisCake.My.Resources.Resources.Pass
@@ -161,13 +151,23 @@ Partial Class Registro
         Me.PictureBox2.TabIndex = 8
         Me.PictureBox2.TabStop = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(31, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(308, 33)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Registro de Usuarios"
+        '
         'Registro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightYellow
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(365, 388)
-        Me.Controls.Add(Me.L_Registro)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CheckBox_Admin)
         Me.Controls.Add(Me.CheckBox_Usuario)
@@ -199,5 +199,5 @@ Partial Class Registro
     Friend WithEvents CheckBox_Usuario As CheckBox
     Friend WithEvents CheckBox_Admin As CheckBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents L_Registro As Label
+    Friend WithEvents Label2 As Label
 End Class

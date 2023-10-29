@@ -293,6 +293,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\AjustesUsuarios.jpg" />
+    <None Include="Imagenes\FondoGestion.png" />
+    <None Include="Imagenes\FondoGestion.jpg" />
     <None Include="Imagenes\Cake17.png" />
     <None Include="Imagenes\Cake14.png" />
     <None Include="Imagenes\Icon.png" />

@@ -23,7 +23,6 @@ Partial Class RestablecerContraseña
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RestablecerContraseña))
-        Me.L_Registro = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckBox_Admin = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -35,19 +34,10 @@ Partial Class RestablecerContraseña
         Me.BT_limpiar = New System.Windows.Forms.Button()
         Me.BT_confirmar = New System.Windows.Forms.Button()
         Me.CheckBox_Usuario = New System.Windows.Forms.CheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'L_Registro
-        '
-        Me.L_Registro.AutoSize = True
-        Me.L_Registro.Font = New System.Drawing.Font("Bauhaus 93", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Registro.Location = New System.Drawing.Point(44, 9)
-        Me.L_Registro.Name = "L_Registro"
-        Me.L_Registro.Size = New System.Drawing.Size(289, 28)
-        Me.L_Registro.TabIndex = 14
-        Me.L_Registro.Text = "Restablecer Contraseña"
         '
         'Label1
         '
@@ -161,12 +151,23 @@ Partial Class RestablecerContraseña
         Me.CheckBox_Usuario.Text = "Usuario"
         Me.CheckBox_Usuario.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(351, 33)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = "Restablecer Contraseña"
+        '
         'RestablecerContraseña
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightYellow
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(368, 349)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BT_confirmar)
         Me.Controls.Add(Me.BT_limpiar)
         Me.Controls.Add(Me.Label1)
@@ -178,7 +179,6 @@ Partial Class RestablecerContraseña
         Me.Controls.Add(Me.L_Contraseña)
         Me.Controls.Add(Me.TextBox_Nombre)
         Me.Controls.Add(Me.L_Usuario)
-        Me.Controls.Add(Me.L_Registro)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "RestablecerContraseña"
         Me.Text = "Restablecer Contraseña"
@@ -188,8 +188,6 @@ Partial Class RestablecerContraseña
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents L_Registro As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CheckBox_Admin As CheckBox
     Friend WithEvents PictureBox3 As PictureBox
@@ -201,4 +199,5 @@ Partial Class RestablecerContraseña
     Friend WithEvents BT_limpiar As Button
     Friend WithEvents BT_confirmar As Button
     Friend WithEvents CheckBox_Usuario As CheckBox
+    Friend WithEvents Label2 As Label
 End Class
