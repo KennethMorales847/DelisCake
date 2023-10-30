@@ -100,7 +100,7 @@ Partial Class proveedores_form
         '
         Id_ProveedorLabel.AutoSize = True
         Id_ProveedorLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Id_ProveedorLabel.Location = New System.Drawing.Point(17, 374)
+        Id_ProveedorLabel.Location = New System.Drawing.Point(17, 401)
         Id_ProveedorLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Id_ProveedorLabel.Name = "Id_ProveedorLabel"
         Id_ProveedorLabel.Size = New System.Drawing.Size(108, 17)
@@ -111,7 +111,7 @@ Partial Class proveedores_form
         '
         Razon_SocialLabel.AutoSize = True
         Razon_SocialLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Razon_SocialLabel.Location = New System.Drawing.Point(17, 402)
+        Razon_SocialLabel.Location = New System.Drawing.Point(17, 431)
         Razon_SocialLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Razon_SocialLabel.Name = "Razon_SocialLabel"
         Razon_SocialLabel.Size = New System.Drawing.Size(104, 17)
@@ -122,7 +122,7 @@ Partial Class proveedores_form
         '
         Nombre_RepresentanteLabel.AutoSize = True
         Nombre_RepresentanteLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Nombre_RepresentanteLabel.Location = New System.Drawing.Point(17, 431)
+        Nombre_RepresentanteLabel.Location = New System.Drawing.Point(17, 462)
         Nombre_RepresentanteLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Nombre_RepresentanteLabel.Name = "Nombre_RepresentanteLabel"
         Nombre_RepresentanteLabel.Size = New System.Drawing.Size(182, 17)
@@ -133,7 +133,7 @@ Partial Class proveedores_form
         '
         NIT_RepresentanteLabel.AutoSize = True
         NIT_RepresentanteLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        NIT_RepresentanteLabel.Location = New System.Drawing.Point(17, 459)
+        NIT_RepresentanteLabel.Location = New System.Drawing.Point(17, 492)
         NIT_RepresentanteLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         NIT_RepresentanteLabel.Name = "NIT_RepresentanteLabel"
         NIT_RepresentanteLabel.Size = New System.Drawing.Size(146, 17)
@@ -144,7 +144,7 @@ Partial Class proveedores_form
         '
         PaisLabel.AutoSize = True
         PaisLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PaisLabel.Location = New System.Drawing.Point(17, 486)
+        PaisLabel.Location = New System.Drawing.Point(17, 521)
         PaisLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         PaisLabel.Name = "PaisLabel"
         PaisLabel.Size = New System.Drawing.Size(44, 17)
@@ -155,7 +155,7 @@ Partial Class proveedores_form
         '
         CiudadLabel.AutoSize = True
         CiudadLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        CiudadLabel.Location = New System.Drawing.Point(17, 514)
+        CiudadLabel.Location = New System.Drawing.Point(17, 551)
         CiudadLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         CiudadLabel.Name = "CiudadLabel"
         CiudadLabel.Size = New System.Drawing.Size(66, 17)
@@ -166,7 +166,7 @@ Partial Class proveedores_form
         '
         DireccionLabel.AutoSize = True
         DireccionLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DireccionLabel.Location = New System.Drawing.Point(17, 542)
+        DireccionLabel.Location = New System.Drawing.Point(17, 581)
         DireccionLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(81, 17)
@@ -177,7 +177,7 @@ Partial Class proveedores_form
         '
         Codigo_PostalLabel.AutoSize = True
         Codigo_PostalLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Codigo_PostalLabel.Location = New System.Drawing.Point(429, 374)
+        Codigo_PostalLabel.Location = New System.Drawing.Point(429, 401)
         Codigo_PostalLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Codigo_PostalLabel.Name = "Codigo_PostalLabel"
         Codigo_PostalLabel.Size = New System.Drawing.Size(115, 17)
@@ -188,7 +188,7 @@ Partial Class proveedores_form
         '
         TelefonoLabel.AutoSize = True
         TelefonoLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TelefonoLabel.Location = New System.Drawing.Point(429, 402)
+        TelefonoLabel.Location = New System.Drawing.Point(429, 431)
         TelefonoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(73, 17)
@@ -199,7 +199,7 @@ Partial Class proveedores_form
         '
         EmailLabel.AutoSize = True
         EmailLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        EmailLabel.Location = New System.Drawing.Point(429, 430)
+        EmailLabel.Location = New System.Drawing.Point(429, 461)
         EmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         EmailLabel.Name = "EmailLabel"
         EmailLabel.Size = New System.Drawing.Size(52, 17)
@@ -210,7 +210,7 @@ Partial Class proveedores_form
         '
         Tipo_de_PagoLabel.AutoSize = True
         Tipo_de_PagoLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Tipo_de_PagoLabel.Location = New System.Drawing.Point(429, 458)
+        Tipo_de_PagoLabel.Location = New System.Drawing.Point(429, 491)
         Tipo_de_PagoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Tipo_de_PagoLabel.Name = "Tipo_de_PagoLabel"
         Tipo_de_PagoLabel.Size = New System.Drawing.Size(107, 17)
@@ -221,7 +221,7 @@ Partial Class proveedores_form
         '
         Cuenta_BancariaLabel.AutoSize = True
         Cuenta_BancariaLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Cuenta_BancariaLabel.Location = New System.Drawing.Point(429, 486)
+        Cuenta_BancariaLabel.Location = New System.Drawing.Point(429, 521)
         Cuenta_BancariaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Cuenta_BancariaLabel.Name = "Cuenta_BancariaLabel"
         Cuenta_BancariaLabel.Size = New System.Drawing.Size(134, 17)
@@ -232,7 +232,7 @@ Partial Class proveedores_form
         '
         Plazo_de_pagoLabel.AutoSize = True
         Plazo_de_pagoLabel.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Plazo_de_pagoLabel.Location = New System.Drawing.Point(429, 514)
+        Plazo_de_pagoLabel.Location = New System.Drawing.Point(429, 551)
         Plazo_de_pagoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Plazo_de_pagoLabel.Name = "Plazo_de_pagoLabel"
         Plazo_de_pagoLabel.Size = New System.Drawing.Size(116, 17)
@@ -246,10 +246,10 @@ Partial Class proveedores_form
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdProveedorDataGridViewTextBoxColumn, Me.RazonSocialDataGridViewTextBoxColumn, Me.NombreRepresentanteDataGridViewTextBoxColumn, Me.NITRepresentanteDataGridViewTextBoxColumn, Me.PaisDataGridViewTextBoxColumn, Me.CiudadDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.CodigoPostalDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TipodePagoDataGridViewTextBoxColumn, Me.CuentaBancariaDataGridViewTextBoxColumn, Me.PlazodepagoDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ProveedoresTableBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(-39, 120)
+        Me.DataGridView1.Location = New System.Drawing.Point(7, 128)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1343, 234)
+        Me.DataGridView1.Size = New System.Drawing.Size(1350, 249)
         Me.DataGridView1.TabIndex = 0
         '
         'IdProveedorDataGridViewTextBoxColumn
@@ -355,116 +355,116 @@ Partial Class proveedores_form
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(567, 402)
+        Me.TextBox9.Location = New System.Drawing.Point(567, 431)
         Me.TextBox9.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox9.Size = New System.Drawing.Size(207, 22)
         Me.TextBox9.TabIndex = 64
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(567, 486)
+        Me.TextBox12.Location = New System.Drawing.Point(567, 521)
         Me.TextBox12.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox12.Size = New System.Drawing.Size(207, 22)
         Me.TextBox12.TabIndex = 65
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(567, 458)
+        Me.TextBox11.Location = New System.Drawing.Point(567, 491)
         Me.TextBox11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox11.Size = New System.Drawing.Size(207, 22)
         Me.TextBox11.TabIndex = 66
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(567, 430)
+        Me.TextBox10.Location = New System.Drawing.Point(567, 461)
         Me.TextBox10.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox10.Size = New System.Drawing.Size(207, 22)
         Me.TextBox10.TabIndex = 67
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(202, 514)
+        Me.TextBox6.Location = New System.Drawing.Point(202, 551)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox6.Size = New System.Drawing.Size(207, 22)
         Me.TextBox6.TabIndex = 68
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(202, 430)
+        Me.TextBox3.Location = New System.Drawing.Point(202, 461)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(207, 22)
         Me.TextBox3.TabIndex = 69
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(567, 374)
+        Me.TextBox8.Location = New System.Drawing.Point(567, 401)
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox8.Size = New System.Drawing.Size(207, 22)
         Me.TextBox8.TabIndex = 70
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(202, 458)
+        Me.TextBox4.Location = New System.Drawing.Point(202, 491)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox4.Size = New System.Drawing.Size(207, 22)
         Me.TextBox4.TabIndex = 71
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(202, 486)
+        Me.TextBox5.Location = New System.Drawing.Point(202, 521)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox5.Size = New System.Drawing.Size(207, 22)
         Me.TextBox5.TabIndex = 72
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(202, 402)
+        Me.TextBox2.Location = New System.Drawing.Point(202, 431)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox2.Size = New System.Drawing.Size(207, 22)
         Me.TextBox2.TabIndex = 73
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(202, 545)
+        Me.TextBox7.Location = New System.Drawing.Point(202, 584)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(207, 22)
         Me.TextBox7.TabIndex = 74
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(202, 374)
+        Me.TextBox1.Location = New System.Drawing.Point(202, 401)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox1.Size = New System.Drawing.Size(207, 22)
         Me.TextBox1.TabIndex = 75
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(567, 512)
+        Me.TextBox13.Location = New System.Drawing.Point(567, 549)
         Me.TextBox13.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox13.Size = New System.Drawing.Size(207, 22)
         Me.TextBox13.TabIndex = 65
         '
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Button5.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(1094, 485)
+        Me.Button5.Location = New System.Drawing.Point(1094, 520)
         Me.Button5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(103, 45)
+        Me.Button5.Size = New System.Drawing.Size(103, 48)
         Me.Button5.TabIndex = 80
         Me.Button5.Text = "&Mostrar Todo"
         Me.Button5.UseVisualStyleBackColor = False
@@ -473,10 +473,10 @@ Partial Class proveedores_form
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Button4.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(961, 484)
+        Me.Button4.Location = New System.Drawing.Point(961, 519)
         Me.Button4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(103, 45)
+        Me.Button4.Size = New System.Drawing.Size(103, 48)
         Me.Button4.TabIndex = 79
         Me.Button4.Text = "&Buscar"
         Me.Button4.UseVisualStyleBackColor = False
@@ -485,10 +485,10 @@ Partial Class proveedores_form
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Button3.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1157, 429)
+        Me.Button3.Location = New System.Drawing.Point(1157, 460)
         Me.Button3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(103, 45)
+        Me.Button3.Size = New System.Drawing.Size(103, 48)
         Me.Button3.TabIndex = 78
         Me.Button3.Text = "&Eliminar"
         Me.Button3.UseVisualStyleBackColor = False
@@ -497,10 +497,10 @@ Partial Class proveedores_form
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1023, 429)
+        Me.Button2.Location = New System.Drawing.Point(1023, 460)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(103, 45)
+        Me.Button2.Size = New System.Drawing.Size(103, 48)
         Me.Button2.TabIndex = 77
         Me.Button2.Text = "&Modificar"
         Me.Button2.UseVisualStyleBackColor = False
@@ -509,10 +509,10 @@ Partial Class proveedores_form
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.Button1.Font = New System.Drawing.Font("Louis George Cafe", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(888, 429)
+        Me.Button1.Location = New System.Drawing.Point(888, 460)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 45)
+        Me.Button1.Size = New System.Drawing.Size(103, 48)
         Me.Button1.TabIndex = 76
         Me.Button1.Text = "&Agregar"
         Me.Button1.UseVisualStyleBackColor = False
@@ -520,10 +520,10 @@ Partial Class proveedores_form
         'PictureBox5
         '
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(18, 566)
+        Me.PictureBox5.Location = New System.Drawing.Point(18, 606)
         Me.PictureBox5.Margin = New System.Windows.Forms.Padding(5, 3, 5, 3)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(91, 86)
+        Me.PictureBox5.Size = New System.Drawing.Size(91, 92)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 82
         Me.PictureBox5.TabStop = False
@@ -531,10 +531,10 @@ Partial Class proveedores_form
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(18, 13)
+        Me.PictureBox3.Location = New System.Drawing.Point(18, 14)
         Me.PictureBox3.Margin = New System.Windows.Forms.Padding(0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(184, 104)
+        Me.PictureBox3.Size = New System.Drawing.Size(184, 111)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 84
         Me.PictureBox3.TabStop = False
@@ -543,7 +543,7 @@ Partial Class proveedores_form
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Amsterdam", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(183, 9)
+        Me.Label1.Location = New System.Drawing.Point(183, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(199, 86)
@@ -552,10 +552,10 @@ Partial Class proveedores_form
         '
         'proveedores_form
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(249, Byte), Integer), CType(CType(236, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1370, 652)
+        Me.ClientSize = New System.Drawing.Size(1370, 699)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox5)
@@ -591,7 +591,7 @@ Partial Class proveedores_form
         Me.Controls.Add(Cuenta_BancariaLabel)
         Me.Controls.Add(Plazo_de_pagoLabel)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Font = New System.Drawing.Font("Louis George Cafe", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Louis George Cafe", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "proveedores_form"
         Me.Text = "proveedores_form"
