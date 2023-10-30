@@ -328,6 +328,13 @@
     <None Include="Imagenes\User.png" />
     <None Include="Imagenes\Pass.png" />
     <None Include="Imagenes\Registrar.png" />
+    <Content Include="DelisCakeDatabase.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DelisCakeDatabase_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>DelisCakeDatabase.mdf</DependentUpon>
+    </Content>
     <Content Include="Icon_Inicio %282%29.ico" />
   </ItemGroup>
   <ItemGroup>
